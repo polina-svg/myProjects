@@ -454,7 +454,7 @@ position: relative;
 
 .section-survival {
     height: 780px;
-    background-image: url('./images/Rectangle.png');
+    background-image: url('./assets/Rectangle.png');
     background-repeat: no-repeat;
     color: white;
     padding: 120px;
@@ -512,9 +512,10 @@ h1{
     font-style: normal;
     font-weight: normal;
     font-size: 48px;
-    width: 324px;
+    width: 325px;
     height: 72px;
     margin: 0;
+    padding: 10px 8px;
 }
 
 .latest-articles__text {
@@ -522,15 +523,19 @@ h1{
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
+    height: 47px;
     color: #666666;
     margin: 0
+    padding: 24px
     }
 
 .latest-articles__examples{
     display: flex;
     width: 100%;
-    justify-content: space-around;
-    margin-top: 120px;
+    justify-content: space-between;
+    margin-top: 81px;
+    padding: 0px 120px;
+    align-items: center;
 }
 
 .slider{
@@ -549,8 +554,8 @@ h1{
 
 .latest-articles__examples__dear h4{
     position: absolute;
-    left: 124px;
-    bottom: 130px;
+    left: 126px;
+    bottom: 52px;
     color: white;
     font-size: 24px;
     font-family: 'Open Sans'; 
@@ -560,8 +565,8 @@ h1{
 }
 .latest-articles__examples__dear p{
     position: absolute;
-    left: 57px;
-    bottom: 120px;
+    left: 60px;
+    bottom: 30px;
     color: white;
     font-family: Open Sans;
     font-style: normal;
@@ -574,8 +579,8 @@ h1{
 
 .latest-articles__examples__Squirrel h4{
     position: absolute;
-    left: 110px;
-    bottom: 130px;
+    left: 107px;
+    bottom: 52px;
     color: white;
     font-size: 24px;
     font-family: 'Open Sans'; 
@@ -585,8 +590,8 @@ h1{
 
 .latest-articles__examples__Squirrel p{
     position: absolute;
-    left: 74px;
-    bottom: 120px;
+    left: 76px;
+    bottom: 30px;
     color: white;
     font-family: Open Sans;
     font-style: normal;
@@ -601,7 +606,7 @@ h1{
 
     position: absolute;
     left: 125px;
-    bottom: 90px;
+    bottom: 53px;
     color: white;
     font-size: 24px;
     font-family: 'Open Sans'; 
@@ -611,11 +616,23 @@ h1{
 
 .latest-articles__examples__bird p{
     position: absolute;
-    left: 85px;
-    bottom: 80px;
+    left: 88px;
+    bottom: 30px;
     color: white;
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 17px;
+}
+.get-notified{
+    padding: 120px;
+    background-color: #CCCCCC;
+}
+
+.get-notified h3{
+    
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
 }
