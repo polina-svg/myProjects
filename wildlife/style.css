@@ -525,8 +525,7 @@ h1{
     font-size: 24px;
     height: 47px;
     color: #666666;
-    margin: 0
-    padding: 24px
+    margin: 24;
     }
 
 .latest-articles__examples{
@@ -568,7 +567,7 @@ h1{
     left: 60px;
     bottom: 30px;
     color: white;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: normal;
     font-size: 17px;
@@ -593,7 +592,7 @@ h1{
     left: 76px;
     bottom: 30px;
     color: white;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: normal;
     font-size: 17px;
@@ -619,20 +618,57 @@ h1{
     left: 88px;
     bottom: 30px;
     color: white;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: normal;
     font-size: 17px;
 }
 .get-notified{
-    padding: 120px;
+    padding: 0 120px;
     background-color: #CCCCCC;
+    height: 400px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
+
 .get-notified h3{
-    
+
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: normal;
     font-size: 27px;
+    color: #333333;
+    margin: 0;
+    text-align: center;
+    padding: 120px 0 7px;
+
+}
+.form{
+    padding: 60px 0;
+    display: flex;
+}
+
+.form__text{
+    height: 60px;
+    width: 400px;
+    border: 0;
+    background-color: inherit;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+}
+.form__button{
+    height: 60px;
+    width: 120px;
+    background-color: #CD6326;
+    border: 0;
+    border-radius: 0px 5px 5px 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 27px;
+    color: white
 }
