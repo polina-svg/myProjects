@@ -646,18 +646,23 @@ h1{
 
 }
 .form{
-    padding: 60px 0;
+    padding-top: 60px;
     display: flex;
 }
 
 .form__text{
     height: 60px;
-    width: 400px;
+    width: 542px;
     border: 0;
     background-color: inherit;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     border-top: 1px solid black;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    padding-left: 16px;
 }
 .form__button{
     height: 60px;
@@ -670,5 +675,5 @@ h1{
     font-weight: normal;
     font-size: 23px;
     line-height: 27px;
-    color: white
+    color: white;
 }
