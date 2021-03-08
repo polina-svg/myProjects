@@ -714,6 +714,10 @@ h1{
     font-size: 23px;
     line-height: 27px;
     color: white;
+    cursor: pointer;
+}
+.form__button:hover{
+    opacity: 0.5;
 }
 
 .footer{
