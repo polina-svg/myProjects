@@ -435,8 +435,22 @@ position: relative;
     font-size: 23px;
     font-style: normal;
     font-weight: 400;
+    cursor: pointer;
     
    
+}
+.header__navigation__links:hover{
+    opacity: 0.5;
+}
+
+.header__navigation__logo{
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out ;
+}
+
+.header__navigation__logo:hover{
+    transform: scale(1.5);
+
 }
 
 .header__navigation__button{
@@ -448,9 +462,14 @@ position: relative;
     border: 2px solid #CD6326;
     border-radius: 5px;
     font-family: 'Roboto';
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
 
 }
-
+.header__navigation__button:hover{
+    opacity: 0.5;
+    transform: rotateZ(360deg);
+}
 
 .section-survival {
     height: 780px;
@@ -497,7 +516,12 @@ h1{
     border: none;
     color: #F7F7F7;
     font-size: 23px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out ;
 
+}
+.present-block__button:hover{
+    transform: scale(1.2);
 }
 
 .latest-articles{
@@ -756,3 +780,4 @@ h1{
     height: 40px;
 
 }
+
