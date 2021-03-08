@@ -733,6 +733,7 @@ h1{
     padding: 0;
     justify-content: space-between;
 }
+
 .footer__navigation__links a{
     text-decoration: none;
     font-family: 'Open Sans';
@@ -740,6 +741,10 @@ h1{
     font-weight: normal;
     font-size: 23px;
     color: #F7F7F7;
+    cursor: pointer;
+}
+.footer__navigation__links a:hover{
+    opacity: 0.5;
 }
 
 .footer__logo{
@@ -758,40 +763,39 @@ h1{
     color: #F7F7F7;
 }
 
-.footer__navigation__social-nets{
+.navigation__list{
     display: flex;
     width: 240px;
     justify-content: space-between;
     padding: 0px;
 }
 
-.footer__navigation__social-nets li{
+.navigation__list li{
     list-style: none;
 }
 
-.footer__navigation__social-nets__fecebook{
-    background-image: url(./assets/facebook.svg);
+.navigation__item {
     background-repeat: no-repeat;
     width: 40px;
     height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
-.footer__navigation__social-nets__inst{
-    background-image: url(./assets/inst.svg);
-    background-repeat: no-repeat;
-    width: 40px;
-    height: 40px;
-}
-.footer__navigation__social-nets__pint{
-    background-image: url(./assets/pint.svg);
-    background-repeat: no-repeat;
-    width: 40px;
-    height: 40px;
-}
-.footer__navigation__social-nets__telegram{
-    background-image: url(./assets/telegram.svg);
-    background-repeat: no-repeat;
-    width: 40px;
-    height: 40px;
 
+.navigation__item:hover {
+    transform: translate(-5px,-1px);
+}
+
+.navigation__item_fecebook{
+    background-image: url(./assets/facebook.svg);
+}
+.navigation__item_inst{
+    background-image: url(./assets/inst.svg);
+}
+.navigation__item_pint{
+    background-image: url(./assets/pint.svg);
+}
+.navigation__item_telegram{
+    background-image: url(./assets/telegram.svg);
 }
 
