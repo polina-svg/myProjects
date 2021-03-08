@@ -564,15 +564,35 @@ h1{
 .slider{
     width: 26px;
     height: 39px;
+    cursor: pointer;
+}
+
+.slider:hover{
+    opacity: 0.5;
 }
 
 .slider2{
     width: 26px;
     height: 39px;
+    cursor: pointer;
+}
+.slider2:hover{
+    opacity: 0.5;
 }
 
-.latest-articles__examples__dear{
+.latest-articles__examples__dear,.latest-articles__examples__Squirrel,
+.latest-articles__examples__bird {
     position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 300px;
+    height: 360px;
+}
+
+.latest-articles__examples__dear:hover,.latest-articles__examples__Squirrel:hover,
+.latest-articles__examples__bird:hover {
+    transform: scale(1.1);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .latest-articles__examples__dear h4{
@@ -596,9 +616,6 @@ h1{
     font-weight: normal;
     font-size: 17px;
 }
-.latest-articles__examples__Squirrel{
-    position: relative;
-}
 
 .latest-articles__examples__Squirrel h4{
     position: absolute;
@@ -620,9 +637,6 @@ h1{
     font-style: normal;
     font-weight: normal;
     font-size: 17px;
-}
-.latest-articles__examples__bird{
-    position: relative;
 }
 
 .latest-articles__examples__bird h4{
