@@ -556,8 +556,8 @@ h1{
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin-top: 81px;
-    padding: 0px 120px;
+    margin-top: 83px;
+    padding: 0px 122px;
     align-items: center;
 }
 
@@ -664,7 +664,7 @@ h1{
 .get-notified{
     padding: 0 120px;
     background-color: #CCCCCC;
-    height: 517px;
+    height: 518px;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -680,7 +680,7 @@ h1{
     color: #333333;
     margin: 0;
     text-align: center;
-    padding: 120px 0 7px;
+    padding: 122px 0 6px;
 
 }
 .form{
