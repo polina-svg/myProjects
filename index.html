@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/35e3809886.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wraper">
+        <header class='header'>
+            <h1>Virtual Piano</h1>
+        </header>
+        <main>
+            <div class="button-container">
+                <button class="button-container__button button-notes  button_active">Notes</button>
+                <button class="button-container__button button-letters">Letters</button>
+            </div>
+            <div class="piano">
+                <div class="piano__key-upper">
+                    <div class="piano__key-upper-dark">
+                        <div id="KeyR" class="piano__key-upper-dark__letter">#c</div>
+                        <div class="piano__key-upper-dark__empty"></div>
+                    </div>
+
+
+                    <div class="piano__key-upper-dark piano__key-upper__dark_space">
+                        <div id="KeyT" class="piano__key-upper-dark__letter">#d</div>
+                        <div class="piano__key-upper-dark__empty"></div>
+                    </div>
+                    <div class="piano__key-upper-dark">
+                        <div id="KeyU" class="piano__key-upper-dark__letter">#f</div>
+                        <div class="piano__key-upper-dark__empty"></div>
+                    </div>
+
+                    <div class="piano__key-upper-dark">
+                        <div id="KeyI" class="piano__key-upper-dark__letter">#g</div>
+                        <div class="piano__key-upper-dark__empty"></div>
+                    </div>
+                    <div class="piano__key-upper-dark">
+                        <div id="KeyO" class="piano__key-upper-dark__letter">#a</div>
+                        <div class="piano__key-upper-dark__empty"></div>
+                    </div>
+                </div>
+
+                <div class="piano__key-down">
+
+                    <div class="piano__key-down_light">
+                        <div class="piano__key-down_light__empty"></div>
+                        <div id="KeyD" class="piano__key-down_light__letter">c</div>
+
+                    </div>
+
+                    <div class="piano__key-down_light">
+                        <div class="piano__key-down_light__empty"></div>
+                        <div id="KeyF" class="piano__key-down_light__letter">d</div>
+
+                    </div>
+
+                    <div class="piano__key-down_light">
+                        <div class="piano__key-down_light__empty"></div>
+                        <div id="KeyG" class="piano__key-down_light__letter">e</div>
+
+                    </div>
+                    <div class="piano__key-down_light">
+                        <div class="piano__key-down_light__empty"></div>
+                        <div id="KeyH" class="piano__key-down_light__letter">f</div>
+
+                    </div>
+
+                    <div class="piano__key-down_light">
+                        <div class="piano__key-down_light__empty"></div>
+                        <div id="KeyJ" class="piano__key-down_light__letter">g</div>
+
+
+                    </div>
+                    <div class="piano__key-down_light">
+                        <div class="piano__key-down_light__empty"></div>
+                        <div id="KeyK" class="piano__key-down_light__letter">a</div>
+
+                    </div>
+                    <div class="piano__key-down_light">
+                        <div class="piano__key-down_light__empty"></div>
+                        <div id="KeyL" class="piano__key-down_light__letter">b</div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div class="fullscreen-btn">
+                <i class="fas fa-expand"></i>
+            </div>
+        </main>
+        <footer class="footer">
+            <a href="https://github.com/polina-svg"> <i class="fab fa-github"></i></a>
+            <a class="footer__link-toApp" href="https://rs.school/js/"><img class="footer__image" src="rs_school_js.svg"
+                    alt="rs-image"></a>
+
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
