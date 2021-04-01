@@ -1,0 +1,140 @@
+@import "../normolize.css";
+.wrapper {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+.wrapper html {
+  font-size: 10px;
+}
+.wrapper body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", Verdana, sans-serif;
+  display: flex;
+}
+.wrapper .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+.wrapper .header h1 {
+  text-align: justify;
+  line-height: 13px;
+  margin-left: 125px;
+}
+.wrapper .header p {
+  margin: 0;
+}
+.wrapper .header .header__zoo {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 37px;
+  padding-left: 26px;
+  padding-top: 47px;
+}
+.wrapper .header .header__online {
+  padding-left: 28px;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 23px;
+  letter-spacing: 0px;
+}
+.wrapper .header nav {
+  width: 813px;
+}
+.wrapper .header nav ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  width: 100%;
+  width: 607px;
+  padding-top: 30px;
+  padding-right: -16px;
+  padding-left: 43px;
+}
+.wrapper .header nav li {
+  list-style: none;
+  display: flex;
+}
+.wrapper .header nav a {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
+}
+.wrapper .header .toggle-bg {
+  background: #f2f2f2;
+  display: block;
+  float: left;
+  height: 30px;
+  position: relative;
+  width: 54px;
+  border-radius: 20px;
+  right: 152px;
+  top: 4px;
+}
+.wrapper .header .toggle-bg input {
+  height: 20px;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  top: 5px;
+  width: 20px;
+  z-index: 2;
+}
+.wrapper .header .switch {
+  background: #ffffff;
+  display: block;
+  float: left;
+  height: 20px;
+  left: 6px;
+  position: relative;
+  top: 3.5px;
+  width: 20px;
+  z-index: 1;
+  border-radius: 10px;
+}
+.wrapper .header .toggle-bg input:checked ~ .switch {
+  left: 6px;
+}
+.wrapper .header .toggle-bg input ~ :checked ~ .switch {
+  left: 20px;
+}
+.wrapper .header .toggle-bg input:checked {
+  z-index: 0;
+}
+.wrapper .watchAnimals {
+  background-image: url(/assets/images/main-bg.png);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 89px;
+  color: white;
+  margin: 0;
+  width: 800px;
+}
+.wrapper .btn {
+  background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 900;
+  color: #ffffff;
+  height: 55px;
+  width: 245px;
+}
+
+/*# sourceMappingURL=style.css.map */

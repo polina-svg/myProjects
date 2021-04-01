@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZooApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <h1><img src="/assets/icons/logo.svg" alt=""></h1>
+        <h1><p class="header__zoo">zoo</p><p class="header__online">online</p></h1>
         <nav class="header__navigation">
           <ul>
             <li><a href="#">About</a></li>
@@ -19,23 +21,34 @@
             <li><a href="#">Design</a></li>
           </ul>
         </nav>
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider round"></span>
-        </label>
+        <span class="toggle-bg">
+          <input type="radio" name="toggle" value="off">
+          <input type="radio" name="toggle" value="on"> 
+          <span class="switch"></span>
+         </span>
       </header>
       <section class="watchAnimals">
         <h2>Watch your favorite animal online</h2>
-        <button class="btn">
-          <img src="/assets/icons/rectangle.svg" alt="play"/>
+        <button class="watchAnimals__btn btn">
+          <div>
+            <img src="/assets/icons/rectangle.svg" alt="play"/>
+          </div>    
           watch online
         </button>
         <div class="watchAnimals__animalsRow">
           <img src="/assets/icons/rectangle.svg" alt="play" />
           <img src="/assets/icons/line-bg.svg" alt="line" />
           <img src="/assets/images/eagle.png" alt="eagle" />
-          <img src="/assets/images/panda.png" alt="panda" />
-          <img src="/assets/images/gorilla.jpg" alt="gorilla" />
+          <div class="panda">
+            <img src="/assets/images/panda.png" alt="panda" />
+            <p>Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+            <button class="btn">
+              <img src="/assets/icons/rectangle.svg" alt="play"/>
+              watch online
+            </button>
+            <a href="#">donate <img src="/assets/icons/$.svg" alt=""></a>
+          </div>
+          <img src="/assets/images/gorilla.png" alt="gorilla" />
           <img src="/assets/images/aligator.png" alt="crocodile" />
           <img src="/assets/images/fox.png" alt="fox" />
         </div>
