@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 94px;
 }
 .wrapper .header h1 {
   text-align: justify;
@@ -30,7 +30,7 @@
   font-weight: 900;
   font-size: 37px;
   padding-left: 26px;
-  padding-top: 47px;
+  padding-top: 22px;
 }
 .wrapper .header .header__online {
   padding-left: 28px;
@@ -52,7 +52,7 @@
   align-items: center;
   width: 100%;
   width: 607px;
-  padding-top: 30px;
+  padding-top: 5px;
   padding-right: -16px;
   padding-left: 43px;
 }
@@ -117,6 +117,12 @@
   display: flex;
   flex-direction: column;
 }
+.wrapper .watchAnimals .bg-line {
+  left: 839px;
+  position: relative;
+  width: 1130px;
+  top: 117px;
+}
 .wrapper h2 {
   font-family: Roboto;
   font-style: normal;
@@ -127,6 +133,8 @@
   width: 800px;
 }
 .wrapper .btn {
+  display: flex;
+  justify-content: space-evenly;
   background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
   border-radius: 5px;
   font-family: "Roboto";
@@ -135,6 +143,196 @@
   color: #ffffff;
   height: 55px;
   width: 245px;
+}
+.wrapper .watch__btn div {
+  border-color: white;
+  width: 32px;
+  height: 29px;
+  border: 1px solid white;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-left: 13px;
+}
+.wrapper .watch__btn div img {
+  height: 10px;
+  width: 10px;
+  margin-top: 8px;
+  margin-left: 2px;
+}
+.wrapper .watch__btn p {
+  font-size: 18px;
+  position: relative;
+  right: 15px;
+  bottom: 1px;
+}
+.wrapper h2 {
+  margin-left: 358px;
+  margin-top: 212px;
+}
+.wrapper .watchAnimals__btn {
+  position: relative;
+  left: 359px;
+  top: 30px;
+}
+.wrapper .watchAnimals__animalsRow {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  left: 1059px;
+  bottom: 44px;
+  width: 1158px;
+}
+.wrapper .watchAnimals__animalsRow .watchAnimals__animalsRow__panda {
+  width: 245px;
+  height: 352px;
+  background-image: url(/assets/images/panda.png);
+  position: relative;
+  left: 29px;
+  bottom: 46px;
+}
+.wrapper .watchAnimals__animalsRow .watchAnimals__animalsRow__panda p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 223px;
+  width: 185px;
+  left: 27px;
+}
+.wrapper .watchAnimals__animalsRow .watchAnimals__animalsRow__panda .btn__panda {
+  width: 80px;
+  height: 42px;
+  position: absolute;
+  left: 8px;
+  top: 294px;
+  border: none;
+  background: none;
+}
+.wrapper .watchAnimals__animalsRow .watchAnimals__animalsRow__panda .btn__panda div {
+  height: 26px;
+  width: 28px;
+  position: relative;
+  right: 28px;
+  bottom: 4px;
+  border-color: #4bd8b5;
+}
+.wrapper .watchAnimals__animalsRow .watchAnimals__animalsRow__panda .btn__panda p {
+  position: absolute;
+  top: 4px;
+  left: -17px;
+  font-size: 11px;
+  color: #4bd8b5;
+}
+.wrapper .watchAnimals__animalsRow .watchAnimals__animalsRow__panda .btn__panda img {
+  height: 10px;
+  width: 10px;
+  margin-top: 7px;
+  margin-left: 2px;
+}
+.wrapper .watchAnimals__animalsRow .watchAnimals__animalsRow__panda .btn__pandaDonate {
+  width: 80px;
+  height: 42px;
+  position: absolute;
+  left: 8px;
+  top: 294px;
+  border: none;
+  background: none;
+}
+.wrapper .watchAnimals__animalsRow .watchAnimals__animalsRow__panda .btn__pandaDonate div {
+  height: 26px;
+  width: 28px;
+  position: relative;
+  left: 99px;
+  bottom: 4px;
+  border-color: white;
+}
+.wrapper .watchAnimals__animalsRow .watchAnimals__animalsRow__panda .btn__pandaDonate p {
+  position: absolute;
+  top: 4px;
+  left: 92px;
+  font-size: 11px;
+  color: white;
+}
+.wrapper .watchAnimals__animalsRow .watchAnimals__animalsRow__panda .btn__pandaDonate img {
+  height: 10px;
+  width: 10px;
+  margin-top: 7px;
+  margin-left: 2px;
+}
+.wrapper .watchAnimals__animalsRow .watchAnimals__animalsRow__eagle {
+  background-image: url(/assets/images/eagle.png);
+  width: 185px;
+  height: 252px;
+}
+.wrapper .watchAnimals__animalsRow .watchAnimals__animalsRow__gorilla {
+  background-image: url(/assets/images/gorilla.png);
+  width: 185px;
+  height: 252px;
+}
+.wrapper .watchAnimals__animalsRow .watchAnimals__animalsRow__crocodile {
+  background-image: url(/assets/images/aligator.png);
+  width: 185px;
+  height: 252px;
+}
+.wrapper .watchAnimals__animalsRow .watchAnimals__animalsRow__fox {
+  background-image: url(/assets/images/fox.png);
+  width: 185px;
+  height: 252px;
+}
+.wrapper .watchAnimals__animalsRow__date {
+  position: relative;
+  top: 337px;
+  right: 515px;
+}
+.wrapper .progress__date-first {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  color: white;
+}
+.wrapper .progress__date-second {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  color: white;
+}
+.wrapper .progress__slider {
+  height: 10px;
+}
+.wrapper .progress__slider .slider_dark {
+  width: 245px;
+  height: 5px;
+  background-color: rgba(189, 189, 189, 0.57);
+  top: 381px;
+  width: 245px;
+  height: 5px;
+  background-color: rgba(189, 189, 189, 0.57);
+  position: relative;
+  right: 776px;
+}
+.wrapper .progress__slider .slider_light {
+  width: 30px;
+  height: 10px;
+  background-color: white;
+  position: relative;
+  right: 990px;
+  top: 378px;
+}
+.wrapper .progress__slider .watchAnimals__nav {
+  position: relative;
+  bottom: 117px;
+  left: 113px;
+}
+.wrapper .progress__slider .watchAnimals__nav ul {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .progress__slider .watchAnimals__nav ul a {
+  margin: 5px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
