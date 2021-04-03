@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZooApp</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <h1><p class="header__zoo">zoo</p><p class="header__online">online</p></h1>
+        <h1>
+          <p class="header__zoo">zoo</p>
+          <p class="header__online">online</p>
+        </h1>
         <nav class="header__navigation">
           <ul>
             <li><a href="#">About</a></li>
@@ -22,76 +28,81 @@
           </ul>
         </nav>
         <span class="toggle-bg">
-          <input type="radio" name="toggle" value="off">
-          <input type="radio" name="toggle" value="on"> 
+          <input type="radio" name="toggle" value="off" />
+          <input type="radio" name="toggle" value="on" />
           <span class="switch"></span>
-         </span>
+        </span>
       </header>
       <section class="watchAnimals">
-        <h2>Watch your favorite animal online</h2>
-        <button class="watchAnimals__btn watch__btn btn">
-          <div>
-            <img src="/assets/icons/rectangle.svg" alt="play"/>
-          </div>    
-          <p>WATCH ONLINE</p> 
-        </button>
-        <img class="bg-line"src="/assets/icons/line-bg.svg" alt="line" />
-        <div class="watchAnimals__animalsRow">
-          <div class="watchAnimals__animalsRow__eagle">
-           
-          </div>
-          <div class="watchAnimals__animalsRow__panda">
-            <p>Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-            <button class="watchAnimals__btn watch__btn btn btn__panda">
-              <div>
-                <img src="/assets/icons/rectangleGreen 1.svg" alt="play"/>
-              </div>    
-              <p>WATCH ONLINE</p> 
-            </button>
-            <button class="watchAnimals__btn watch__btn btn btn__pandaDonate">
-              <div>
-                <img src="/assets/icons/$.svg" alt="play"/>
-              </div>    
-              <p>DONATE</p> 
-            </button>
-          </div>
-          <div class="watchAnimals__animalsRow__gorilla">
-
-          </div>
-          <div class="watchAnimals__animalsRow__crocodile">
-
-          </div>
-          <div class="watchAnimals__animalsRow__fox">
-            <div class="watchAnimals__animalsRow__date">
-              <span class="progress__date-first">02/</span>
-              <span class="progress__date-second">08</span>
+        <h2 class="watchAnimals__title">Watch your favorite animal online</h2>
+        <div class="watchAnimals__body">
+          <nav class="watchAnimals__nav">
+            <ul>
+              <li>
+                <a href="#"
+                  ><img src="/assets/icons/instagram 1.svg" alt="inst"
+                /></a>
+              </li>
+              <li class="social-navigation-space">
+                <a href="#"
+                  ><img src="/assets/icons/twittersvg.svg" alt="tw"
+                /></a>
+              </li>
+              <li class="social-navigation-space">
+                <a href="#"
+                  ><img src="/assets/icons/youtube.svg" alt="youTube"
+                /></a>
+              </li>
+              <li>
+                <a href="#"><img src="/assets/icons/vk.svg" alt="VK" /></a>
+              </li>
+            </ul>
+          </nav>
+          <button class="watchAnimals__btn">
+            <div class="icon"></div>
+            <span>WATCH ONLINE</span>
+          </button>
+          <div class="watchAnimals__animals animals">
+            <img
+              class="animals__bg-line"
+              src="/assets/icons/line-bg.svg"
+              alt="line"
+            />
+            <div class="animals__slide">
+              <div class="animals__eagle"></div>
+              <div class="animals__panda">
+                <p>
+                  Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from
+                  China. He loves bamboos.
+                </p>
+                <div class="panda__btns">
+                  <button class="first">
+                    <div class="icon"></div>
+                    <span>WATCH ONLINE</span>
+                  </button>
+                  <button class="seconde">
+                    <div class="icon"></div>
+                    <span>DONATE</span>
+                  </button>
+                </div>
+              </div>
+              <div class="animals__gorilla"></div>
+              <div class="animals__crocodile"></div>
+              <div class="animals__fox"></div>
             </div>
-          </div>
-          <div class="progress__slider">
-            <div class="slider_dark">
-            </div>
-          </div>
-          <div class="progress__slider">
-            <div class="slider_light">
+            <div class="animals__progress">
+              <div class="progress__numbers">
+                <span class="progress__num_first">02</span>
+                <span class="progress__num_slash">/</span>
+                <span class="progress__num_last">04</span>
+              </div>
+              <div class="progress__slider">
+                <div class="progress__bar"></div>
+                <div class="progress__cursor"></div>
+              </div>
             </div>
           </div>
         </div>
-        <nav class="watchAnimals__nav">
-          <ul>
-            <li>
-              <a href="#"><img src="/assets/icons/instagram 1.svg" alt="inst"></a>
-            </li>
-            <li class="social-navigation-space">
-              <a href="#"><img src="/assets/icons/twittersvg.svg" alt="tw"></a>
-            </li>
-            <li class="social-navigation-space">
-              <a href="#"><img src="/assets/icons/youtube.svg" alt="youTube"></a>
-            </li>
-            <li>
-              <a href="#"><img src="/assets/icons/vk.svg" alt="VK"></a>
-            </li>
-          </ul>
-        </nav>
       </section>
       <section class="how-it-works">
         <h2>How it works?</h2>
@@ -107,126 +118,169 @@
           devastated by the impact of the 2020 Australian bushfires on precious
           species and their habitat.
         </p>
-        <img src="/assets/images/deers.png" alt="deers">
+        <img src="/assets/images/deers.png" alt="deers" />
         <div class="how-it-works__progress progress">
-          <span class="progress__date-first">01/</span>
-          <span class="progress__date-second">04</span>
-          <div class="progress__slider">
-            <div class="slider_dark">
-            </div>
+          <div class="progress__numbers">
+            <span class="progress__num_first">01</span>
+            <span class="progress__num_slash">/</span>
+            <span class="progress__num_last">04</span>
           </div>
           <div class="progress__slider">
-            <div class="slider_light">
-            </div>
+            <div class="progress__bar"></div>
+            <div class="progress__cursor"></div>
           </div>
         </div>
-        <button class="watch__btn btn">
-          <div>
-            <img src="/assets/icons/rectangle.svg" alt="play"/>
-          </div>    
-          <p>watch online</p> 
+        <button class="how-it-works__btn">
+          <div class="icon"></div>
+          <span>WATCH ONLINE</span>
         </button>
       </section>
       <!-- там где ценности, вдохновение и тд -->
       <section class="infoAbout">
-        <div class="infoAbout__inspiration">
-          <img src="/assets/icons/inspires.svg" alt="inspiration">
-          <h3>What inspires us?</h3>
-          <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat, and we are determined to assist in all aspects.</p>
+        <div class="infoAbout__wrapper">
+          <div class="infoAbout__item">
+            <img src="/assets/icons/inspires.svg" alt="inspiration" />
+            <h3>What inspires us?</h3>
+            <p>
+              As a voice for wildlife, we are devastated by the impact of the 2020
+              Australian bushfires on precious species and their habitat, and we
+              are determined to assist in all aspects.
+            </p>
+          </div>
+          <div class="infoAbout__item">
+            <img src="/assets/icons/mission.svg" alt="mission" />
+            <h3>Our mission</h3>
+            <p>
+              Zoo Online saves wildlife and inspires everyone to make conservation
+              a priority in their lives.
+            </p>
+          </div>
+          <div class="infoAbout__item">
+            <img src="/assets/icons/belive.svg" alt="believe" />
+            <h3>What we believe in?</h3>
+            <p>
+              Animals have the right to a pain-free and happy life. They have
+              equal claim to the resources of this planet, and deserve a life of
+              dignity and compassion.
+            </p>
+          </div>
         </div>
-        <div class=infoAbout__mission>
-          <img src="/assets/icons/mission.svg" alt="mission">
-          <h3>Our mission</h3>
-          <p>Zoo Online saves wildlife and inspires everyone to make conservation a priority in their lives. </p>
-        </div>
-        <div class="infoAbout__believe">
-          <img src="/assets/icons/belive.svg" alt="believe">
-          <h3>What we believe in?</h3>
-          <p>Animals have the right to a pain-free and happy life. They have equal claim to the resources of this planet, and deserve a life of dignity and compassion.</p>
-        </div>
+        
       </section>
       <section class="petsInzoo">
-        <h2>Pets in Zoo</h2>
-        <img src="/assets/icons/left-arrow.svg" alt="arrow-left">
-        <img src="/assets/images/panda.png" alt="panda">
-        <img src="/assets/images/eagle.png" alt="eagle">
-        <img src="/assets/images/gorilla2.png" alt="gorilla">
-        <img src="/assets/images/aligator.png" alt="aligator">
-        <img src="/assets/icons/right-arrow.svg" alt="arrow-left">
-        <div class="petsInzoo__progress progress">
-          <span class="progress__date-first">01/</span>
-          <span class="progress__date-second">08</span>
-          <div class="progress__slider">
-            <div class="slider_dark">
+          <h2>Pets in Zoo</h2>
+        <div class="petsInzoo__animals">
+          <img src="/assets/icons/left-arrow.svg" alt="arrow-left" />
+          <div class="animals__panda">
+            <p>
+              Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from
+              China. He loves bamboos.
+            </p>
+            <div class="panda__btns">
+              <button class="first">
+                <div class="icon"></div>
+                <span>WATCH ONLINE</span>
+              </button>
+              <button class="seconde">
+                <div class="icon"></div>
+                <span>DONATE</span>
+              </button>
             </div>
           </div>
+          <img src="/assets/images/eagle.jpg" alt="eagle" />
+          <img src="/assets/images/gorilla2.png" alt="gorilla" />
+          <img src="/assets/images/aligator.jpg" alt="aligator" />
+          <img src="/assets/icons/right-arrow.svg" alt="arrow-left" />
+        </div>
+        <div class="petsInzoo__progress progress">
+          <div class="progress__numbers">
+            <span class="progress__num_first">01</span>
+            <span class="progress__num_slash">/</span>
+            <span class="progress__num_last">04</span>
+          </div>
           <div class="progress__slider">
-            <div class="slider_light">
-            </div>
+            <div class="progress__bar"></div>
+            <div class="progress__cursor"></div>
           </div>
         </div>
-        <button class="btn">
-          Choose your favorite
+        <button class="petsInzoo__btn">
+          <div class="icon"></div>
+          <span>choose your favorite</span>
         </button>
       </section>
       <section class="payAndfeed">
-        <h2>Pay and feed</h2>
-        <p>The opportunity to easily and naturally (but as often as possible) donate to the needs of animals that you like.</p>
-        <div class="payment">
-          <img src="/assets/icons/visasvg.svg" alt="visa">
-          <img src="/assets/icons/Arrow 2.png" alt="">
-          <img src="/assets/icons/gateZoo.svg" alt="gate">
-          <img src="/assets/icons/Arrow 2.png" alt="">
-          <img src="/assets/icons/pandaBamboo.svg" alt="panda">
+        <div class="payAndfeed__wrapper">
+          <h2>Pay and feed</h2>
+        <p>
+          The opportunity to easily and naturally (but as often as possible)
+          donate to the needs of animals that you like.
+        </p>
+        <div class="payAndfeed__item">
+          <img src="/assets/icons/visasvg.svg" alt="visa" />
+          <img src="/assets/icons/Arrow 2.png" alt="" />
+          <img src="/assets/icons/gateZoo.svg" alt="gate" />
+          <img src="/assets/icons/Arrow 2.png" alt="" />
+          <img src="/assets/icons/pandaBamboo.svg" alt="panda" />
         </div>
+        <button class="petsInzoo__btn">
+          <div class="icon"></div>
+          <span>donate</span>
+        </button>
+        
       </section>
       <section class="testimonials">
         <h2>Testimonials</h2>
-        <img src="/assets/icons/left-arrow.svg" alt="">
+        <img src="/assets/icons/left-arrow.svg" alt="" />
         <div class="testimonials__userDefault">
-          <img src="/assets/icons/userDefault.svg" alt="user">
+          <img src="/assets/icons/userDefault.svg" alt="user" />
           <h3>Nastya Sidorova</h3>
-          <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
+          <p>
+            As a voice for wildlife, we are devastated by the impact of the 2020
+            Australian bushfires on precious species and their habitat.
+          </p>
         </div>
         <div class="testimonials__userNaned">
-          <img src="/assets/icons/ebalo.png" alt="user">
+          <img src="/assets/icons/ebalo.png" alt="user" />
           <h3>Vlad Kim</h3>
-          <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
+          <p>
+            As a voice for wildlife, we are devastated by the impact of the 2020
+            Australian bushfires on precious species and their habitat.
+          </p>
         </div>
         <div class="testimonials__progress progress">
-          <span class="date-first">01/</span>
-          <span class="date-second">08</span>
-          <div class="slider">
-            <div class="slider_dark">
-            </div>
+          <div class="progress__numbers">
+            <span class="progress__num_first">01</span>
+            <span class="progress__num_slash">/</span>
+            <span class="progress__num_last">04</span>
           </div>
           <div class="progress__slider">
-            <div class="slider_light">
-            </div>
+            <div class="progress__bar"></div>
+            <div class="progress__cursor"></div>
           </div>
         </div>
-        <button class="btn">
-          Leave feedback
+        <button class="petsInzoo__btn">
+          <div class="icon"></div>
+          <span>Leave feedback</span>
         </button>
       </section>
       <section class="map">
         <h2>Map</h2>
-        <img src="/assets/images/map.png" alt="">
+        <img src="/assets/images/map.png" alt="" />
         <div class="map__animalExample">
           <p>West End Bald Eagle</p>
-          <img src="/assets/icons/eagle_ebalo.png" alt="eagle">
+          <img src="/assets/icons/eagle_ebalo.png" alt="eagle" />
           <p>Region: on an island near Los Angeles</p>
           <p>Population: more than 270 pairs in 2013</p>
         </div>
         <button class="watch__btn btn">
           <div>
-            <img src="/assets/icons/rectangle.svg" alt="play"/>
-          </div>    
-          <p>watch online</p> 
+            <img src="/assets/icons/rectangle.svg" alt="play" />
+          </div>
+          <p>watch online</p>
         </button>
       </section>
       <footer class="footer">
-        <img src="/assets/icons/logo.svg" alt="logo">
+        <img src="/assets/icons/logo.svg" alt="logo" />
         <nav class="footer__navigation">
           <ul>
             <li><a href="#">About</a></li>
@@ -235,22 +289,23 @@
             <li><a href="#">Design</a></li>
           </ul>
         </nav>
-        <button class="btn">
-          donate for volunteers
-        </button>
+        <button class="btn">donate for volunteers</button>
         <div class="contactUs">
           <form action="#">
-            <input type="text" placeholder="name">
-            <input type="email" placeholder="email">
-              <fieldset>
-                <legend>Please enter your message</legend>
-                <textarea cols="280"></textarea>
-              </fieldset>
+            <input type="text" placeholder="name" />
+            <input type="email" placeholder="email" />
+            <fieldset>
+              <legend>Please enter your message</legend>
+              <textarea cols="280"></textarea>
+            </fieldset>
           </form>
-          <label for="#"><input type="checkbox">I agree to the processing of Personal Data</label>
+          <label for="#"
+            ><input type="checkbox" />I agree to the processing of Personal
+            Data</label
+          >
           <button class="footer__btn">
             SEND
-            <img src="/assets/icons/ArrowFooter.png" alt="play"/>
+            <img src="/assets/icons/ArrowFooter.png" alt="play" />
           </button>
         </div>
         <div class="footer__onlineCenter">
@@ -263,18 +318,18 @@
         <nav class="footer__navigation">
           <ul>
             <li>
-              <a href="#"><img src="/assets/icons/instagram 1.svg" alt=""></a>
+              <a href="#"><img src="/assets/icons/instagram 1.svg" alt="" /></a>
             </li>
             <li>
-              <a href="#"><img src="/assets/icons/twittersvg.svg" alt=""></a>
+              <a href="#"><img src="/assets/icons/twittersvg.svg" alt="" /></a>
             </li>
             <li>
-              <a href="#"><img src="/assets/icons/youtube.svg" alt=""></a>
+              <a href="#"><img src="/assets/icons/youtube.svg" alt="" /></a>
             </li>
             <li>
-              <a href="#"><img src="/assets/icons/vk.svg" alt=""></a>
+              <a href="#"><img src="/assets/icons/vk.svg" alt="" /></a>
+            </li>
           </ul>
-
         </nav>
       </footer>
     </div>

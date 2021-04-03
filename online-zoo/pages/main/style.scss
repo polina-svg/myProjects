@@ -1,352 +1,583 @@
 @import "../normolize.css";
 
-.wrapper {
-  margin: 0 auto;
-  max-width: 1920px;
-  html {
-    font-size: 10px;
+@mixin slider($targetColor, $position, $widthcursor) {
+  width: 245px;
+  height: 49px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .progress__numbers {
+    .progress__num {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 900;
+      &_first {
+        color: $targetColor;
+        font-size: 24px;
+        line-height: 28px;
+      }
+      &_slash {
+        color: $targetColor;
+        font-size: 24px;
+        line-height: 28px;
+      }
+      &_last {
+        color: #828282;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
   }
-  body {
-    font-size: 1.6rem;
-    font-family: "Open Sans", Verdana, sans-serif;
+  .progress__slider {
+    width: 100%;
+    position: relative;
+    height: 10px;
     display: flex;
-  }
-  .header {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 94px;
-    h1 {
-      text-align: justify;
-      line-height: 13px;
-      margin-left: 125px;
+    .progress__bar {
+      background-color: #828282;
+      height: 5px;
+      width: 100%;
     }
-    p {
-      margin: 0;
-    }
-    .header__zoo {
-      font-family: "Roboto";
-      font-weight: 900;
-      font-size: 37px;
-      padding-left: 26px;
-      padding-top: 22px;
-    }
-    .header__online {
-      padding-left: 28px;
-      font-family: "Roboto";
-      font-weight: 900;
-      font-size: 20px;
-      padding-top: 10px;
-      padding-bottom: 23px;
-      letter-spacing: 0px;
-    }
-
-    nav {
-      width: 813px;
-      ul {
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        padding: 0;
-        align-items: center;
-        width: 100%;
-        width: 607px;
-        padding-top: 5px;
-        padding-right: -16px;
-        padding-left: 43px;
-      }
-      li {
-        list-style: none;
-        display: flex;
-      }
-      a {
-        text-decoration: none;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        color: black;
-      }
-    }
-
-    .toggle-bg {
-      background: #f2f2f2;
-      display: block;
-      float: left;
-      height: 30px;
-      position: relative;
-      width: 54px;
-      border-radius: 20px;
-      right: 152px;
-      top: 4px;
-    }
-    .toggle-bg input {
-      height: 20px;
-      left: 0;
-      margin: 0;
-      opacity: 0;
-      padding: 0;
+    .progress__cursor {
+      height: 10px;
+      background-color: $targetColor;
+      width: $widthcursor;
       position: absolute;
-      top: 5px;
-      width: 20px;
-      z-index: 2;
+      left: $position;
     }
-    .switch {
-      background: #ffffff;
-      display: block;
-      float: left;
-      height: 20px;
-      left: 6px;
-      position: relative;
-      top: 3.5px;
-      width: 20px;
-      z-index: 1;
-      border-radius: 10px;
-    }
-    .toggle-bg input:checked ~ .switch {
-      left: 6px;
-    }
+  }
+}
 
-    .toggle-bg input ~ :checked ~ .switch {
-      left: 20px;
-    }
-
-    .toggle-bg input:checked {
-      z-index: 0;
-    }
-  }
-  .watchAnimals {
-    background-image: url(/assets/images/main-bg.png);
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    .bg-line{
-      left: 839px;
-      position: relative;
-      width: 1130px;
-      top: 117px;
-      }
-  }
-  h2 {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 89px;
-    color: white;
-    margin: 0;
-    width: 800px;
-  }
-  .btn {
-    display: flex;
-    justify-content: space-evenly;
-    background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
-    border-radius: 5px;
-    font-family: "Roboto";
-    font-size: 18px;
-    font-weight: 900;
-    color: #ffffff;
-    height: 55px;
-    width: 245px;
-  }
-  .watch__btn{
-    div{
-      border-color: white;
+@mixin btn($withIcon, $icon, $bg) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $bg;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #ffffff;
+  border: none;
+  @if $withIcon {
+    .icon {
       width: 32px;
       height: 29px;
       border: 1px solid white;
       border-radius: 25px;
-      margin-top: 10px;
-      margin-left: 13px;
-    img{
-      height: 10px;
-      width: 10px;
-      margin-top: 8px;
-      margin-left: 2px;
+      margin-right: 5px;
+      background-image: url($icon);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  span {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}
+
+body {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4f4f4f;
+  .wrapper {
+    margin: 0 auto;
+    max-width: 1920px;
+    overflow: hidden;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 94px;
+      h1 {
+        text-align: justify;
+        line-height: 13px;
+        margin-left: 125px;
+      }
+      p {
+        margin: 0;
+      }
+      .header__zoo {
+        font-family: "Roboto";
+        font-weight: 900;
+        font-size: 37px;
+        padding-left: 26px;
+        padding-top: 22px;
+      }
+      .header__online {
+        padding-left: 28px;
+        font-family: "Roboto";
+        font-weight: 900;
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 23px;
+        letter-spacing: 0px;
+      }
+
+      nav {
+        width: 813px;
+        ul {
+          display: flex;
+          justify-content: space-between;
+          margin: 0;
+          padding: 0;
+          align-items: center;
+          width: 100%;
+          width: 607px;
+          padding-top: 5px;
+          padding-right: -16px;
+          padding-left: 43px;
+        }
+        li {
+          list-style: none;
+          display: flex;
+        }
+        a {
+          text-decoration: none;
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          color: black;
+        }
+      }
+
+      .toggle-bg {
+        background: #f2f2f2;
+        display: block;
+        float: left;
+        height: 30px;
+        position: relative;
+        width: 54px;
+        border-radius: 20px;
+        right: 152px;
+        top: 4px;
+      }
+      .toggle-bg input {
+        height: 20px;
+        left: 0;
+        margin: 0;
+        opacity: 0;
+        padding: 0;
+        position: absolute;
+        top: 5px;
+        width: 20px;
+        z-index: 2;
+      }
+      .switch {
+        background: #ffffff;
+        display: block;
+        float: left;
+        height: 20px;
+        left: 6px;
+        position: relative;
+        top: 3.5px;
+        width: 20px;
+        z-index: 1;
+        border-radius: 10px;
+      }
+      .toggle-bg input:checked ~ .switch {
+        left: 6px;
+      }
+
+      .toggle-bg input ~ :checked ~ .switch {
+        left: 20px;
+      }
+
+      .toggle-bg input:checked {
+        z-index: 0;
       }
     }
-    p{
-      font-size: 18px;
-      position: relative;
-      right: 15px;
-      bottom: 1px;
-    }
-    
-  }
-  h2{
-    margin-left: 358px;
-    margin-top: 212px;
-  }
-  .watchAnimals__btn{
-        position: relative;
-        left: 359px;
-        top: 30px;
-  }
-  .watchAnimals__animalsRow{
-    display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    left: 1059px;
-    bottom: 44px;
-    width: 1158px;
-  
-    .watchAnimals__animalsRow__panda{
-      width: 245px;
-      height: 352px;
-      background-image: url(/assets/images/panda.png);
-      position: relative;
-      left: 29px;
-      bottom: 46px;
-      p{
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
+    .watchAnimals {
+      background-image: url(/assets/images/main-bg.png);
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      &__title {
+        max-width: 800px;
+        width: 100%;
+        margin: 205px 0 0 360px;
+        font-weight: 900;
+        font-size: 89px;
         color: white;
-        position: absolute;
-        top: 223px;
-        width: 185px;
-        left: 27px;
+        line-height: 104px;
       }
-      .btn__panda{
-        width: 80px;
-        height: 42px;
-        position: absolute;
-        left: 8px;
-        top: 294px;
-        border: none;
-        background: none;
-        div{
-          height: 26px;
-          width: 28px;
-          position: relative;
-          right: 28px;
-          bottom: 4px;
-          border-color: rgba(75, 216, 181, 1);
-        }
-        p{
+      &__body {
+        display: flex;
+        align-items: flex-end;
+        height: 527px;
+      }
+      &__animals.animals {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 421px;
+        margin-left: 235px;
+        align-self: end;
+      }
+      .animals {
+        padding-left: 135px;
+        img {
           position: absolute;
-          top: 4px;
-          left: -17px;
-          font-size: 11px;
-          color: rgba(75, 216, 181, 1)
+          left: 0;
+          width: 100%;
+          top: calc(350px / 2);
+          z-index: 0;
         }
-        img{
-          height: 10px;
-          width: 10px;
-          margin-top: 7px;
-          margin-left: 2px;
+        &__slide {
+          display: flex;
+          overflow: hidden;
+          width: 100%;
+          align-items: center;
+          gap: 46px;
+          z-index: 1;
+          .animals__panda {
+            width: 245px;
+            height: 352px;
+            background-image: url(/assets/images/panda.jpg);
+            background-size: cover;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 38px;
+            p {
+              color: white;
+              width: 194px;
+            }
+            .panda__btns {
+              display: flex;
+              justify-content: center;
+              .first {
+                @include btn(
+                  $withIcon: true,
+                  $icon: "/assets/icons/rectangle-green.svg",
+                  $bg: inherit
+                );
+                span {
+                  color: transparent;
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  background-image: linear-gradient(
+                    106.89deg,
+                    #4bd8b5 -14.32%,
+                    #49d6df 100.68%
+                  );
+                  font-weight: 500;
+                  font-size: 12px;
+                  line-height: 14px;
+                }
+                .icon {
+                  width: 24px;
+                  height: 24px;
+                  border: 1px solid rgba(75, 216, 181, 1);
+                }
+              }
+              .seconde {
+                @include btn(
+                  $withIcon: true,
+                  $icon: "/assets/icons/$.svg",
+                  $bg: inherit
+                );
+                span {
+                  font-weight: 500;
+                  font-size: 12px;
+                  line-height: 14px;
+                }
+                .icon {
+                  width: 24px;
+                  height: 24px;
+                }
+              }
+            }
+          }
+          .animals__eagle {
+            background-image: url(/assets/images/eagle.jpg);
+            width: 140px;
+            height: 203px;
+            background-size: cover;
+            border-radius: 5px;
+          }
+          .animals__gorilla {
+            background-image: url(/assets/images/gorilla.jpg);
+            width: 140px;
+            height: 203px;
+            background-size: cover;
+            border-radius: 5px;
+          }
+          .animals__crocodile {
+            background-image: url(/assets/images/aligator.jpg);
+            width: 140px;
+            height: 203px;
+            background-size: cover;
+            border-radius: 5px;
+          }
+          .animals__fox {
+            background-image: url(/assets/images/fox.jpg);
+            width: 96px;
+            height: 203px;
+            background-size: cover;
+            border-radius: 5px;
+          }
+        }
+        &__progress {
+          margin-left: 20%;
+          margin-top: 14px;
+          @include slider(#fefefe, 27px, 30px);
         }
       }
-      .btn__pandaDonate{
-        width: 80px;
-        height: 42px;
-        position: absolute;
-        left: 8px;
-        top: 294px;
-        border: none;
-        background: none;
-        div{
-          height: 26px;
-          width: 28px;
-          position: relative;
-          left: 99px;
-          bottom: 4px;
-          border-color: white
-        }
-        p{
-          position: absolute;
-          top: 4px;
-          left: 92px;;
-          font-size: 11px;
-          color: white
-        }
-        img{
-          height: 10px;
-          width: 10px;
-          margin-top: 7px;
-          margin-left: 2px;
-        }
-      }
-
-  }
-
-    .watchAnimals__animalsRow__eagle{
-      background-image: url(/assets/images/eagle.png);
-      width: 185px;
-      height: 252px;
-    }
-    .watchAnimals__animalsRow__gorilla{
-      background-image: url(/assets/images/gorilla.png);
-      width: 185px;
-      height: 252px;
-   }
-   .watchAnimals__animalsRow__crocodile{
-     background-image: url(/assets/images/aligator.png);
-     width: 185px;
-     height: 252px;
-
-   }
-   .watchAnimals__animalsRow__fox{
-     background-image: url(/assets/images/fox.png);
-     width: 185px;
-     height: 252px;
-   }
-  }
-  .watchAnimals__animalsRow__date{
-    position: relative;
-    top: 337px;
-    right: 515px;
-  }
-    .progress__date-first{
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 24px;
-      color: white;
-    }
-    .progress__date-second{
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 14px;
-      color: white;
-    }
-    .progress__slider{
-      height: 10px;
-      .slider_dark{
-        width: 245px;
-        height: 5px;
-        background-color: rgb(189, 189, 189, 0.57);
-        top: 381px;
-        width: 245px;
-        height: 5px;
-        background-color: rgba(189, 189, 189, 0.57);
-        position: relative;
-        right: 776px;
-        ;
-      }
-      .slider_light{
-        width: 30px;
-        height: 10px;
-        background-color: white;
-        position: relative;
-        right: 990px;
-        top: 378px;
-      }
-      .watchAnimals__nav{
-        position: relative;
-        bottom: 117px;
-        left: 113px;
-        ul{
+      &__nav {
+        margin: 0 0 111px 152px;
+        ul {
           display: flex;
           flex-direction: column;
-          a{
-            margin: 5px 0;
+          padding: 0;
+          margin: 0;
+          width: 20px;
+          height: 107px;
+          justify-content: space-between;
+          li {
+            list-style: none;
           }
-          
         }
+      }
+      &__btn {
+        margin-left: 188px;
+        align-self: end;
+        margin-top: 38px;
+        @include btn(
+          $withIcon: true,
+          $icon: "/assets/icons/rectangle.svg",
+          $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
+        );
+        min-width: 245px;
+        height: 55px;
       }
     }
 
-
+    .how-it-works {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding: 100px 0;
+      align-items: end;
+      h2 {
+        text-align: left;
+        font-weight: 900;
+        font-size: 48px;
+        margin: 0 auto;
+        line-height: 56px;
+        max-width: 790px;
+        width: 100%;
+      }
+      p {
+        margin: 30px auto;
+        max-width: 790px;
+        width: 100%;
+      }
+      img {
+        margin: 0 auto;
+      }
+      &__btn {
+        @include btn(
+          $withIcon: true,
+          $icon: "/assets/icons/rectangle.svg",
+          $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
+        );
+        margin: 0 auto;
+        width: 245px;
+        height: 55px;
+      }
+      &__progress {
+        @include slider(black, 0, 60px);
+        margin: 30px auto;
+      }
+    }
+    .infoAbout {
+      padding: 100px;
+      background-color: #f2f2f2;
+      &__wrapper {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 380px;
+        height: 213px;
+        p {
+          margin: 0;
+        }
+        h3 {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 20px;
+        }
+      }
+    }
+    .petsInzoo {
+      display: flex;
+      flex-direction: column;
+      padding: 100px 0;
+      align-items: center;
+      text-align: center;
+      h2{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 48px;
+        margin: 0;
+        margin-bottom: 55px;
+        margin-top: 23px;
+      }
+      &__animals {
+        display: flex;
+        gap: 25px;
+        max-width: 1300px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      &__progress {
+        @include slider(black, 0, 60px);
+        margin: 30px auto;
+      }
+      &__btn {
+        @include btn(
+          $withIcon: false,
+          $icon: "/assets/icons/rectangle.svg",
+          $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
+        );
+        margin: 0 auto;
+        width: 245px;
+        height: 55px;
+      }
+      .animals__panda {
+        width: 278px;
+        height: 399px;
+        background-image: url(/assets/images/panda.jpg);
+        background-size: cover;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 38px;
+        p {
+          color: white;
+          width: 194px;
+        }
+        .panda__btns {
+          display: flex;
+          justify-content: center;
+          .first {
+            @include btn(
+              $withIcon: true,
+              $icon: "/assets/icons/rectangle-green.svg",
+              $bg: inherit
+            );
+            span {
+              color: transparent;
+              -webkit-background-clip: text;
+              background-clip: text;
+              background-image: linear-gradient(
+                106.89deg,
+                #4bd8b5 -14.32%,
+                #49d6df 100.68%
+              );
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 14px;
+            }
+            .icon {
+              width: 24px;
+              height: 24px;
+              border: 1px solid rgba(75, 216, 181, 1);
+            }
+          }
+          .seconde {
+            @include btn(
+              $withIcon: true,
+              $icon: "/assets/icons/$.svg",
+              $bg: inherit
+            );
+            span {
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 14px;
+            }
+            .icon {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+    .payAndfeed{
+      padding: 100px;
+      background-color: #f2f2f2;
+      h2 {
+        text-align: left;
+        font-weight: 900;
+        font-size: 48px;
+        margin: 0 auto;
+        line-height: 56px;
+        margin-top: -6px;
+  
+      }
+      p {
+        margin: 30px auto;
+        max-width: 790px;
+        width: 100%;
+        margin-left: 259px;
+      }
+      &__wrapper {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 1200px;
+        height: 240px;
+        margin-top: 64px;
+        margin-bottom: 63px;
+      }
+    }
+    .testimonials{
+      &__progress {
+        @include slider(black, 0, 60px);
+        margin: 30px auto;
+      }
+      &__btn {
+        @include btn(
+          $withIcon: false,
+          $icon: "/assets/icons/rectangle.svg",
+          $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
+        );
+        margin: 0 auto;
+        width: 245px;
+        height: 55px;
+      }
+    }
+  }
 }
