@@ -1,0 +1,1008 @@
+@import "../normolize.css";
+
+@mixin slider($targetColor, $position, $widthcursor) {
+  width: 245px;
+  height: 49px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .progress__numbers {
+    .progress__num {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 900;
+      &_first {
+        color: $targetColor;
+        font-size: 24px;
+        line-height: 28px;
+      }
+      &_slash {
+        color: $targetColor;
+        font-size: 24px;
+        line-height: 28px;
+      }
+      &_last {
+        color: #828282;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+  .progress__slider {
+    width: 100%;
+    position: relative;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    .progress__bar {
+      background-color: #828282;
+      height: 5px;
+      width: 100%;
+      cursor: pointer;
+    }
+    .progress__bar:hover {
+      opacity: 0.7;
+    }
+    .progress__cursor {
+      height: 10px;
+      background-color: $targetColor;
+      width: $widthcursor;
+      position: absolute;
+      left: $position;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .progress__cursor:hover {
+      transform: scale(1.4);
+    }
+  }
+}
+
+@mixin btn($withIcon, $icon, $bg) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $bg;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
+  @if $withIcon {
+    .icon {
+      width: 32px;
+      height: 29px;
+      border: 1px solid white;
+      border-radius: 25px;
+      margin-right: 5px;
+      background-image: url($icon);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  span {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}
+
+body {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4f4f4f;
+  a {
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+  }
+  .zoo {
+    visibility: hidden;
+    display: none;
+  }
+  .wrapper {
+    margin: 0 auto;
+    max-width: 1920px;
+    overflow: hidden;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 94px;
+      h1 {
+        text-align: justify;
+        line-height: 13px;
+        margin-left: 125px;
+      }
+      p {
+        margin: 0;
+      }
+      .header__zoo {
+        font-family: "Roboto";
+        font-weight: 900;
+        font-size: 37px;
+        padding-left: 26px;
+        padding-top: 22px;
+      }
+      .header__online {
+        padding-left: 28px;
+        font-family: "Roboto";
+        font-weight: 900;
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 23px;
+        letter-spacing: 0px;
+      }
+
+      nav {
+        width: 813px;
+        ul {
+          display: flex;
+          justify-content: space-between;
+          margin: 0;
+          padding: 0;
+          align-items: center;
+          width: 100%;
+          width: 607px;
+          padding-top: 5px;
+          padding-right: -16px;
+          padding-left: 43px;
+        }
+        li {
+          list-style: none;
+          display: flex;
+        }
+        .active {
+          cursor: pointer;
+        }
+        .about {
+          text-decoration: underline;
+        }
+        .active:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .toggle-bg {
+        background: #f2f2f2;
+        display: block;
+        float: left;
+        height: 30px;
+        position: relative;
+        width: 54px;
+        border-radius: 20px;
+        right: 152px;
+        top: 4px;
+        cursor: pointer;
+      }
+      .toggle-bg input {
+        height: 20px;
+        left: 0;
+        margin: 0;
+        opacity: 0;
+        padding: 0;
+        position: absolute;
+        top: 5px;
+        width: 20px;
+        z-index: 2;
+      }
+      .toggle-bg:hover {
+        background-color: black;
+      }
+      .switch {
+        background: #ffffff;
+        display: block;
+        float: left;
+        height: 20px;
+        left: 6px;
+        position: relative;
+        top: 3.5px;
+        width: 20px;
+        z-index: 1;
+        border-radius: 10px;
+      }
+      .toggle-bg input:checked ~ .switch {
+        left: 6px;
+      }
+
+      .toggle-bg input ~ :checked ~ .switch {
+        left: 20px;
+      }
+
+      .toggle-bg input:checked {
+        z-index: 0;
+      }
+    }
+    .watchAnimals {
+      background-image: url(/assets/images/main-bg.png);
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      &__title {
+        max-width: 800px;
+        width: 100%;
+        margin: 205px 0 0 360px;
+        font-weight: 900;
+        font-size: 89px;
+        color: white;
+        line-height: 104px;
+      }
+      &__body {
+        display: flex;
+        align-items: flex-end;
+        height: 527px;
+      }
+      &__animals.animals {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 421px;
+        margin-left: 235px;
+        align-self: end;
+      }
+      .animals {
+        padding-left: 135px;
+        img {
+          position: absolute;
+          left: 0;
+          width: 100%;
+          top: calc(350px / 2);
+          z-index: 0;
+        }
+        &__slide {
+          display: flex;
+          overflow: hidden;
+          width: 100%;
+          align-items: center;
+          gap: 46px;
+          z-index: 1;
+          .animals__panda {
+            width: 245px;
+            height: 352px;
+            background-image: url(/assets/images/panda.jpg);
+            background-size: cover;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 38px;
+            cursor: pointer;
+            transition: all 0.3s;
+            p {
+              color: white;
+              width: 194px;
+            }
+            .panda__btns {
+              display: flex;
+              justify-content: center;
+
+              .first {
+                @include btn(
+                  $withIcon: true,
+                  $icon: "/assets/icons/rectangle-green.svg",
+                  $bg: inherit
+                );
+                span {
+                  color: transparent;
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  background-image: linear-gradient(
+                    106.89deg,
+                    #4bd8b5 -14.32%,
+                    #49d6df 100.68%
+                  );
+                  font-weight: 500;
+                  font-size: 12px;
+                  line-height: 14px;
+                  cursor: pointer;
+                }
+                .icon {
+                  width: 24px;
+                  height: 24px;
+                  border: 1px solid rgba(75, 216, 181, 1);
+                  cursor: pointer;
+                }
+              }
+              .seconde {
+                @include btn(
+                  $withIcon: true,
+                  $icon: "/assets/icons/$.svg",
+                  $bg: inherit
+                );
+                span {
+                  font-weight: 500;
+                  font-size: 12px;
+                  line-height: 14px;
+                  cursor: pointer;
+                }
+                .icon {
+                  width: 24px;
+                  height: 24px;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+          .animals__panda:hover {
+            transform: scale(0.9);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          }
+          .animals__eagle {
+            background-image: url(/assets/images/eagle.jpg);
+            width: 140px;
+            height: 203px;
+            background-size: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+          }
+          .animals__eagle:hover {
+            transform: scale(0.9);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          }
+          .animals__gorilla {
+            background-image: url(/assets/images/gorilla.jpg);
+            width: 140px;
+            height: 203px;
+            background-size: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+          }
+          .animals__gorilla:hover {
+            transform: scale(0.9);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          }
+          .animals__crocodile {
+            background-image: url(/assets/images/aligator.jpg);
+            width: 140px;
+            height: 203px;
+            background-size: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+          }
+          .animals__crocodile:hover {
+            transform: scale(0.9);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          }
+          .animals__fox {
+            background-image: url(/assets/images/fox.jpg);
+            width: 96px;
+            height: 203px;
+            background-size: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+          }
+          .animals__fox:hover {
+            transform: scale(0.9);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          }
+        }
+        &__progress {
+          margin-left: 20%;
+          margin-top: 14px;
+          @include slider(#fefefe, 27px, 30px);
+        }
+      }
+      &__nav {
+        margin: 0 0 111px 152px;
+        ul {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+          margin: 0;
+          width: 20px;
+          height: 107px;
+          justify-content: space-between;
+
+          li {
+            list-style: none;
+          }
+          a {
+            display: inline-block;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+          }
+          a:hover {
+            transform: translate(5px, -1px);
+          }
+        }
+      }
+      &__btn {
+        margin-left: 188px;
+        align-self: end;
+        margin-top: 38px;
+        @include btn(
+          $withIcon: true,
+          $icon: "/assets/icons/rectangle.svg",
+          $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
+        );
+        min-width: 245px;
+        height: 55px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+      &__btn:hover {
+        opacity: 0.8;
+        outline: none;
+      }
+    }
+
+    .how-it-works {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding: 100px 0;
+      align-items: end;
+      h2 {
+        text-align: left;
+        font-weight: 900;
+        font-size: 48px;
+        margin: 0 auto;
+        line-height: 56px;
+        max-width: 790px;
+        width: 100%;
+      }
+      p {
+        margin: 30px auto;
+        max-width: 790px;
+        width: 100%;
+      }
+      img {
+        margin: 0 auto;
+      }
+      &__btn {
+        @include btn(
+          $withIcon: true,
+          $icon: "/assets/icons/rectangle.svg",
+          $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
+        );
+        margin: 0 auto;
+        width: 245px;
+        height: 55px;
+        cursor: pointer;
+      }
+      &__btn:hover {
+        opacity: 0.8;
+      }
+      &__progress {
+        @include slider(black, 0, 60px);
+        margin: 30px auto;
+      }
+    }
+    .infoAbout {
+      padding: 100px;
+      background-color: #f2f2f2;
+      &__wrapper {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 380px;
+        height: 213px;
+        p {
+          margin: 0;
+        }
+        h3 {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 20px;
+        }
+      }
+    }
+    .petsInzoo {
+      display: flex;
+      flex-direction: column;
+      padding: 100px 0;
+      align-items: center;
+      text-align: center;
+      .arrow {
+        cursor: pointer;
+      }
+      .arrow:hover {
+        opacity: 0.5;
+      }
+      h2 {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 48px;
+        margin: 0;
+        margin-bottom: 55px;
+        margin-top: 23px;
+      }
+      &__animals {
+        display: flex;
+        gap: 25px;
+        max-width: 1300px;
+        width: 100%;
+        margin: 0 auto;
+        img {
+          cursor: pointer;
+          &:hover {
+            filter: brightness(50%);
+          }
+        }
+      }
+      &__progress {
+        @include slider(black, 0, 60px);
+        margin: 30px auto;
+      }
+      &__btn {
+        @include btn(
+          $withIcon: false,
+          $icon: "/assets/icons/rectangle.svg",
+          $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
+        );
+        margin: 0 auto;
+        width: 245px;
+        height: 55px;
+      }
+      .animals__panda {
+        width: 278px;
+        height: 399px;
+        background-image: url(/assets/images/panda.jpg);
+        background-size: cover;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 38px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        .animals__title {
+          position: absolute;
+          height: 490px;
+          display: flex;
+          bottom: -172px;
+          transition: bottom 0.3s ease-in;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+          p {
+            color: white;
+            width: 194px;
+            cursor: pointer;
+          }
+          .panda__btns {
+            display: flex;
+            justify-content: center;
+            .first {
+              @include btn(
+                $withIcon: true,
+                $icon: "/assets/icons/rectangle-green.svg",
+                $bg: inherit
+              );
+              span {
+                color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+                background-image: linear-gradient(
+                  106.89deg,
+                  #4bd8b5 -14.32%,
+                  #49d6df 100.68%
+                );
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+              }
+              .icon {
+                width: 24px;
+                height: 24px;
+                border: 1px solid rgba(75, 216, 181, 1);
+              }
+            }
+            .seconde {
+              @include btn(
+                $withIcon: true,
+                $icon: "/assets/icons/$.svg",
+                $bg: inherit
+              );
+              span {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+              }
+              .icon {
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+          &:hover {
+            bottom: 20px;
+          }
+        }
+        &:hover {
+          filter: brightness(50%);
+        }
+      }
+    }
+    .payAndfeed {
+      padding: 100px;
+      background-color: #f2f2f2;
+      h2 {
+        text-align: left;
+        font-weight: 900;
+        font-size: 48px;
+        margin: 0 auto;
+        line-height: 56px;
+        margin-top: -6px;
+      }
+      p {
+        margin: 30px auto;
+        max-width: 790px;
+        width: 100%;
+        margin-left: 259px;
+      }
+      &__wrapper {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 1200px;
+        height: 240px;
+        margin-top: 64px;
+        margin-bottom: 63px;
+      }
+    }
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+      padding: 100px 0;
+      align-items: center;
+      text-align: center;
+      h2 {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 48px;
+        margin: 0;
+        margin-bottom: 69px;
+        margin-top: 17px;
+      }
+      &__wrapper {
+        width: 1300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 37px;
+        .arrow {
+          cursor: pointer;
+        }
+        .arrow:hover {
+          opacity: 0.5;
+        }
+        .testimonials__user {
+          width: 585px;
+          height: 310px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+          img {
+            width: 48px;
+            height: 48px;
+          }
+          .user__image {
+            width: 68px;
+            height: 68px;
+          }
+          h3 {
+            font-family: " Roboto";
+            font-style: normal;
+            font-weight: 900;
+            font-size: 20px;
+          }
+          p {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            max-width: 440px;
+          }
+        }
+      }
+      &__progress {
+        @include slider(black, 27px, 30px);
+        margin: 30px auto;
+      }
+      &__btn {
+        @include btn(
+          $withIcon: false,
+          $icon: "/assets/icons/rectangle.svg",
+          $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
+        );
+        margin: 0 auto;
+        width: 245px;
+        height: 55px;
+      }
+    }
+    .map {
+      position: relative;
+      h2 {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 72px;
+        margin-top: 119px;
+      }
+      .map__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 100px;
+        .map__btn {
+          @include btn(
+            $withIcon: true,
+            $icon: "/assets/icons/rectangle.svg",
+            $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
+          );
+          margin: 0 auto;
+          margin-top: 35px;
+          width: 245px;
+          height: 55px;
+        }
+      }
+      .map__animalExample {
+        display: flex;
+        justify-content: space-evenly;
+        width: 436px;
+        box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+        border-radius: 5px;
+        position: absolute;
+        bottom: 257px;
+        height: 149px;
+        left: 81px;
+        top: 240px;
+        align-items: center;
+        background-color: white;
+        h4 {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 18px;
+          margin-top: 10px;
+        }
+        p {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+        }
+        img {
+          margin-right: 51px;
+        }
+        .example__info {
+          margin-left: -104px;
+          margin-top: -4px;
+        }
+        .animal__info {
+          line-height: 2px;
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      background-color: #333333;
+      height: 751px;
+      flex-direction: column;
+      .footer__navigation__container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        height: 165px;
+        padding: 75px 150px 0 150px;
+        h2 {
+          text-align: justify;
+          line-height: 13px;
+          color: white;
+          cursor: pointer;
+          a {
+            text-decoration: none;
+            color: white;
+          }
+          p {
+            margin: 0;
+          }
+          .footer__zoo {
+            font-family: "Roboto";
+            font-weight: 900;
+            font-size: 37px;
+          }
+          .footer__online {
+            font-family: "Roboto";
+            font-weight: 900;
+            font-size: 20px;
+            padding-top: 10px;
+            letter-spacing: 0px;
+          }
+        }
+        .footer__navigation {
+          ul {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            width: 300px;
+            width: 385px;
+            margin-left: 625px;
+            margin-top: 20px;
+          }
+          li {
+            list-style: none;
+            display: flex;
+          }
+          a {
+            text-decoration: none;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            color: white;
+          }
+        }
+        .footer__btn {
+          @include btn(
+            $withIcon: false,
+            $icon: "/assets/icons/rectangle.svg",
+            $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
+          );
+          width: 279px;
+          height: 55px;
+        }
+      }
+      .contacts__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 150px;
+        margin-top: 30px;
+        h3 {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 20px;
+          color: white;
+        }
+        .contact-us {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          form {
+            display: flex;
+            flex-direction: column;
+            width: 383px;
+            input {
+              height: 26px;
+              margin-top: 17px;
+              outline: none;
+              border: none;
+              background: inherit;
+              padding-bottom: 10px;
+              border-bottom: 1px solid white;
+            }
+            fieldset {
+              border: 1px solid white;
+              margin-top: 26px;
+              height: 122px;
+              legend {
+                color: white;
+              }
+              textarea {
+                width: 100%;
+                height: 100%;
+                background-color: inherit;
+                border: none;
+                resize: none;
+              }
+            }
+          }
+          label {
+            margin-top: 25px;
+            color: #ffffff;
+            input {
+              margin-right: 10px;
+              color: white;
+            }
+          }
+          .footer__btn {
+            margin-top: 18px;
+            width: 108px;
+            align-self: flex-end;
+            padding: 0px;
+            margin-right: 14px;
+            background-color: inherit;
+            border: none;
+            color: white;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            margin-right: 440px;
+          }
+        }
+        .footer__onlineCenter {
+          flex: 1;
+          .footer__navigation {
+            ul {
+              margin-left: -19px;
+              display: contents;
+              display: flex;
+              justify-content: space-between;
+              width: 158px;
+              margin-top: 24px;
+              align-items: center;
+              li {
+                list-style: none;
+              }
+            }
+          }
+          p {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            color: white;
+          }
+        }
+      }
+      .footer__names {
+        width: 1700px;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid white;
+        margin-top: 78px;
+        p {
+          margin-left: 36px;
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          color: white;
+          line-height: 3px;
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+}
