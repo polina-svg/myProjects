@@ -127,6 +127,9 @@ body {
       p {
         margin: 0;
       }
+      .header__title {
+        margin-left: 125px;
+      }
       .header__zoo {
         font-family: "Roboto";
         font-weight: 900;
@@ -868,6 +871,7 @@ body {
         align-items: center;
         height: 165px;
         padding: 75px 150px 0 150px;
+        
         h2 {
           text-align: justify;
           line-height: 13px;
@@ -876,6 +880,10 @@ body {
           a {
             text-decoration: none;
             color: white;
+            cursor: pointer;
+          }
+          a:hover{
+            opacity: 0.5;
           }
           p {
             margin: 0;
@@ -995,6 +1003,10 @@ body {
             gap: 25px;
             align-items: center;
             margin-right: 440px;
+            cursor: pointer;
+          }
+          .footer__btn:hover{
+            opacity: 0.5;
           }
         }
         .footer__onlineCenter {
@@ -1013,6 +1025,9 @@ body {
               }
               a{
                 cursor: pointer;
+              }
+              a:hover{
+                opacity: 0.5;
               }
             }
           }

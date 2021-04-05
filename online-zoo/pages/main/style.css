@@ -38,6 +38,9 @@ body .wrapper .header h1 {
 body .wrapper .header p {
   margin: 0;
 }
+body .wrapper .header .header__title {
+  margin-left: 125px;
+}
 body .wrapper .header .header__zoo {
   font-family: "Roboto";
   font-weight: 900;
@@ -1162,6 +1165,10 @@ body .wrapper .footer .footer__navigation__container h2 {
 body .wrapper .footer .footer__navigation__container h2 a {
   text-decoration: none;
   color: white;
+  cursor: pointer;
+}
+body .wrapper .footer .footer__navigation__container h2 a:hover {
+  opacity: 0.5;
 }
 body .wrapper .footer .footer__navigation__container h2 p {
   margin: 0;
@@ -1291,6 +1298,10 @@ body .wrapper .footer .contacts__wrapper .contact-us .footer__btn {
   gap: 25px;
   align-items: center;
   margin-right: 440px;
+  cursor: pointer;
+}
+body .wrapper .footer .contacts__wrapper .contact-us .footer__btn:hover {
+  opacity: 0.5;
 }
 body .wrapper .footer .contacts__wrapper .footer__onlineCenter {
   flex: 1;
@@ -1309,6 +1320,9 @@ body .wrapper .footer .contacts__wrapper .footer__onlineCenter .footer__navigati
 }
 body .wrapper .footer .contacts__wrapper .footer__onlineCenter .footer__navigation ul a {
   cursor: pointer;
+}
+body .wrapper .footer .contacts__wrapper .footer__onlineCenter .footer__navigation ul a:hover {
+  opacity: 0.5;
 }
 body .wrapper .footer .contacts__wrapper .footer__onlineCenter p {
   font-family: "Roboto";
