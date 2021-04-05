@@ -133,7 +133,7 @@ body .wrapper .header .toggle-bg input:checked {
   z-index: 0;
 }
 body .wrapper .watchAnimals {
-  background-image: url(/assets/images/main-bg.png);
+  background-image: url(../../assets/images/main-bg.png);
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -181,7 +181,7 @@ body .wrapper .watchAnimals .animals__slide {
 body .wrapper .watchAnimals .animals__slide .animals__panda {
   width: 245px;
   height: 352px;
-  background-image: url(/assets/images/panda.jpg);
+  background-image: url(../../assets/images/panda.jpg);
   background-size: cover;
   border-radius: 5px;
   display: flex;
@@ -221,7 +221,7 @@ body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first 
   border: 1px solid white;
   border-radius: 25px;
   margin-right: 5px;
-  background-image: url("/assets/icons/rectangle-green.svg");
+  background-image: url("../../assets/icons/rectangle-green.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -266,7 +266,7 @@ body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .second
   border: 1px solid white;
   border-radius: 25px;
   margin-right: 5px;
-  background-image: url("/assets/icons/$.svg");
+  background-image: url("../../assets/icons/$.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -290,7 +290,7 @@ body .wrapper .watchAnimals .animals__slide .animals__panda:hover {
   box-shadow: #26394d 0px 20px 30px -10px;
 }
 body .wrapper .watchAnimals .animals__slide .animals__eagle {
-  background-image: url(/assets/images/eagle.jpg);
+  background-image: url(../../assets/images/eagle.jpg);
   width: 140px;
   height: 203px;
   background-size: cover;
@@ -303,7 +303,7 @@ body .wrapper .watchAnimals .animals__slide .animals__eagle:hover {
   box-shadow: #26394d 0px 20px 30px -10px;
 }
 body .wrapper .watchAnimals .animals__slide .animals__gorilla {
-  background-image: url(/assets/images/gorilla.jpg);
+  background-image: url(../../assets/images/gorilla.jpg);
   width: 140px;
   height: 203px;
   background-size: cover;
@@ -316,7 +316,7 @@ body .wrapper .watchAnimals .animals__slide .animals__gorilla:hover {
   box-shadow: #26394d 0px 20px 30px -10px;
 }
 body .wrapper .watchAnimals .animals__slide .animals__crocodile {
-  background-image: url(/assets/images/aligator.jpg);
+  background-image: url(../../assets/images/aligator.jpg);
   width: 140px;
   height: 203px;
   background-size: cover;
@@ -329,7 +329,7 @@ body .wrapper .watchAnimals .animals__slide .animals__crocodile:hover {
   box-shadow: #26394d 0px 20px 30px -10px;
 }
 body .wrapper .watchAnimals .animals__slide .animals__fox {
-  background-image: url(/assets/images/fox.jpg);
+  background-image: url(../../assets/images/fox.jpg);
   width: 96px;
   height: 203px;
   background-size: cover;
@@ -450,7 +450,7 @@ body .wrapper .watchAnimals__btn .icon {
   border: 1px solid white;
   border-radius: 25px;
   margin-right: 5px;
-  background-image: url("/assets/icons/rectangle.svg");
+  background-image: url("../../assets/icons/rectangle.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -511,7 +511,7 @@ body .wrapper .how-it-works__btn .icon {
   border: 1px solid white;
   border-radius: 25px;
   margin-right: 5px;
-  background-image: url("/assets/icons/rectangle.svg");
+  background-image: url("../../assets/icons/rectangle.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -726,7 +726,7 @@ body .wrapper .petsInzoo__btn span {
 body .wrapper .petsInzoo .animals__panda {
   width: 278px;
   height: 399px;
-  background-image: url(/assets/images/panda.jpg);
+  background-image: url(../../assets/images/panda.jpg);
   background-size: cover;
   border-radius: 5px;
   display: flex;
@@ -778,7 +778,7 @@ body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .first .ic
   border: 1px solid white;
   border-radius: 25px;
   margin-right: 5px;
-  background-image: url("/assets/icons/rectangle-green.svg");
+  background-image: url("../../assets/icons/rectangle-green.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -821,7 +821,7 @@ body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .seconde .
   border: 1px solid white;
   border-radius: 25px;
   margin-right: 5px;
-  background-image: url("/assets/icons/$.svg");
+  background-image: url("../../assets/icons/$.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1133,7 +1133,7 @@ body .wrapper .map .map__wrapper .map__btn .icon {
   border: 1px solid white;
   border-radius: 25px;
   margin-right: 5px;
-  background-image: url("/assets/icons/rectangle.svg");
+  background-image: url("../../assets/icons/rectangle.svg");
   background-repeat: no-repeat;
   background-position: center;
 }

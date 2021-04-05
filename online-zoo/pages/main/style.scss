@@ -227,7 +227,7 @@ body {
       }
     }
     .watchAnimals {
-      background-image: url(/assets/images/main-bg.png);
+      background-image: url(../../assets/images/main-bg.png);
       background-repeat: no-repeat;
       display: flex;
       flex-direction: column;
@@ -272,7 +272,7 @@ body {
           .animals__panda {
             width: 245px;
             height: 352px;
-            background-image: url(/assets/images/panda.jpg);
+            background-image: url(../../assets/images/panda.jpg);
             background-size: cover;
             border-radius: 5px;
             display: flex;
@@ -293,7 +293,7 @@ body {
               .first {
                 @include btn(
                   $withIcon: true,
-                  $icon: "/assets/icons/rectangle-green.svg",
+                  $icon: "../../assets/icons/rectangle-green.svg",
                   $bg: inherit
                 );
                 span {
@@ -320,7 +320,7 @@ body {
               .seconde {
                 @include btn(
                   $withIcon: true,
-                  $icon: "/assets/icons/$.svg",
+                  $icon: "../../assets/icons/$.svg",
                   $bg: inherit
                 );
                 span {
@@ -342,7 +342,7 @@ body {
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
           }
           .animals__eagle {
-            background-image: url(/assets/images/eagle.jpg);
+            background-image: url(../../assets/images/eagle.jpg);
             width: 140px;
             height: 203px;
             background-size: cover;
@@ -355,7 +355,7 @@ body {
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
           }
           .animals__gorilla {
-            background-image: url(/assets/images/gorilla.jpg);
+            background-image: url(../../assets/images/gorilla.jpg);
             width: 140px;
             height: 203px;
             background-size: cover;
@@ -368,7 +368,7 @@ body {
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
           }
           .animals__crocodile {
-            background-image: url(/assets/images/aligator.jpg);
+            background-image: url(../../assets/images/aligator.jpg);
             width: 140px;
             height: 203px;
             background-size: cover;
@@ -381,7 +381,7 @@ body {
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
           }
           .animals__fox {
-            background-image: url(/assets/images/fox.jpg);
+            background-image: url(../../assets/images/fox.jpg);
             width: 96px;
             height: 203px;
             background-size: cover;
@@ -430,7 +430,7 @@ body {
         margin-top: 38px;
         @include btn(
           $withIcon: true,
-          $icon: "/assets/icons/rectangle.svg",
+          $icon: "../../assets/icons/rectangle.svg",
           $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
         );
         min-width: 245px;
@@ -470,7 +470,7 @@ body {
       &__btn {
         @include btn(
           $withIcon: true,
-          $icon: "/assets/icons/rectangle.svg",
+          $icon: "../../assets/icons/rectangle.svg",
           $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
         );
         margin: 0 auto;
@@ -557,7 +557,7 @@ body {
       &__btn {
         @include btn(
           $withIcon: false,
-          $icon: "/assets/icons/rectangle.svg",
+          $icon: "../../assets/icons/rectangle.svg",
           $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
         );
         margin: 0 auto;
@@ -567,7 +567,7 @@ body {
       .animals__panda {
         width: 278px;
         height: 399px;
-        background-image: url(/assets/images/panda.jpg);
+        background-image: url(../../assets/images/panda.jpg);
         background-size: cover;
         border-radius: 5px;
         display: flex;
@@ -598,7 +598,7 @@ body {
             .first {
               @include btn(
                 $withIcon: true,
-                $icon: "/assets/icons/rectangle-green.svg",
+                $icon: "../../assets/icons/rectangle-green.svg",
                 $bg: inherit
               );
               span {
@@ -623,7 +623,7 @@ body {
             .seconde {
               @include btn(
                 $withIcon: true,
-                $icon: "/assets/icons/$.svg",
+                $icon: "../../assets/icons/$.svg",
                 $bg: inherit
               );
               span {
@@ -747,7 +747,7 @@ body {
       &__btn {
         @include btn(
           $withIcon: false,
-          $icon: "/assets/icons/rectangle.svg",
+          $icon: "../../assets/icons/rectangle.svg",
           $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
         );
         margin: 0 auto;
@@ -848,7 +848,7 @@ body {
         .map__btn {
           @include btn(
             $withIcon: true,
-            $icon: "/assets/icons/rectangle.svg",
+            $icon: "../../assets/icons/rectangle.svg",
             $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
           );
           margin: 0 auto;
@@ -929,7 +929,7 @@ body {
         .footer__btn {
           @include btn(
             $withIcon: false,
-            $icon: "/assets/icons/rectangle.svg",
+            $icon: "../../assets/icons/rectangle.svg",
             $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
           );
           width: 279px;
