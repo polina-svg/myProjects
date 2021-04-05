@@ -61,7 +61,7 @@ body .wrapper .header nav li {
   list-style: none;
   display: flex;
 }
-body .wrapper .header nav a {
+body .wrapper .header nav li .list__item {
   text-decoration: none;
   font-family: Roboto;
   font-style: normal;
@@ -69,18 +69,11 @@ body .wrapper .header nav a {
   font-size: 16px;
   color: black;
   cursor: pointer;
+  transition: all 0.5s ease-in;
 }
-body .wrapper .header nav a:hover {
-  opacity: 0.5;
-}
-body .wrapper .header nav .active {
-  cursor: pointer;
-}
-body .wrapper .header nav .map {
+body .wrapper .header nav li .list__item:hover {
   text-decoration: underline;
-}
-body .wrapper .header nav .map:hover {
-  opacity: 0.8;
+  font-weight: 900;
 }
 body .wrapper .header .toggle-bg {
   background: #f2f2f2;
@@ -346,7 +339,7 @@ body .wrapper .map-map .map .map__wrapper .map__btn .icon {
   border: 1px solid white;
   border-radius: 25px;
   margin-right: 5px;
-  background-image: url(../../assets/icons/rectangle.svg);
+  background-image: url("/assets/icons/rectangle.svg");
   background-repeat: no-repeat;
   background-position: center;
 }

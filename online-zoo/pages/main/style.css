@@ -76,15 +76,23 @@ body .wrapper .header nav li {
   list-style: none;
   display: flex;
 }
-body .wrapper .header nav .active {
+body .wrapper .header nav li .list__item {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
   cursor: pointer;
+  transition: all 0.5s ease-in;
 }
-body .wrapper .header nav .about {
+body .wrapper .header nav li .list__item:hover {
   text-decoration: underline;
+  font-weight: 900;
 }
-body .wrapper .header nav .active:hover {
-  opacity: 0.8;
+body .wrapper .header nav li .list__item.active {
   text-decoration: underline;
+  font-weight: 900;
 }
 body .wrapper .header .toggle-bg {
   background: #f2f2f2;
@@ -716,6 +724,7 @@ body .wrapper .petsInzoo__btn {
   margin: 0 auto;
   width: 245px;
   height: 55px;
+  color: #ffffff;
 }
 body .wrapper .petsInzoo__btn:hover {
   opacity: 0.6;
