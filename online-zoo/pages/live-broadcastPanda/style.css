@@ -9,7 +9,7 @@ body {
 body .wrapper {
   margin: 0 auto;
   max-width: 1920px;
-  overflow: hidden;
+  width: 100%;
 }
 body .wrapper .header {
   display: flex;
@@ -19,8 +19,8 @@ body .wrapper .header {
 }
 body .wrapper .header h1 {
   text-align: justify;
-  line-height: 14px;
-  margin-left: 116px;
+  line-height: 13px;
+  margin-left: 125px;
 }
 body .wrapper .header p {
   margin: 0;
@@ -51,11 +51,10 @@ body .wrapper .header nav ul {
   padding: 0;
   align-items: center;
   width: 100%;
-  width: 574px;
-  padding-top: -5px;
+  width: 607px;
+  padding-top: 5px;
   padding-right: -16px;
-  padding-left: 45px;
-  padding-bottom: 13px;
+  padding-left: 43px;
 }
 body .wrapper .header nav li {
   list-style: none;
@@ -68,18 +67,14 @@ body .wrapper .header nav a {
   font-weight: 500;
   font-size: 16px;
   color: black;
-  cursor: pointer;
-}
-body .wrapper .header nav a:hover {
-  opacity: 0.5;
 }
 body .wrapper .header nav .active {
   cursor: pointer;
 }
-body .wrapper .header nav .map {
+body .wrapper .header nav .about {
   text-decoration: underline;
 }
-body .wrapper .header nav .map:hover {
+body .wrapper .header nav .active:hover {
   opacity: 0.8;
 }
 body .wrapper .header .toggle-bg {
@@ -91,9 +86,8 @@ body .wrapper .header .toggle-bg {
   width: 54px;
   border-radius: 20px;
   right: 152px;
-  top: -7px;
+  top: 4px;
   cursor: pointer;
-  right: 143px;
 }
 body .wrapper .header .toggle-bg input {
   height: 20px;
@@ -130,198 +124,81 @@ body .wrapper .header .toggle-bg input ~ :checked ~ .switch {
 body .wrapper .header .toggle-bg input:checked {
   z-index: 0;
 }
-body .wrapper .map-map .map__container {
+body .wrapper .container {
   display: flex;
-  flex-direction: column;
+  height: 903px;
+}
+body .wrapper .container .aside {
+  position: sticky;
+  top: 0;
+  height: 600px;
+  width: 209px;
+}
+body .wrapper .container .aside .aside__container .aside__container__images {
   align-items: center;
-  width: 1774px;
-  gap: -18px;
-}
-body .wrapper .map-map .map__container h2 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 48px;
-  color: #333333;
-  padding-bottom: 84px;
-  margin-top: 68px;
-  margin-bottom: -50px;
-  margin-left: 125px;
-}
-body .wrapper .map-map .map__container p {
-  width: 790px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  color: #4F4F4F;
-  padding-bottom: 24px;
-  margin-left: 137px;
-}
-body .wrapper .map-map .map__container .map__container__images {
-  display: flex;
-  padding-bottom: 9px;
-  height: 110px;
-  display: flex;
-  gap: 26px;
-  padding-bottom: -6px;
-  align-items: center;
-  width: 1102px;
-  padding-top: -22px;
-  margin-top: 38px;
-}
-body .wrapper .map-map .map__container .map__progress {
-  width: 245px;
-  height: 49px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: 30px auto;
-  padding-left: 96px;
-  padding-top: 23px;
-}
-body .wrapper .map-map .map__container .map__progress .progress__numbers .progress__num {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 900;
-}
-body .wrapper .map-map .map__container .map__progress .progress__numbers .progress__num_first {
-  color: black;
-  font-size: 24px;
-  line-height: 28px;
-}
-body .wrapper .map-map .map__container .map__progress .progress__numbers .progress__num_slash {
-  color: black;
-  font-size: 24px;
-  line-height: 28px;
-}
-body .wrapper .map-map .map__container .map__progress .progress__numbers .progress__num_last {
-  color: #828282;
-  font-size: 14px;
-  line-height: 16px;
-}
-body .wrapper .map-map .map__container .map__progress .progress__slider {
-  width: 100%;
-  position: relative;
-  height: 10px;
-  display: flex;
-  align-items: center;
-}
-body .wrapper .map-map .map__container .map__progress .progress__slider .progress__bar {
-  background-color: #828282;
-  height: 5px;
-  width: 100%;
-  cursor: pointer;
-}
-body .wrapper .map-map .map__container .map__progress .progress__slider .progress__bar:hover {
-  opacity: 0.7;
-}
-body .wrapper .map-map .map__container .map__progress .progress__slider .progress__cursor {
-  height: 10px;
-  background-color: black;
-  width: 60px;
-  position: absolute;
-  left: 0;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-body .wrapper .map-map .map__container .map__progress .progress__slider .progress__cursor:hover {
-  transform: scale(1.4);
-}
-body .wrapper .map-map .map {
-  position: relative;
-  bottom: -43px;
-}
-body .wrapper .map-map .map h2 {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 48px;
   text-align: center;
-  margin-bottom: 72px;
-  margin-top: 119px;
 }
-body .wrapper .map-map .map .map__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 100px;
+body .wrapper .container .aside .aside__container .aside__container__images .aside__container__animal {
+  padding: 20px;
 }
-body .wrapper .map-map .map .map__wrapper .animals__box {
-  position: absolute;
-  overflow: hidden;
-  width: 70px;
-  height: 95px;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
+body .wrapper .container .aside .aside__container .aside__container__images .aside__container__animal img {
+  width: 108px;
+  height: 108px;
 }
-body .wrapper .map-map .map .map__wrapper .animals__box:hover {
-  overflow: visible;
+body .wrapper .container .aside .aside__container .aside__container__images .aside__container__animal img[alt=panda] {
+  width: 157px;
+  height: 157px;
 }
-body .wrapper .map-map .map .map__wrapper .animals__box .animals__marker {
-  position: absolute;
-  top: -11px;
-  left: -12px;
-  transition: transform 0.5s ease-in-out;
+body .wrapper .container .animal__video {
+  padding: 55px 150px;
 }
-body .wrapper .map-map .map .map__wrapper .animals__box .animals__marker:hover {
-  transform: scale(1.2);
-}
-body .wrapper .map-map .map .map__wrapper .animals__box .map__animalExample {
-  display: flex;
-  justify-content: space-evenly;
-  width: 436px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  border-radius: 5px;
-  position: absolute;
-  bottom: 257px;
-  height: 149px;
-  right: 40px;
-  top: 95px;
-  align-items: center;
-  background-color: white;
-}
-body .wrapper .map-map .map .map__wrapper .animals__box .map__animalExample h4 {
+body .wrapper .container .animal__video h2 {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 48px;
 }
-body .wrapper .map-map .map .map__wrapper .animals__box .map__animalExample p {
+body .wrapper .container .content {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+body .wrapper .container .content h2 {
   font-family: "Roboto";
   font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
 }
-body .wrapper .map-map .map .map__wrapper .animals__box .map__animalExample img {
-  margin-right: 51px;
+body .wrapper .container .content .animal__video__container {
+  width: 792px;
+  height: 611px;
+  display: grid;
+  grid-template-areas: "big big big" "big big big" "one two three";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
 }
-body .wrapper .map-map .map .map__wrapper .animals__box .map__animalExample .example__info {
-  margin-left: -104px;
-  margin-top: -4px;
+body .wrapper .container .content .animal__video__container .big-frame {
+  grid-area: big;
+  border-radius: 10px;
 }
-body .wrapper .map-map .map .map__wrapper .animals__box .map__animalExample .animal__info {
-  line-height: 2px;
+body .wrapper .container .content .animal__video__container .one {
+  grid-area: one;
+  border-radius: 10px;
 }
-body .wrapper .map-map .map .map__wrapper .animals__box.panda {
-  top: 180px;
-  right: 600px;
+body .wrapper .container .content .animal__video__container .two {
+  grid-area: two;
+  border-radius: 10px;
 }
-body .wrapper .map-map .map .map__wrapper .animals__box.gorilla {
-  top: 280px;
+body .wrapper .container .content .animal__video__container .three {
+  grid-area: three;
+  border-radius: 10px;
 }
-body .wrapper .map-map .map .map__wrapper .animals__box.aligator {
-  top: 190px;
-  left: 603px;
+body .wrapper .container .content .animal__info {
+  flex: 1;
 }
-body .wrapper .map-map .map .map__wrapper .animals__box.eagle {
-  top: 165px;
-  left: 480px;
-}
-body .wrapper .map-map .map .map__wrapper .map__btn {
+body .wrapper .container .content .animal__info .animal__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -332,35 +209,23 @@ body .wrapper .map-map .map .map__wrapper .map__btn {
   color: #ffffff;
   border: none;
   cursor: pointer;
-  margin: 0 auto;
-  margin-top: 35px;
-  width: 245px;
+  width: 194px;
   height: 55px;
 }
-body .wrapper .map-map .map .map__wrapper .map__btn:hover {
+body .wrapper .container .content .animal__info .animal__btn:hover {
   opacity: 0.6;
 }
-body .wrapper .map-map .map .map__wrapper .map__btn .icon {
-  width: 32px;
-  height: 29px;
-  border: 1px solid white;
-  border-radius: 25px;
-  margin-right: 5px;
-  background-image: url("/assets/icons/rectangle.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-body .wrapper .map-map .map .map__wrapper .map__btn span {
+body .wrapper .container .content .animal__info .animal__btn span {
   font-size: 18px;
   text-transform: uppercase;
 }
 body .wrapper .footer {
+  padding: 0 150px;
   display: flex;
   align-items: center;
   background-color: #333333;
   height: 751px;
   flex-direction: column;
-  padding: 53px 142px;
 }
 body .wrapper .footer .footer__navigation__container {
   display: flex;
@@ -379,10 +244,6 @@ body .wrapper .footer .footer__navigation__container h2 {
 body .wrapper .footer .footer__navigation__container h2 a {
   text-decoration: none;
   color: white;
-  cursor: pointer;
-}
-body .wrapper .footer .footer__navigation__container h2 a:hover {
-  opacity: 0.5;
 }
 body .wrapper .footer .footer__navigation__container h2 p {
   margin: 0;
@@ -512,10 +373,6 @@ body .wrapper .footer .contacts__wrapper .contact-us .footer__btn {
   gap: 25px;
   align-items: center;
   margin-right: 440px;
-  cursor: pointer;
-}
-body .wrapper .footer .contacts__wrapper .contact-us .footer__btn:hover {
-  opacity: 0.5;
 }
 body .wrapper .footer .contacts__wrapper .footer__onlineCenter {
   flex: 1;
@@ -532,12 +389,6 @@ body .wrapper .footer .contacts__wrapper .footer__onlineCenter .footer__navigati
 body .wrapper .footer .contacts__wrapper .footer__onlineCenter .footer__navigation ul li {
   list-style: none;
 }
-body .wrapper .footer .contacts__wrapper .footer__onlineCenter .footer__navigation ul a {
-  cursor: pointer;
-}
-body .wrapper .footer .contacts__wrapper .footer__onlineCenter .footer__navigation ul a:hover {
-  opacity: 0.5;
-}
 body .wrapper .footer .contacts__wrapper .footer__onlineCenter p {
   font-family: "Roboto";
   font-style: normal;
@@ -551,7 +402,6 @@ body .wrapper .footer .footer__names {
   flex-direction: column;
   border-top: 1px solid white;
   margin-top: 78px;
-  margin-top: 93px;
 }
 body .wrapper .footer .footer__names p {
   margin-left: 36px;
