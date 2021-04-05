@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZooApp</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>
+          <p class="header__zoo">zoo</p>
+          <p class="header__online">online</p>
+        </h1>
+        <nav class="header__navigation">
+          <ul>
+            <li><a class="about" href="#header">About</a></li>
+            <li><a class="active" href="#">Zoos</a></li>
+            <li><a class="active" href="#">Map</a></li>
+            <li><a class="active" href="#form">Contact Us</a></li>
+            <li>
+              <a
+                class="active"
+                href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
+                >Design</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <span class="toggle-bg">
+          <input type="radio" name="toggle" value="off" />
+          <input type="radio" name="toggle" value="on" />
+          <span class="switch"></span>
+        </span>
+      </header>
+      <div class="container">
+        <aside class="aside">
+          <div class="aside__container">
+            <div class="aside__container__images">
+              <img
+                height="30px"
+                class="arrow"
+                src="../../assets/icons/arrow-UP.svg"
+                alt=""
+              />
+              <div class="aside__container__animal">
+                <img
+                  height="30px"
+                  class="arrow"
+                  src="../../assets/icons/arrow-UP.svg"
+                  alt=""
+                />
+                <div class="aside__container__animal">
+                  <a href="../../pages/live-broadcastPanda/">
+                    <img src="../../assets/images/pandaMap.png" alt="panda" />
+                  </a>
+                  <a href="../../pages/live-broadcastEagle/">
+                    <img src="../../assets/images/eagleMap.png" alt="eagle" />
+                  </a>
+
+                  <a href="../../pages/live-broadcastAligator/">
+                    <img
+                      src="../../assets/images/alligatorMap.png"
+                      alt="aligator"
+                    />
+                  </a>
+                  <a href="../../pages/live-broadcastGorila/">
+                    <img
+                      src="../../assets/images/gorillaMap.png"
+                      alt="gorilla"
+                    />
+                  </a>
+                </div>
+                <img
+                  height="30px"
+                  class="arrow"
+                  src="../../assets/icons/arrow-down.svg"
+                  alt=""
+                />
+              </div>
+              <img
+                height="30px"
+                class="arrow"
+                src="../../assets/icons/arrow-down.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </aside>
+        <section class="animal__video">
+          <h2>West End Bald Eagle Cam</h2>
+          <div class="content">
+            <div class="animal__video__container">
+              <div class="big-frame">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/7utMaDb1W08"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="little-frame one">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/7utMaDb1W08"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="little-frame two">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/7utMaDb1W08"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="little-frame three">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/7utMaDb1W08"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div class="animal__info">
+              <h2>Population:</h2>
+              <p>More than 270 pairs in 2013</p>
+              <h2>Habitat:</h2>
+              <p>Typically nest in forested areas adjacent to large bodies of water</p>
+              <h2>Diet:</h2>
+              <p>
+                Main live prey consists of medium sized mammals and birds such as rabbits, hares, grouse and ptarmigan. The diet of coastal birds includes gulls and other seabirds.
+              </p>
+              <button class="animal__btn">FEED</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="footer__navigation__container">
+          <h2>
+            <a href="#header">
+              <p class="footer__zoo">zoo</p>
+              <p class="footer__online">online</p>
+            </a>
+          </h2>
+          <nav class="footer__navigation">
+            <ul>
+              <li><a class="about" href="#">About</a></li>
+              <li><a class="active" href="#">Zoos</a></li>
+              <li><a class="active" href="#">Map</a></li>
+              <li><a class="active" href="#">Design</a></li>
+            </ul>
+          </nav>
+          <button class="footer__btn">
+            <div class="icon"></div>
+            <span>donate for volunteers</span>
+          </button>
+        </div>
+        <div class="contacts__wrapper">
+          <div class="contact-us" id="form">
+            <h3>Contact us</h3>
+            <form action="#">
+              <input type="text" placeholder="name" />
+              <input type="email" placeholder="email" />
+              <fieldset>
+                <legend>Please enter your message</legend>
+                <textarea maxlength="280"></textarea>
+              </fieldset>
+            </form>
+            <label for="#"
+              ><input type="checkbox" />I agree to the processing of Personal
+              Data</label
+            >
+            <button class="footer__btn">
+              SEND
+              <img src="../../assets/icons/ArrowFooter.png" alt="play" />
+            </button>
+          </div>
+          <div class="footer__onlineCenter">
+            <h3>ZOO Online Centre</h3>
+            <p>132, Address District, Street</p>
+            <p>Open Daily 10:00 am - 5:00 pm</p>
+            <p>T(702) 163-3433</p>
+            <p>zoo.online@gmail.com</p>
+            <nav class="footer__navigation">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="../../assets/icons/instagram 1.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="../../assets/icons/twittersvg.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="../../assets/icons/youtube.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="../../assets/icons/vk.svg" alt="" /></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__names">
+          <p>©Noora Sagnayeva</p>
+          <p>©RSSchool and ©Yem Digital - 2021</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
