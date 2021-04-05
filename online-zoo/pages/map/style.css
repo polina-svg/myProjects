@@ -7,17 +7,8 @@ body {
   line-height: 16px;
   color: #4f4f4f;
 }
-body a {
-  text-decoration: none;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  color: black;
-}
 body .zoo {
   visibility: hidden;
-  display: none;
 }
 body .wrapper {
   margin: 0 auto;
@@ -72,6 +63,14 @@ body .wrapper .header nav ul {
 body .wrapper .header nav li {
   list-style: none;
   display: flex;
+}
+body .wrapper .header nav a {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
 }
 body .wrapper .header nav .active {
   cursor: pointer;
@@ -635,12 +634,6 @@ body .wrapper .petsInzoo__animals {
   width: 100%;
   margin: 0 auto;
 }
-body .wrapper .petsInzoo__animals img {
-  cursor: pointer;
-}
-body .wrapper .petsInzoo__animals img:hover {
-  filter: brightness(50%);
-}
 body .wrapper .petsInzoo__progress {
   width: 245px;
   height: 49px;
@@ -732,29 +725,21 @@ body .wrapper .petsInzoo .animals__panda {
   align-items: center;
   padding-bottom: 38px;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title {
-  position: absolute;
-  height: 490px;
-  display: flex;
-  bottom: -172px;
-  transition: bottom 0.3s ease-in;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
-body .wrapper .petsInzoo .animals__panda .animals__title p {
+body .wrapper .petsInzoo .animals__panda p {
   color: white;
   width: 194px;
   cursor: pointer;
+  transition: all 0.3s;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns {
+body .wrapper .petsInzoo .animals__panda p:hover {
+  transform: scale(1.4);
+}
+body .wrapper .petsInzoo .animals__panda .panda__btns {
   display: flex;
   justify-content: center;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .first {
+body .wrapper .petsInzoo .animals__panda .panda__btns .first {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -766,10 +751,10 @@ body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .first {
   border: none;
   cursor: pointer;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .first:hover {
+body .wrapper .petsInzoo .animals__panda .panda__btns .first:hover {
   opacity: 0.6;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .first .icon {
+body .wrapper .petsInzoo .animals__panda .panda__btns .first .icon {
   width: 32px;
   height: 29px;
   border: 1px solid white;
@@ -779,11 +764,11 @@ body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .first .ic
   background-repeat: no-repeat;
   background-position: center;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .first span {
+body .wrapper .petsInzoo .animals__panda .panda__btns .first span {
   font-size: 18px;
   text-transform: uppercase;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .first span {
+body .wrapper .petsInzoo .animals__panda .panda__btns .first span {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -792,12 +777,12 @@ body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .first spa
   font-size: 12px;
   line-height: 14px;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .first .icon {
+body .wrapper .petsInzoo .animals__panda .panda__btns .first .icon {
   width: 24px;
   height: 24px;
   border: 1px solid #4bd8b5;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .seconde {
+body .wrapper .petsInzoo .animals__panda .panda__btns .seconde {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -809,10 +794,10 @@ body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .seconde {
   border: none;
   cursor: pointer;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .seconde:hover {
+body .wrapper .petsInzoo .animals__panda .panda__btns .seconde:hover {
   opacity: 0.6;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .seconde .icon {
+body .wrapper .petsInzoo .animals__panda .panda__btns .seconde .icon {
   width: 32px;
   height: 29px;
   border: 1px solid white;
@@ -822,24 +807,21 @@ body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .seconde .
   background-repeat: no-repeat;
   background-position: center;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .seconde span {
+body .wrapper .petsInzoo .animals__panda .panda__btns .seconde span {
   font-size: 18px;
   text-transform: uppercase;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .seconde span {
+body .wrapper .petsInzoo .animals__panda .panda__btns .seconde span {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title .panda__btns .seconde .icon {
+body .wrapper .petsInzoo .animals__panda .panda__btns .seconde .icon {
   width: 24px;
   height: 24px;
 }
-body .wrapper .petsInzoo .animals__panda .animals__title:hover {
-  bottom: 20px;
-}
 body .wrapper .petsInzoo .animals__panda:hover {
-  filter: brightness(50%);
+  opacity: 0.6;
 }
 body .wrapper .payAndfeed {
   padding: 100px;

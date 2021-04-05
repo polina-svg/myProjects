@@ -39,6 +39,10 @@
       background-color: #828282;
       height: 5px;
       width: 100%;
+      cursor: pointer;
+    }
+    .progress__bar:hover {
+      opacity: 0.7;
     }
     .progress__cursor {
       height: 10px;
@@ -46,6 +50,11 @@
       width: $widthcursor;
       position: absolute;
       left: $position;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .progress__cursor:hover {
+      transform: scale(1.4);
     }
   }
 }
@@ -60,6 +69,10 @@
   font-weight: 900;
   color: #ffffff;
   border: none;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
   @if $withIcon {
     .icon {
       width: 32px;
@@ -85,6 +98,18 @@ body {
   font-size: 14px;
   line-height: 16px;
   color: #4f4f4f;
+  a {
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+  }
+  .zoo {
+    visibility: hidden;
+    display: none;
+  }
   .wrapper {
     margin: 0 auto;
     max-width: 1920px;
@@ -137,13 +162,14 @@ body {
           list-style: none;
           display: flex;
         }
-        a {
-          text-decoration: none;
-          font-family: Roboto;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 16px;
-          color: black;
+        .active {
+          cursor: pointer;
+        }
+        .about {
+          text-decoration: underline;
+        }
+        .active:hover {
+          opacity: 0.8;
         }
       }
 
@@ -157,6 +183,7 @@ body {
         border-radius: 20px;
         right: 152px;
         top: 4px;
+        cursor: pointer;
       }
       .toggle-bg input {
         height: 20px;
@@ -168,6 +195,9 @@ body {
         top: 5px;
         width: 20px;
         z-index: 2;
+      }
+      .toggle-bg:hover {
+        background-color: black;
       }
       .switch {
         background: #ffffff;
@@ -247,6 +277,8 @@ body {
             justify-content: flex-end;
             align-items: center;
             padding-bottom: 38px;
+            cursor: pointer;
+            transition: all 0.3s;
             p {
               color: white;
               width: 194px;
@@ -254,6 +286,7 @@ body {
             .panda__btns {
               display: flex;
               justify-content: center;
+
               .first {
                 @include btn(
                   $withIcon: true,
@@ -272,11 +305,13 @@ body {
                   font-weight: 500;
                   font-size: 12px;
                   line-height: 14px;
+                  cursor: pointer;
                 }
                 .icon {
                   width: 24px;
                   height: 24px;
                   border: 1px solid rgba(75, 216, 181, 1);
+                  cursor: pointer;
                 }
               }
               .seconde {
@@ -289,13 +324,19 @@ body {
                   font-weight: 500;
                   font-size: 12px;
                   line-height: 14px;
+                  cursor: pointer;
                 }
                 .icon {
                   width: 24px;
                   height: 24px;
+                  cursor: pointer;
                 }
               }
             }
+          }
+          .animals__panda:hover {
+            transform: scale(0.9);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
           }
           .animals__eagle {
             background-image: url(/assets/images/eagle.jpg);
@@ -303,6 +344,12 @@ body {
             height: 203px;
             background-size: cover;
             border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+          }
+          .animals__eagle:hover {
+            transform: scale(0.9);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
           }
           .animals__gorilla {
             background-image: url(/assets/images/gorilla.jpg);
@@ -310,6 +357,12 @@ body {
             height: 203px;
             background-size: cover;
             border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+          }
+          .animals__gorilla:hover {
+            transform: scale(0.9);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
           }
           .animals__crocodile {
             background-image: url(/assets/images/aligator.jpg);
@@ -317,6 +370,12 @@ body {
             height: 203px;
             background-size: cover;
             border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+          }
+          .animals__crocodile:hover {
+            transform: scale(0.9);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
           }
           .animals__fox {
             background-image: url(/assets/images/fox.jpg);
@@ -324,6 +383,12 @@ body {
             height: 203px;
             background-size: cover;
             border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+          }
+          .animals__fox:hover {
+            transform: scale(0.9);
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
           }
         }
         &__progress {
@@ -342,8 +407,17 @@ body {
           width: 20px;
           height: 107px;
           justify-content: space-between;
+
           li {
             list-style: none;
+          }
+          a {
+            display: inline-block;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+          }
+          a:hover {
+            transform: translate(5px, -1px);
           }
         }
       }
@@ -358,6 +432,12 @@ body {
         );
         min-width: 245px;
         height: 55px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+      &__btn:hover {
+        opacity: 0.8;
+        outline: none;
       }
     }
 
@@ -393,6 +473,10 @@ body {
         margin: 0 auto;
         width: 245px;
         height: 55px;
+        cursor: pointer;
+      }
+      &__btn:hover {
+        opacity: 0.8;
       }
       &__progress {
         @include slider(black, 0, 60px);
@@ -435,6 +519,12 @@ body {
       padding: 100px 0;
       align-items: center;
       text-align: center;
+      .arrow {
+        cursor: pointer;
+      }
+      .arrow:hover {
+        opacity: 0.5;
+      }
       h2 {
         font-family: "Roboto";
         font-style: normal;
@@ -450,6 +540,12 @@ body {
         max-width: 1300px;
         width: 100%;
         margin: 0 auto;
+        img {
+          cursor: pointer;
+          &:hover {
+            filter: brightness(50%);
+          }
+        }
       }
       &__progress {
         @include slider(black, 0, 60px);
@@ -476,54 +572,74 @@ body {
         justify-content: flex-end;
         align-items: center;
         padding-bottom: 38px;
-        p {
-          color: white;
-          width: 194px;
-        }
-        .panda__btns {
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        .animals__title {
+          position: absolute;
+          height: 490px;
           display: flex;
-          justify-content: center;
-          .first {
-            @include btn(
-              $withIcon: true,
-              $icon: "/assets/icons/rectangle-green.svg",
-              $bg: inherit
-            );
-            span {
-              color: transparent;
-              -webkit-background-clip: text;
-              background-clip: text;
-              background-image: linear-gradient(
-                106.89deg,
-                #4bd8b5 -14.32%,
-                #49d6df 100.68%
+          bottom: -172px;
+          transition: bottom 0.3s ease-in;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+          p {
+            color: white;
+            width: 194px;
+            cursor: pointer;
+          }
+          .panda__btns {
+            display: flex;
+            justify-content: center;
+            .first {
+              @include btn(
+                $withIcon: true,
+                $icon: "/assets/icons/rectangle-green.svg",
+                $bg: inherit
               );
-              font-weight: 500;
-              font-size: 12px;
-              line-height: 14px;
+              span {
+                color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+                background-image: linear-gradient(
+                  106.89deg,
+                  #4bd8b5 -14.32%,
+                  #49d6df 100.68%
+                );
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+              }
+              .icon {
+                width: 24px;
+                height: 24px;
+                border: 1px solid rgba(75, 216, 181, 1);
+              }
             }
-            .icon {
-              width: 24px;
-              height: 24px;
-              border: 1px solid rgba(75, 216, 181, 1);
+            .seconde {
+              @include btn(
+                $withIcon: true,
+                $icon: "/assets/icons/$.svg",
+                $bg: inherit
+              );
+              span {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+              }
+              .icon {
+                width: 24px;
+                height: 24px;
+              }
             }
           }
-          .seconde {
-            @include btn(
-              $withIcon: true,
-              $icon: "/assets/icons/$.svg",
-              $bg: inherit
-            );
-            span {
-              font-weight: 500;
-              font-size: 12px;
-              line-height: 14px;
-            }
-            .icon {
-              width: 24px;
-              height: 24px;
-            }
+          &:hover {
+            bottom: 20px;
           }
+        }
+        &:hover {
+          filter: brightness(50%);
         }
       }
     }
@@ -583,6 +699,12 @@ body {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 37px;
+        .arrow {
+          cursor: pointer;
+        }
+        .arrow:hover {
+          opacity: 0.5;
+        }
         .testimonials__user {
           width: 585px;
           height: 310px;
@@ -714,7 +836,11 @@ body {
           text-align: justify;
           line-height: 13px;
           color: white;
-
+          cursor: pointer;
+          a {
+            text-decoration: none;
+            color: white;
+          }
           p {
             margin: 0;
           }
@@ -800,7 +926,7 @@ body {
               border: 1px solid white;
               margin-top: 26px;
               height: 122px;
-              legend{
+              legend {
                 color: white;
               }
               textarea {
@@ -828,35 +954,53 @@ body {
             margin-right: 14px;
             background-color: inherit;
             border: none;
-            color:white;
+            color: white;
             display: flex;
             gap: 25px;
             align-items: center;
-            margin-right: 440px
+            margin-right: 440px;
           }
         }
         .footer__onlineCenter {
           flex: 1;
-          .footer__navigation{
-            ul{
+          .footer__navigation {
+            ul {
               margin-left: -19px;
               display: contents;
               display: flex;
               justify-content: space-between;
-              width: 150px;
-              margin-top: 23px;
-              li{
+              width: 158px;
+              margin-top: 24px;
+              align-items: center;
+              li {
                 list-style: none;
               }
             }
           }
-          p{
-            font-family: 'Roboto';
+          p {
+            font-family: "Roboto";
             font-style: normal;
             font-weight: normal;
             font-size: 14px;
             color: white;
           }
+        }
+      }
+      .footer__names {
+        width: 1700px;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid white;
+        margin-top: 78px;
+        p {
+          margin-left: 36px;
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          color: white;
+          line-height: 3px;
+          margin-top: 14px;
         }
       }
     }
