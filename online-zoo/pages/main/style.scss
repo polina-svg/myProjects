@@ -769,6 +769,79 @@ body {
         justify-content: center;
         flex-direction: column;
         margin-bottom: 100px;
+        .animals__box {
+          position: absolute;
+          overflow: hidden;
+          width: 70px;
+          height: 95px;
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
+          &:hover {
+            overflow: visible;
+          }
+          .animals__marker {
+            position: absolute;
+            top: -11px;
+            left: -12px;
+            transition: transform 0.5s ease-in-out;
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+          .map__animalExample {
+            display: flex;
+            justify-content: space-evenly;
+            width: 436px;
+            box-shadow: 0 14px 28px rgb(0 0 0 / 25%),
+              0 10px 10px rgb(0 0 0 / 22%);
+            border-radius: 5px;
+            position: absolute;
+            bottom: 257px;
+            height: 149px;
+            right: 40px;
+            top: 95px;
+            align-items: center;
+            background-color: white;
+            h4 {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 900;
+              font-size: 18px;
+              margin-top: 10px;
+            }
+            p {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+            }
+            img {
+              margin-right: 51px;
+            }
+            .example__info {
+              margin-left: -104px;
+              margin-top: -4px;
+            }
+            .animal__info {
+              line-height: 2px;
+            }
+          }
+          &.panda {
+            top: 180px;
+            right: 600px;        
+          }
+          &.gorilla {
+            top: 280px;
+          }
+          &.aligator {
+            top: 190px;
+            left: 603px;
+          }
+          &.eagle {
+            top: 165px;
+            left: 480px;
+          }
+        }
         .map__btn {
           @include btn(
             $withIcon: true,
@@ -779,43 +852,6 @@ body {
           margin-top: 35px;
           width: 245px;
           height: 55px;
-        }
-      }
-      .map__animalExample {
-        display: flex;
-        justify-content: space-evenly;
-        width: 436px;
-        box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
-        border-radius: 5px;
-        position: absolute;
-        bottom: 257px;
-        height: 149px;
-        left: 81px;
-        top: 240px;
-        align-items: center;
-        background-color: white;
-        h4 {
-          font-family: "Roboto";
-          font-style: normal;
-          font-weight: 900;
-          font-size: 18px;
-          margin-top: 10px;
-        }
-        p {
-          font-family: "Roboto";
-          font-style: normal;
-          font-weight: normal;
-          font-size: 14px;
-        }
-        img {
-          margin-right: 51px;
-        }
-        .example__info {
-          margin-left: -104px;
-          margin-top: -4px;
-        }
-        .animal__info {
-          line-height: 2px;
         }
       }
     }
@@ -974,6 +1010,9 @@ body {
               align-items: center;
               li {
                 list-style: none;
+              }
+              a{
+                cursor: pointer;
               }
             }
           }

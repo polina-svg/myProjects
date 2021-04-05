@@ -14,7 +14,7 @@
   <body>
     <h1 class="zoo">Online Zoo</h1>
     <div class="wrapper">
-      <header class="header">
+      <header  class="header">
         <a href="#header">
           <p class="header__zoo">zoo</p>
           <p class="header__online">online</p>
@@ -34,8 +34,9 @@
           <span class="switch"></span>
         </span>
       </header>
-      <section class="watchAnimals">
-        <h2 class="watchAnimals__title">Watch your favorite animal online</h2>
+      <section  class="watchAnimals">
+        <a name="header"></a>
+        <h2  class="watchAnimals__title">Watch your favorite animal online</h2>
         <div class="watchAnimals__body">
           <nav class="watchAnimals__nav">
             <ul>
@@ -273,24 +274,71 @@
       <section class="map">
         <h2>Map</h2>
         <div class="map__wrapper">
-          <img src="/assets/images/map.png" alt="" />
+          <div class="animals__box panda">
+            <img class="animals__marker" src="/assets//images/placeholder 1.png" alt="">
+            <div class="map__animalExample">
+              <div class="example__image">
+                <img src="/assets/icons/eagle_ebalo.png" alt="eagle" />
+              </div>
+              <div class="example__info">
+                <h4>West End Bald Eagle</h4>
+                <div class="animal__info">
+                  <p><b>Region:</b> on an island near Los Angeles</p>
+                  <p><b>Population:</b> more than 270 pairs in 2013</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animals__box eagle">
+            <img class="animals__marker" src="/assets//images/placeholder 2.png" alt="">
+            <div class="map__animalExample">
+              <div class="example__image">
+                <img src="/assets/icons/eagle_ebalo.png" alt="eagle" />
+              </div>
+              <div class="example__info">
+                <h4>West End Bald Eagle</h4>
+                <div class="animal__info">
+                  <p><b>Region:</b> on an island near Los Angeles</p>
+                  <p><b>Population:</b> more than 270 pairs in 2013</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animals__box aligator">
+            <img class="animals__marker" src="/assets//images/placeholder 3.png" alt="">
+            <div class="map__animalExample">
+              <div class="example__image">
+                <img src="/assets/icons/eagle_ebalo.png" alt="eagle" />
+              </div>
+              <div class="example__info">
+                <h4>West End Bald Eagle</h4>
+                <div class="animal__info">
+                  <p><b>Region:</b> on an island near Los Angeles</p>
+                  <p><b>Population:</b> more than 270 pairs in 2013</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animals__box gorilla">
+            <img class="animals__marker" src="/assets//images/placeholder 2.png" alt="">
+            <div class="map__animalExample">
+              <div class="example__image">
+                <img src="/assets/icons/eagle_ebalo.png" alt="eagle" />
+              </div>
+              <div class="example__info">
+                <h4>West End Bald Eagle</h4>
+                <div class="animal__info">
+                  <p><b>Region:</b> on an island near Los Angeles</p>
+                  <p><b>Population:</b> more than 270 pairs in 2013</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="/assets/images/Group.png" alt="map" />
           <button class="map__btn">
             <div class="icon"></div>
             <span>WATCH ONLINE</span>
           </button>
-        </div>
-        
-        <div class="map__animalExample">
-          <div class="example__image">
-            <img src="/assets/icons/eagle_ebalo.png" alt="eagle" />
-          </div>
-          <div class="example__info">
-            <h4>West End Bald Eagle</h4>
-            <div class="animal__info">
-              <p><b>Region:</b> on an island near Los Angeles</p>
-              <p><b>Population:</b> more than 270 pairs in 2013</p>
-            </div>
-          </div>
         </div>
       </section>
       <footer class="footer">
@@ -303,7 +351,7 @@
           </h2>
           <nav class="footer__navigation">
             <ul>
-              <li><a class="about"href="#">About</a></li>
+              <li><a class="about"href="#header">About</a></li>
               <li><a class="active"href="#">Zoos</a></li>
               <li><a class="active"href="#">Map</a></li>
               <li><a class="active"href="#">Design</a></li>
@@ -318,18 +366,18 @@
            <div class="contact-us" id="form">
              <h3>Contact us</h3>
             <form action="#">
-              <input type="text" placeholder="name" />
-              <input type="email" placeholder="email" />
+              <input required type="text" placeholder="name" />
+              <input required type="email" placeholder="email" />
               <fieldset>
                 <legend>Please enter your message</legend>
-                <textarea maxlength="280"></textarea>
+                <textarea required maxlength="280"></textarea>
               </fieldset>
             </form>
             <label for="#"
-              ><input type="checkbox" />I agree to the processing of Personal
+              ><input required type="checkbox" />I agree to the processing of Personal
               Data</label
             >
-            <button class="footer__btn">
+            <button type="submit" class="footer__btn">
               SEND
               <img src="/assets/icons/ArrowFooter.png" alt="play" />
             </button>
@@ -339,7 +387,7 @@
           <p>132, Address District, Street</p>
           <p>Open Daily 10:00 am - 5:00 pm</p>
           <p>T(702) 163-3433</p>
-          <p>zoo.online@gmail.com</p>
+          <a type="mailto" href=""><p>zoo.online@gmail.com</p></a>
           <nav class="footer__navigation">
             <ul>
               <li>
