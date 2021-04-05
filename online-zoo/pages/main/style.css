@@ -19,9 +19,6 @@ body .zoo {
   visibility: hidden;
   display: none;
 }
-body .header__zoo_container {
-  margin-left: 125px;
-}
 body .wrapper {
   margin: 0 auto;
   max-width: 1920px;
@@ -33,6 +30,12 @@ body .wrapper .header {
   align-items: center;
   height: 94px;
 }
+
+body .wrapper .header .header__zoo_container {
+  margin-left: 125px;
+}
+
+
 body .wrapper .header h1 {
   text-align: justify;
   line-height: 13px;
