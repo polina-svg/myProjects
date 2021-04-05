@@ -18,6 +18,7 @@ body a {
 body .zoo {
   visibility: hidden;
   display: none;
+  margin-left: 125px;
 }
 body .wrapper {
   margin: 0 auto;
@@ -130,7 +131,7 @@ body .wrapper .header .toggle-bg input:checked {
   z-index: 0;
 }
 body .wrapper .watchAnimals {
-  background-image: url(../../../assets/images/main-bg.png);
+  background-image: url(../../assets/images/main-bg.png);
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -178,7 +179,7 @@ body .wrapper .watchAnimals .animals__slide {
 body .wrapper .watchAnimals .animals__slide .animals__panda {
   width: 245px;
   height: 352px;
-  background-image: url(../assets/images/panda.jpg);
+  background-image: url(../../assets/images/panda.jpg);
   background-size: cover;
   border-radius: 5px;
   display: flex;
