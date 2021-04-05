@@ -18,6 +18,8 @@ body a {
 body .zoo {
   visibility: hidden;
   display: none;
+}
+body .header__zoo_container {
   margin-left: 125px;
 }
 body .wrapper {
