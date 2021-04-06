@@ -16,6 +16,7 @@ body .wrapper .header {
   justify-content: space-between;
   align-items: center;
   height: 94px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 body .wrapper .header h1 {
   text-align: justify;
@@ -74,6 +75,9 @@ body .wrapper .header nav li .list__item {
 body .wrapper .header nav li .list__item:hover {
   text-decoration: underline;
   font-weight: 900;
+}
+body .wrapper .header nav li .map {
+  text-decoration: underline;
 }
 body .wrapper .header .toggle-bg {
   background: #f2f2f2;
