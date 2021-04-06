@@ -134,7 +134,7 @@ body .wrapper .container .aside {
   height: 600px;
   width: 209px;
 }
-body .wrapper .container .aside .aside__container .aside__container__images {
+body .wrapper .container .aside .aside__container .aside__container__images {;
   align-items: center;
   text-align: center;
 }

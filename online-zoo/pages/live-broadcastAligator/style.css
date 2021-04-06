@@ -60,22 +60,18 @@ body .wrapper .header nav li {
   list-style: none;
   display: flex;
 }
-body .wrapper .header nav a {
+body .wrapper .header nav li .list__item {
   text-decoration: none;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   color: black;
-}
-body .wrapper .header nav .active {
   cursor: pointer;
 }
-body .wrapper .header nav .about {
+body .wrapper .header nav li .list__item:hover {
   text-decoration: underline;
-}
-body .wrapper .header nav .active:hover {
-  opacity: 0.8;
+  font-weight: 900;
 }
 body .wrapper .header .toggle-bg {
   background: #f2f2f2;
