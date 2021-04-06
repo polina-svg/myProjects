@@ -175,15 +175,24 @@ body {
             cursor: pointer;
             transition: all 0.5s ease-in;
             &:hover {
+              opacity: 0.5;
+              font-weight: 900;
+            }
+            .about {
               text-decoration: underline;
               font-weight: 900;
             }
+            .active{
+              cursor: pointer;
+            }
+            .active:hover{
+              opacity: 0.5;
+            }
           }
+        
+        
 
-          .list__item.active {
-            text-decoration: underline;
-            font-weight: 900;
-          }
+          
         }
       }
 

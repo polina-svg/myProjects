@@ -255,6 +255,7 @@ body {
           .aside__container__images {
             align-items: center;
             text-align: center;
+            cursor: pointer;
 
             .aside__container__animal {
               padding: 20px;
@@ -269,6 +270,9 @@ body {
                 height: 157px;
               }
             }
+          }
+          .aside__container__images:hover{
+            opacity: 0.5;
           }
         }
       }
