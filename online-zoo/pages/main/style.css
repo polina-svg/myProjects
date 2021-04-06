@@ -84,6 +84,7 @@ body .wrapper .header nav .about {
 }
 body .wrapper .header nav .active:hover {
   opacity: 0.8;
+  text-decoration: underline;
 }
 body .wrapper .header .toggle-bg {
   background: #f2f2f2;

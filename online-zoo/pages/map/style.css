@@ -346,7 +346,7 @@ body .wrapper .map-map .map .map__wrapper .map__btn .icon {
   border: 1px solid white;
   border-radius: 25px;
   margin-right: 5px;
-  background-image: url("/assets/icons/rectangle.svg");
+  background-image: url(../../assets/icons/rectangle.svg);
   background-repeat: no-repeat;
   background-position: center;
 }

@@ -371,7 +371,7 @@ body {
         .footer__btn {
           @include btn(
             $withIcon: false,
-            $icon: "/assets/icons/rectangle.svg",
+            $icon: "../../assets/icons/rectangle.svg",
             $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
           );
           width: 279px;
