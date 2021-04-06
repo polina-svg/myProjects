@@ -146,23 +146,26 @@ body {
         li {
           list-style: none;
           display: flex;
-        }
-        a {
-          text-decoration: none;
-          font-family: Roboto;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 16px;
-          color: black;
-        }
-        .active {
-          cursor: pointer;
-        }
-        .about {
-          text-decoration: underline;
-        }
-        .active:hover {
-          opacity: 0.8;
+
+          .list__item {
+            text-decoration: none;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            color: black;
+            cursor: pointer;
+            transition: all 0.5s ease-in;
+            &:hover {
+              text-decoration: underline;
+              font-weight: 900;
+            }
+          }
+
+          .list__item.active {
+            text-decoration: underline;
+            font-weight: 900;
+          }
         }
       }
 

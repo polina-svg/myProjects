@@ -146,28 +146,22 @@ body {
         li {
           list-style: none;
           display: flex;
-        }
-        a {
-          text-decoration: none;
-          font-family: Roboto;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 16px;
-          color: black;
-          cursor: pointer;
-          
-        }
-        a:hover{
-          opacity: 0.5
-        }
-        .active{
-          cursor: pointer
-        }
-        .map{
-          text-decoration: underline;
-        }
-        .map:hover{
-          opacity: 0.8;
+
+          .list__item {
+            text-decoration: none;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            color: black;
+            cursor: pointer;
+            transition: all 0.5s ease-in;
+
+            &:hover {
+              text-decoration: underline;
+              font-weight: 900;
+            }
+          }
         }
       }
 
