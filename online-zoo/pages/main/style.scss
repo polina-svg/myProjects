@@ -563,6 +563,88 @@ body {
         max-width: 1300px;
         width: 100%;
         margin: 0 auto;
+        .animals__panda {
+        width: 278px;
+        height: 399px;
+        background-image: url(../../assets/images/panda.jpg);
+        background-size: cover;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 38px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        
+        .animals__title {
+          position: absolute;
+          height: 490px;
+          display: flex;
+          bottom: -172px;
+          transition: bottom 0.3s ease-in;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+          p {
+            color: white;
+            width: 194px;
+            cursor: pointer;
+          }
+          .panda__btns {
+            display: flex;
+            justify-content: center;
+            .first {
+              @include btn(
+                $withIcon: true,
+                $icon: "../../assets/icons/rectangle-green.svg",
+                $bg: inherit
+              );
+              span {
+                color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+                background-image: linear-gradient(
+                  106.89deg,
+                  #4bd8b5 -14.32%,
+                  #49d6df 100.68%
+                );
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+              }
+              .icon {
+                width: 24px;
+                height: 24px;
+                border: 1px solid rgba(75, 216, 181, 1);
+              }
+            }
+            .seconde {
+              @include btn(
+                $withIcon: true,
+                $icon: "../../assets/icons/$.svg",
+                $bg: inherit
+              );
+              span {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+              }
+              .icon {
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+          &:hover {
+            bottom: 20px;
+          }
+        }
+        &:hover {
+          filter: brightness(50%);
+        }
+      }
         img {
           cursor: pointer;
           &:hover {
@@ -570,6 +652,7 @@ body {
           }
         }
       }
+      
       &__progress {
         @include slider(black, 0, 60px);
         margin: 30px auto;
