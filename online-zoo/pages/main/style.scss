@@ -246,10 +246,10 @@ body {
       }
       @media screen and (max-width: 1200px){
         .header__title{
-          margin-left: 10%;
+          margin-left: 0%;
         }
         .header__navigation{
-          width: 66%;
+          width: 72%;
         }
       }
     }
@@ -542,7 +542,7 @@ body {
       }
     }
     .infoAbout {
-      padding: 100px;
+      padding: 100px 12%;
       background-color: #f2f2f2;
       &__wrapper {
         max-width: 1200px;
@@ -550,6 +550,7 @@ body {
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
+        gap: 30px;
       }
       &__item {
         display: flex;
@@ -572,12 +573,9 @@ body {
       }
       @media screen and (max-width: 1200px){
         .infoAbout__item{
-          height: 10%;
-          margin-left: 6%;
+          width: 32%;
         }
-        .infoAbout__item:nth-child(1){
-
-        }
+ 
       }
     }
     .petsInzoo {

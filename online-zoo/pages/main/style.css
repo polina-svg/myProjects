@@ -148,10 +148,10 @@ body .wrapper .header .toggle-bg input:checked {
 }
 @media screen and (max-width: 1200px) {
   body .wrapper .header .header__title {
-    margin-left: 10%;
+    margin-left: 0%;
   }
   body .wrapper .header .header__navigation {
-    width: 66%;
+    width: 72%;
   }
 }
 body .wrapper .watchAnimals {
@@ -628,7 +628,7 @@ body .wrapper .how-it-works__progress .progress__slider .progress__cursor:hover 
   transform: scale(1.4);
 }
 body .wrapper .infoAbout {
-  padding: 100px;
+  padding: 100px 12%;
   background-color: #f2f2f2;
 }
 body .wrapper .infoAbout__wrapper {
@@ -637,6 +637,7 @@ body .wrapper .infoAbout__wrapper {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  gap: 30px;
 }
 body .wrapper .infoAbout__item {
   display: flex;
@@ -659,8 +660,7 @@ body .wrapper .infoAbout__item h3 {
 }
 @media screen and (max-width: 1200px) {
   body .wrapper .infoAbout .infoAbout__item {
-    height: 10%;
-    margin-left: 6%;
+    width: 32%;
   }
 }
 body .wrapper .petsInzoo {
