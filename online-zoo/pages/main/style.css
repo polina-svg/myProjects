@@ -58,7 +58,7 @@ body .wrapper .header .header__online {
   letter-spacing: 0px;
 }
 body .wrapper .header nav {
-  width: 813px;
+  width: 660px;
 }
 body .wrapper .header nav ul {
   display: flex;
@@ -87,24 +87,28 @@ body .wrapper .header nav li .list__item {
   transition: all 0.5s ease-in;
 }
 body .wrapper .header nav li .list__item:hover {
+  opacity: 0.5;
+  font-weight: 900;
+}
+body .wrapper .header nav li .list__item .about {
   text-decoration: underline;
   font-weight: 900;
 }
-body .wrapper .header nav li .list__item.active {
-  text-decoration: underline;
-  font-weight: 900;
+body .wrapper .header nav li .list__item .active {
+  cursor: pointer;
+}
+body .wrapper .header nav li .list__item .active:hover {
+  opacity: 0.5;
 }
 body .wrapper .header .toggle-bg {
   background: #f2f2f2;
   display: block;
   float: left;
   height: 30px;
-  position: relative;
   width: 54px;
   border-radius: 20px;
-  right: 152px;
-  top: 4px;
   cursor: pointer;
+  margin-right: 144px;
 }
 body .wrapper .header .toggle-bg input {
   height: 20px;
@@ -140,6 +144,14 @@ body .wrapper .header .toggle-bg input ~ :checked ~ .switch {
 }
 body .wrapper .header .toggle-bg input:checked {
   z-index: 0;
+}
+@media screen and (max-width: 1200px) {
+  body .wrapper .header .header__title {
+    margin-left: 10%;
+  }
+  body .wrapper .header .header__navigation {
+    width: 65%;
+  }
 }
 body .wrapper .watchAnimals {
   background-image: url(../../assets/images/main-bg.png);
@@ -471,6 +483,17 @@ body .wrapper .watchAnimals__btn:hover {
   opacity: 0.8;
   outline: none;
 }
+@media screen and (max-width: 1200px) {
+  body .wrapper .watchAnimals .watchAnimals__title {
+    margin: 205px 0 0 134px;
+  }
+  body .wrapper .watchAnimals .watchAnimals__btn {
+    margin-left: -38px;
+  }
+  body .wrapper .watchAnimals .watchAnimals__animals.animals {
+    padding-left: 140px;
+  }
+}
 body .wrapper .how-it-works {
   align-items: center;
   display: flex;
@@ -646,6 +669,127 @@ body .wrapper .petsInzoo__animals {
   max-width: 1300px;
   width: 100%;
   margin: 0 auto;
+}
+body .wrapper .petsInzoo__animals .animals__panda {
+  width: 278px;
+  height: 399px;
+  background-image: url(../../assets/images/panda.jpg);
+  background-size: cover;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 38px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title {
+  position: absolute;
+  height: 490px;
+  display: flex;
+  bottom: -172px;
+  transition: bottom 0.3s ease-in;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title p {
+  color: white;
+  width: 194px;
+  cursor: pointer;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title .panda__btns {
+  display: flex;
+  justify-content: center;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title .panda__btns .first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: inherit;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title .panda__btns .first:hover {
+  opacity: 0.6;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title .panda__btns .first .icon {
+  width: 32px;
+  height: 29px;
+  border: 1px solid white;
+  border-radius: 25px;
+  margin-right: 5px;
+  background-image: url("../../assets/icons/rectangle-green.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title .panda__btns .first span {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title .panda__btns .first span {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title .panda__btns .first .icon {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #4bd8b5;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title .panda__btns .seconde {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: inherit;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title .panda__btns .seconde:hover {
+  opacity: 0.6;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title .panda__btns .seconde .icon {
+  width: 32px;
+  height: 29px;
+  border: 1px solid white;
+  border-radius: 25px;
+  margin-right: 5px;
+  background-image: url("../../assets/icons/$.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title .panda__btns .seconde span {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title .panda__btns .seconde span {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title .panda__btns .seconde .icon {
+  width: 24px;
+  height: 24px;
+}
+body .wrapper .petsInzoo__animals .animals__panda .animals__title:hover {
+  bottom: 20px;
+}
+body .wrapper .petsInzoo__animals .animals__panda:hover {
+  filter: brightness(50%);
 }
 body .wrapper .petsInzoo__animals img {
   cursor: pointer;
@@ -936,7 +1080,7 @@ body .wrapper .testimonials__wrapper .testimonials__user .user__image {
   height: 68px;
 }
 body .wrapper .testimonials__wrapper .testimonials__user h3 {
-  font-family: "Roboto";
+  font-family: " Roboto";
   font-style: normal;
   font-weight: 900;
   font-size: 20px;
@@ -1357,6 +1501,20 @@ body .wrapper .footer .footer__names p {
   color: white;
   line-height: 3px;
   margin-top: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+  .watchAnimals__title {
+    margin: 205px 0 0 134px;
+  }
+
+  .watchAnimals__btn {
+    margin-left: -38px;
+  }
+
+  .watchAnimals__animals.animals {
+    padding-left: 159px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

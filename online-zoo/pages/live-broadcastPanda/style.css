@@ -138,6 +138,7 @@ body .wrapper .container .aside {
 body .wrapper .container .aside .aside__container .aside__container__images {
   align-items: center;
   text-align: center;
+  cursor: pointer;
 }
 body .wrapper .container .aside .aside__container .aside__container__images .aside__container__animal {
   padding: 20px;
@@ -149,6 +150,9 @@ body .wrapper .container .aside .aside__container .aside__container__images .asi
 body .wrapper .container .aside .aside__container .aside__container__images .aside__container__animal img[alt=panda] {
   width: 157px;
   height: 157px;
+}
+body .wrapper .container .aside .aside__container .aside__container__images:hover {
+  opacity: 0.5;
 }
 body .wrapper .container .animal__video {
   padding: 55px 150px;

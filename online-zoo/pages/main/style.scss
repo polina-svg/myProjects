@@ -148,7 +148,7 @@ body {
       }
 
       nav {
-        width: 813px;
+        width: 660px;
         ul {
           display: flex;
           justify-content: space-between;
@@ -188,25 +188,19 @@ body {
             .active:hover{
               opacity: 0.5;
             }
-          }
-        
-        
-
-          
+          }                       
         }
       }
-
+      
       .toggle-bg {
         background: #f2f2f2;
         display: block;
         float: left;
         height: 30px;
-        position: relative;
         width: 54px;
         border-radius: 20px;
-        right: 152px;
-        top: 4px;
         cursor: pointer;
+        margin-right: 144px;
       }
       .toggle-bg input {
         height: 20px;
@@ -245,6 +239,15 @@ body {
       .toggle-bg input:checked {
         z-index: 0;
       }
+      @media screen and (max-width: 1200px){
+        .header__title{
+          margin-left: 10%;
+        }
+        .header__navigation{
+          width: 65%
+        }
+      }
+
     }
     .watchAnimals {
       background-image: url(../../assets/images/main-bg.png);
@@ -461,6 +464,19 @@ body {
       &__btn:hover {
         opacity: 0.8;
         outline: none;
+      }
+      @media screen and (max-width: 1200px) {
+        .watchAnimals__title {
+          margin: 205px 0 0 134px;
+        }
+      
+        .watchAnimals__btn {
+          margin-left: -38px;
+        }
+      
+        .watchAnimals__animals.animals {
+          padding-left: 140px;
+        }
       }
     }
 
@@ -1164,3 +1180,15 @@ body {
     }
   }
 }
+@media screen and (max-width: 1200px) {
+  .watchAnimals__title{
+    margin: 205px 0 0 134px;
+  }
+  .watchAnimals__btn{
+    margin-left: -38px;
+  }
+  .watchAnimals__animals.animals{
+    padding-left: 159px;
+  }
+}
+
