@@ -91,6 +91,91 @@
   }
 }
 
+@mixin pets($src) {
+  width: calc(100% / 4);
+  height: 100%;
+  background-image: url($src);
+  background-repeat:no-repeat;
+  background-size: 100%;
+  background-position: center;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  .animals__title {
+    position: absolute;
+    bottom: -100px;
+    display: flex;
+    transition: bottom 0.3s ease-in;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    p {
+      color: white;
+      width: 194px;
+      cursor: pointer;
+    }
+    .pets__btns {
+      display: flex;
+      justify-content: center;
+      .first {
+        @include btn(
+          $withIcon: true,
+          $icon: "../../assets/icons/rectangle-green.svg",
+          $bg: inherit
+        );
+        span {
+          color: transparent;
+          -webkit-background-clip: text;
+          background-clip: text;
+          background-image: linear-gradient(
+            106.89deg,
+            #4bd8b5 -14.32%,
+            #49d6df 100.68%
+          );
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 14px;
+        }
+        .icon {
+          width: 24px;
+          height: 24px;
+          border: 1px solid rgba(75, 216, 181, 1);
+        }
+      }
+      .seconde {
+        @include btn(
+          $withIcon: true,
+          $icon: "../../assets/icons/$.svg",
+          $bg: inherit
+        );
+        span {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 14px;
+        }
+        .icon {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    &:hover {
+      bottom: 20px;
+    }
+  }
+  &:hover {
+    .animals__title {
+      bottom: 50px;
+    }
+    filter: brightness(50%);
+  }
+}
+
 body {
   font-family: "Roboto";
   font-style: normal;
@@ -182,17 +267,13 @@ body {
               text-decoration: underline;
               font-weight: 900;
             }
-            .active{
+            .active {
               cursor: pointer;
             }
-            .active:hover{
+            .active:hover {
               opacity: 0.5;
             }
           }
-        
-        
-
-          
         }
       }
 
@@ -244,11 +325,11 @@ body {
       .toggle-bg input:checked {
         z-index: 0;
       }
-      @media screen and (max-width: 1200px){
-        .header__title{
+      @media screen and (max-width: 1200px) {
+        .header__title {
           margin-left: 0%;
         }
-        .header__navigation{
+        .header__navigation {
           width: 72%;
         }
       }
@@ -470,29 +551,29 @@ body {
         opacity: 0.8;
         outline: none;
       }
-      @media screen and (max-width: 1200px){
-        .watchAnimals__title{
+      @media screen and (max-width: 1200px) {
+        .watchAnimals__title {
           margin-top: 10.5%;
           margin-left: 12.5%;
         }
-        .watchAnimals__btn{
+        .watchAnimals__btn {
           margin-left: -2%;
         }
-        .animals{
+        .animals {
           margin-left: 7%;
           margin-top: 9%;
         }
-        .animals__slide{
-          .animals__eagle{
+        .animals__slide {
+          .animals__eagle {
             width: 160px;
             height: 243px;
           }
-          .animals__gorilla{
+          .animals__gorilla {
             width: 152px;
             height: 225px;
           }
         }
-        .watchAnimals__nav{
+        .watchAnimals__nav {
           margin-left: 12.2%;
           margin-bottom: 0.5%;
         }
@@ -521,6 +602,9 @@ body {
       }
       img {
         margin: 0 auto;
+    width: 100%;
+    max-width: 790px;
+    overflow: hidden;
       }
       &__btn {
         @include btn(
@@ -571,11 +655,10 @@ body {
           font-size: 20px;
         }
       }
-      @media screen and (max-width: 1200px){
-        .infoAbout__item{
+      @media screen and (max-width: 1200px) {
+        .infoAbout__item {
           width: 32%;
         }
- 
       }
     }
     .petsInzoo {
@@ -602,99 +685,30 @@ body {
       &__animals {
         display: flex;
         gap: 25px;
+        align-items: center;
         max-width: 1300px;
-        width: 100%;
+        max-height: 400px;
+        width: 68vw;
+        height: 22vw;
         margin: 0 auto;
         .animals__panda {
-        width: 278px;
-        height: 399px;
-        background-image: url(../../assets/images/panda.jpg);
-        background-size: cover;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        padding-bottom: 38px;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-        
-        .animals__title {
-          position: absolute;
-          height: 490px;
-          display: flex;
-          bottom: -172px;
-          transition: bottom 0.3s ease-in;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-end;
-          p {
-            color: white;
-            width: 194px;
-            cursor: pointer;
-          }
-          .panda__btns {
-            display: flex;
-            justify-content: center;
-            .first {
-              @include btn(
-                $withIcon: true,
-                $icon: "../../assets/icons/rectangle-green.svg",
-                $bg: inherit
-              );
-              span {
-                color: transparent;
-                -webkit-background-clip: text;
-                background-clip: text;
-                background-image: linear-gradient(
-                  106.89deg,
-                  #4bd8b5 -14.32%,
-                  #49d6df 100.68%
-                );
-                font-weight: 500;
-                font-size: 12px;
-                line-height: 14px;
-              }
-              .icon {
-                width: 24px;
-                height: 24px;
-                border: 1px solid rgba(75, 216, 181, 1);
-              }
-            }
-            .seconde {
-              @include btn(
-                $withIcon: true,
-                $icon: "../../assets/icons/$.svg",
-                $bg: inherit
-              );
-              span {
-                font-weight: 500;
-                font-size: 12px;
-                line-height: 14px;
-              }
-              .icon {
-                width: 24px;
-                height: 24px;
-              }
-            }
-          }
-          &:hover {
-            bottom: 20px;
-          }
+          @include pets($src: "../../assets/images/panda.jpg");
         }
-        &:hover {
-          filter: brightness(50%);
+        .animals__eagle {
+          @include pets($src: "../../assets/images/eagle.jpg");
+        }
+        .animals__crocodile {
+          @include pets($src: "../../assets/images/aligator.jpg");
+        }
+        .animals__gorilla {
+          @include pets($src: "../../assets/images/gorilla2.png");
+        }
+        .arrow {
+          width: 30px;
+          height: 30px
         }
       }
-        img {
-          cursor: pointer;
-          &:hover {
-            filter: brightness(50%);
-          }
-        }
-      }
-      
+
       &__progress {
         @include slider(black, 0, 60px);
         margin: 30px auto;
@@ -709,87 +723,6 @@ body {
         width: 245px;
         height: 55px;
         color: #ffffff;
-      }
-      .animals__panda {
-        width: 278px;
-        height: 399px;
-        background-image: url(../../assets/images/panda.jpg);
-        background-size: cover;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        padding-bottom: 38px;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-        .animals__title {
-          position: absolute;
-          height: 490px;
-          display: flex;
-          bottom: -172px;
-          transition: bottom 0.3s ease-in;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-end;
-          p {
-            color: white;
-            width: 194px;
-            cursor: pointer;
-          }
-          .panda__btns {
-            display: flex;
-            justify-content: center;
-            .first {
-              @include btn(
-                $withIcon: true,
-                $icon: "../../assets/icons/rectangle-green.svg",
-                $bg: inherit
-              );
-              span {
-                color: transparent;
-                -webkit-background-clip: text;
-                background-clip: text;
-                background-image: linear-gradient(
-                  106.89deg,
-                  #4bd8b5 -14.32%,
-                  #49d6df 100.68%
-                );
-                font-weight: 500;
-                font-size: 12px;
-                line-height: 14px;
-              }
-              .icon {
-                width: 24px;
-                height: 24px;
-                border: 1px solid rgba(75, 216, 181, 1);
-              }
-            }
-            .seconde {
-              @include btn(
-                $withIcon: true,
-                $icon: "../../assets/icons/$.svg",
-                $bg: inherit
-              );
-              span {
-                font-weight: 500;
-                font-size: 12px;
-                line-height: 14px;
-              }
-              .icon {
-                width: 24px;
-                height: 24px;
-              }
-            }
-          }
-          &:hover {
-            bottom: 20px;
-          }
-        }
-        &:hover {
-          filter: brightness(50%);
-        }
       }
     }
     .payAndfeed {
@@ -977,7 +910,7 @@ body {
           }
           &.panda {
             top: 180px;
-            right: 600px;        
+            right: 600px;
           }
           &.gorilla {
             top: 280px;
@@ -1017,7 +950,7 @@ body {
         align-items: center;
         height: 165px;
         padding: 75px 150px 0 150px;
-        
+
         h2 {
           text-align: justify;
           line-height: 13px;
@@ -1028,7 +961,7 @@ body {
             color: white;
             cursor: pointer;
           }
-          a:hover{
+          a:hover {
             opacity: 0.5;
           }
           p {
@@ -1151,7 +1084,7 @@ body {
             margin-right: 440px;
             cursor: pointer;
           }
-          .footer__btn:hover{
+          .footer__btn:hover {
             opacity: 0.5;
           }
         }
@@ -1169,10 +1102,10 @@ body {
               li {
                 list-style: none;
               }
-              a{
+              a {
                 cursor: pointer;
               }
-              a:hover{
+              a:hover {
                 opacity: 0.5;
               }
             }
@@ -1206,5 +1139,3 @@ body {
     }
   }
 }
-
-
