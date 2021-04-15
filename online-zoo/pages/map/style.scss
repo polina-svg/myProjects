@@ -103,15 +103,16 @@ body {
       justify-content: space-between;
       align-items: center;
       height: 94px;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-            0 10px 10px rgba(0, 0, 0, 0.22);
+      padding: 0 125px;
       h1 {
         text-align: justify;
-        line-height: 14px;
-        margin-left: 116px;
+        line-height: 13px;
       }
       p {
         margin: 0;
+      }
+      .header__title {
+        margin-left: 125px;
       }
       .header__zoo {
         font-family: "Roboto";
@@ -139,11 +140,10 @@ body {
           padding: 0;
           align-items: center;
           width: 100%;
-          width: 574px;
-          padding-top: -5px;
+          width: 607px;
+          padding-top: 5px;
           padding-right: -16px;
-          padding-left: 45px;
-          padding-bottom: 13px;
+          padding-left: 43px;
         }
         li {
           list-style: none;
@@ -158,14 +158,15 @@ body {
             color: black;
             cursor: pointer;
             transition: all 0.5s ease-in;
-
             &:hover {
-              text-decoration: underline;
+              opacity: 0.5;
               font-weight: 900;
+              text-decoration: underline;
             }
           }
-          .map{
+          .list__item_active{
             text-decoration: underline;
+            font-weight: 900;
           }
         }
       }
@@ -178,23 +179,20 @@ body {
         position: relative;
         width: 54px;
         border-radius: 20px;
-        right: 152px;
-        top: -7px;
+        top: 4px;
         cursor: pointer;
-        right: 143px;
       }
       .toggle-bg input {
-        height: 20px;
+        height: 30px;
         left: 0;
         margin: 0;
         opacity: 0;
         padding: 0;
         position: absolute;
-        top: 5px;
-        width: 20px;
+        width: 55px;
         z-index: 2;
       }
-      .toggle-bg:hover{
+      .toggle-bg:hover {
         background-color: black;
       }
       .switch {
@@ -208,17 +206,26 @@ body {
         width: 20px;
         z-index: 1;
         border-radius: 10px;
+        transition: all 0.5s ease-in-out;
       }
       .toggle-bg input:checked ~ .switch {
-        left: 6px;
+        left: 5px;
       }
 
       .toggle-bg input ~ :checked ~ .switch {
-        left: 20px;
+        left: 30px;
       }
 
       .toggle-bg input:checked {
         z-index: 0;
+      }
+      @media screen and (max-width: 1200px) {
+        .header__title {
+          margin-left: 0%;
+        }
+        .header__navigation {
+          width: 72%;
+        }
       }
     }
     .map-map{   
@@ -226,8 +233,8 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 1774px;
-      gap: -18px;
+      width: 91%;
+      gap: 12px;
       h2{
       font-family: Roboto;
       font-style: normal;
@@ -238,6 +245,8 @@ body {
       margin-top: 68px;
       margin-bottom: -50px;
       margin-left: 125px;
+      align-items: center;
+      text-align: center;
 
       }
       p{
@@ -249,16 +258,17 @@ body {
       color: #4F4F4F;
       padding-bottom: 24px;
       margin-left: 137px;
+      text-align: center;
       }
       .map__container__images{
         display: flex;
         padding-bottom: 9px;
         height: 110px;
         display: flex;
-        gap: 26px;
+        gap: 17px;
         padding-bottom: -6px;
         align-items: center;
-        width: 1102px;
+        width: 94%;
         padding-top: -22px;
         margin-top: 38px;
       }
