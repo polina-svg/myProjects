@@ -1517,6 +1517,7 @@ body .wrapper .map {
   padding: 100px;
   align-items: center;
   background-color: #f2f2f2;
+  right: 252px;
 }
 body .wrapper .map h2 {
   font-family: "Roboto";
@@ -1561,7 +1562,7 @@ body .wrapper .map .map__wrapper .animals__box .animals__marker {
   transition: transform 0.5s ease-in-out;
 }
 body .wrapper .map .map__wrapper .animals__box .animals__marker:hover {
-  fill: red;
+  fill: #f54141;
 }
 body .wrapper .map .map__wrapper .animals__box .map__animalExample {
   display: flex;
@@ -1649,65 +1650,34 @@ body .wrapper .map .map__btn span {
   text-transform: uppercase;
 }
 body .wrapper .footer {
-  display: flex;
-  align-items: center;
   background-color: #333333;
-  height: 751px;
-  flex-direction: column;
 }
-body .wrapper .footer .footer__navigation__container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  height: 165px;
-  padding: 75px 150px 0 150px;
-}
-body .wrapper .footer .footer__navigation__container h2 {
-  text-align: justify;
-  line-height: 13px;
-  color: white;
-  cursor: pointer;
-}
-body .wrapper .footer .footer__navigation__container h2 a {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-}
-body .wrapper .footer .footer__navigation__container h2 a:hover {
-  opacity: 0.5;
-}
-body .wrapper .footer .footer__navigation__container h2 p {
+body .wrapper .footer__title p {
   margin: 0;
+  color: white;
 }
-body .wrapper .footer .footer__navigation__container h2 .footer__zoo {
-  font-family: "Roboto";
+body .wrapper .footer__title .footer__zoo {
   font-weight: 900;
   font-size: 37px;
 }
-body .wrapper .footer .footer__navigation__container h2 .footer__online {
-  font-family: "Roboto";
+body .wrapper .footer__title .footer__online {
   font-weight: 900;
   font-size: 20px;
   padding-top: 10px;
   letter-spacing: 0px;
 }
-body .wrapper .footer .footer__navigation__container .footer__navigation ul {
+body .wrapper .footer__navigation ul {
   display: flex;
   justify-content: space-between;
   margin: 0;
   padding: 0;
   align-items: center;
-  width: 300px;
-  width: 385px;
-  margin-left: 625px;
-  margin-top: 20px;
 }
-body .wrapper .footer .footer__navigation__container .footer__navigation li {
+body .wrapper .footer__navigation li {
   list-style: none;
   display: flex;
 }
-body .wrapper .footer .footer__navigation__container .footer__navigation a {
+body .wrapper .footer__navigation a {
   text-decoration: none;
   font-family: Roboto;
   font-style: normal;
@@ -1715,7 +1685,7 @@ body .wrapper .footer .footer__navigation__container .footer__navigation a {
   font-size: 16px;
   color: white;
 }
-body .wrapper .footer .footer__navigation__container .footer__btn {
+body .wrapper .footer__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1726,41 +1696,15 @@ body .wrapper .footer .footer__navigation__container .footer__btn {
   color: #ffffff;
   border: none;
   cursor: pointer;
-  width: 279px;
-  height: 55px;
 }
-body .wrapper .footer .footer__navigation__container .footer__btn:hover {
+body .wrapper .footer__btn:hover {
   opacity: 0.6;
 }
-body .wrapper .footer .footer__navigation__container .footer__btn span {
+body .wrapper .footer__btn span {
   font-size: 18px;
   text-transform: uppercase;
 }
-body .wrapper .footer .contacts__wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 150px;
-  margin-top: 30px;
-}
-body .wrapper .footer .contacts__wrapper h3 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 20px;
-  color: white;
-}
-body .wrapper .footer .contacts__wrapper .contact-us {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-body .wrapper .footer .contacts__wrapper .contact-us form {
-  display: flex;
-  flex-direction: column;
-  width: 383px;
-}
-body .wrapper .footer .contacts__wrapper .contact-us form input {
+body .wrapper .footer__contact-us form input {
   height: 26px;
   margin-top: 17px;
   outline: none;
@@ -1769,30 +1713,30 @@ body .wrapper .footer .contacts__wrapper .contact-us form input {
   padding-bottom: 10px;
   border-bottom: 1px solid white;
 }
-body .wrapper .footer .contacts__wrapper .contact-us form fieldset {
+body .wrapper .footer__contact-us form fieldset {
   border: 1px solid white;
   margin-top: 26px;
   height: 122px;
 }
-body .wrapper .footer .contacts__wrapper .contact-us form fieldset legend {
+body .wrapper .footer__contact-us form fieldset legend {
   color: white;
 }
-body .wrapper .footer .contacts__wrapper .contact-us form fieldset textarea {
+body .wrapper .footer__contact-us form fieldset textarea {
   width: 100%;
   height: 100%;
   background-color: inherit;
   border: none;
   resize: none;
 }
-body .wrapper .footer .contacts__wrapper .contact-us label {
+body .wrapper .footer__contact-us label {
   margin-top: 25px;
   color: #ffffff;
 }
-body .wrapper .footer .contacts__wrapper .contact-us label input {
+body .wrapper .footer__contact-us label input {
   margin-right: 10px;
   color: white;
 }
-body .wrapper .footer .contacts__wrapper .contact-us .footer__btn {
+body .wrapper .footer__contact-us .footer__btn {
   margin-top: 18px;
   width: 108px;
   align-self: flex-end;
@@ -1807,53 +1751,110 @@ body .wrapper .footer .contacts__wrapper .contact-us .footer__btn {
   margin-right: 440px;
   cursor: pointer;
 }
-body .wrapper .footer .contacts__wrapper .contact-us .footer__btn:hover {
+body .wrapper .footer__contact-us .footer__btn:hover {
   opacity: 0.5;
 }
-body .wrapper .footer .contacts__wrapper .footer__onlineCenter {
-  flex: 1;
+@media screen and (max-width: 639px) {
+  body .wrapper .footer {
+    padding: 0 10px;
+    display: grid;
+    height: fit-content;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "title" "navigation" "contact" "center" "copywrite" "button";
+  }
+  body .wrapper .footer__title {
+    grid-area: title;
+    margin-top: 50px;
+    margin-bottom: 45px;
+  }
+  body .wrapper .footer__navigation {
+    grid-area: navigation;
+  }
+  body .wrapper .footer__navigation ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  body .wrapper .footer__navigation li {
+    list-style: none;
+    display: flex;
+    margin-bottom: 8px;
+  }
+  body .wrapper .footer__navigation a {
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+  }
+  body .wrapper .footer__btn {
+    grid-area: button;
+  }
+  body .wrapper .footer__contact-us {
+    grid-area: contact;
+  }
+  body .wrapper .footer__onlineCenter {
+    grid-area: center;
+  }
+  body .wrapper .footer__names {
+    grid-area: copywrite;
+  }
 }
-body .wrapper .footer .contacts__wrapper .footer__onlineCenter .footer__navigation ul {
-  margin-left: -19px;
-  display: contents;
-  display: flex;
-  justify-content: space-between;
-  width: 158px;
-  margin-top: 24px;
-  align-items: center;
+@media (min-width: 640px) and (max-width: 1199px) {
+  body .wrapper .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "title button" "navigation ." "contact contact" "center ." "copywrite .";
+  }
+  body .wrapper .footer__title {
+    grid-area: title;
+  }
+  body .wrapper .footer__navigation {
+    grid-area: navigation;
+  }
+  body .wrapper .footer__btn {
+    grid-area: button;
+  }
+  body .wrapper .footer__contact-us {
+    grid-area: contact;
+    width: 70%;
+  }
+  body .wrapper .footer__onlineCenter {
+    grid-area: center;
+  }
+  body .wrapper .footer__names {
+    grid-area: copywrite;
+  }
 }
-body .wrapper .footer .contacts__wrapper .footer__onlineCenter .footer__navigation ul li {
-  list-style: none;
-}
-body .wrapper .footer .contacts__wrapper .footer__onlineCenter .footer__navigation ul a {
-  cursor: pointer;
-}
-body .wrapper .footer .contacts__wrapper .footer__onlineCenter .footer__navigation ul a:hover {
-  opacity: 0.5;
-}
-body .wrapper .footer .contacts__wrapper .footer__onlineCenter p {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  color: white;
-}
-body .wrapper .footer .footer__names {
-  width: 1700px;
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid white;
-  margin-top: 78px;
-}
-body .wrapper .footer .footer__names p {
-  margin-left: 36px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  color: white;
-  line-height: 3px;
-  margin-top: 14px;
+@media (min-width: 1200px) and (max-width: 1919px) {
+  body .wrapper .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "title navigation" "contact center" "contact button" "copywrite copywrite";
+  }
+  body .wrapper .footer__title {
+    grid-area: title;
+  }
+  body .wrapper .footer__navigation {
+    grid-area: navigation;
+  }
+  body .wrapper .footer__btn {
+    grid-area: button;
+  }
+  body .wrapper .footer__contact-us {
+    grid-area: contact;
+    width: 70%;
+  }
+  body .wrapper .footer__onlineCenter {
+    grid-area: center;
+  }
+  body .wrapper .footer__names {
+    grid-area: copywrite;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
