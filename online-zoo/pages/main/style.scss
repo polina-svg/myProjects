@@ -192,6 +192,8 @@
     //   background-color: rgba(0,0,0,0.5);
   }
 }
+@mixin mapAnimalSticker($icon) {
+}
 
 body {
   font-family: "Roboto";
@@ -214,7 +216,7 @@ body {
   }
   .wrapper {
     margin: 0 auto;
-    max-width: 1920px;
+    // max-width: 1920px;
     overflow: hidden;
     .header {
       display: flex;
@@ -920,7 +922,7 @@ body {
             position: absolute;
             transition: transform 0.5s ease-in-out;
             &:hover {
-              fill: #f54141; 
+              fill: #f54141;
             }
           }
           .map__animalExample {
@@ -989,88 +991,23 @@ body {
         width: 245px;
         height: 55px;
       }
-         right: 252px;
+      right: 252px;
     }
-    // .footer {
-    //   display: flex;
-    //   align-items: center;
-    //   background-color: #333333;
-    //   height: 751px;
-    //   flex-direction: column;
-    //   .footer__navigation__container {
-    //     display: flex;
-    //     width: 100%;
-    //     justify-content: space-between;
-    //     align-items: center;
-    //     height: 165px;
-    //     padding: 75px 150px 0 150px;
-    //   .contacts__wrapper {
-    //     display: flex;
-    //     justify-content: space-between;
-    //     width: 100%;
-    //     padding: 0 150px;
-    //     margin-top: 30px;
-    //     h3 {
-    //       font-family: Roboto;
-    //       font-style: normal;
-    //       font-weight: 900;
-    //       font-size: 20px;
-    //       color: white;
-    //     }
-        
-    //     .footer__onlineCenter {
-    //       flex: 1;
-    //       .footer__navigation {
-    //         ul {
-    //           margin-left: -19px;
-    //           display: contents;
-    //           display: flex;
-    //           justify-content: space-between;
-    //           width: 158px;
-    //           margin-top: 24px;
-    //           align-items: center;
-    //           li {
-    //             list-style: none;
-    //           }
-    //           a {
-    //             cursor: pointer;
-    //           }
-    //           a:hover {
-    //             opacity: 0.5;
-    //           }
-    //         }
-    //       }
-    //       p {
-    //         font-family: "Roboto";
-    //         font-style: normal;
-    //         font-weight: normal;
-    //         font-size: 14px;
-    //         color: white;
-    //       }
-    //     }
-    //   }
-    //   .footer__names {
-    //     width: 1700px;
-    //     display: flex;
-    //     flex-direction: column;
-    //     border-top: 1px solid white;
-    //     margin-top: 78px;
-    //     p {
-    //       margin-left: 36px;
-    //       font-family: Roboto;
-    //       font-style: normal;
-    //       font-weight: normal;
-    //       font-size: 12px;
-    //       color: white;
-    //       line-height: 3px;
-    //       margin-top: 14px;
-    //     }
-    //   }
-    // }
-
-    .footer {
+    .footer-wrapper {
       background-color: #333333;
-
+    }
+    .footer {
+      max-width: 1920px;
+      margin: 0 auto;
+      h3 {
+        font-weight: 900;
+        font-size: 20px;
+        color: white;
+        margin: 0;
+      }
+      h2 {
+        margin: 0;
+      }
       &__title {
         p {
           margin: 0;
@@ -1110,14 +1047,25 @@ body {
       }
       &__btn {
         @include btn(
-            $withIcon: false,
-            $icon: "../../assets/icons/rectangle.svg",
-            $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
-          );
+          $withIcon: false,
+          $icon: "../../assets/icons/rectangle.svg",
+          $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
+        );
+        margin: 0 auto;
+        width: 274px;
+        height: 54px;
       }
       &__contact-us {
+        h3 {
+          font-weight: 900;
+          font-size: 20px;
+          line-height: 23px;
+          color: #fefefe;
+          margin: 0;
+        }
         form {
-          input {
+          margin-top: 18px;
+          & > input {
             height: 26px;
             margin-top: 17px;
             outline: none;
@@ -1125,13 +1073,18 @@ body {
             background: inherit;
             padding-bottom: 10px;
             border-bottom: 1px solid white;
+            width: 100%;
+            color: #e0e0e0;
           }
           fieldset {
             border: 1px solid white;
             margin-top: 26px;
             height: 122px;
+            margin-bottom: 20px;
             legend {
-              color: white;
+              font-size: 12px;
+              line-height: 14px;
+              color: #bdbdbd;
             }
             textarea {
               width: 100%;
@@ -1141,146 +1094,310 @@ body {
               resize: none;
             }
           }
+          .check {
+            color: #bdbdbd;
+            font-size: 12px;
+            line-height: 14px;
+            label::before {
+              content: "";
+              display: inline-block;
+              width: 1em;
+              height: 1em;
+              flex-shrink: 0;
+              flex-grow: 0;
+              border: 1px solid #bdbdbd;
+              border-radius: 0.25em;
+              margin-right: 3px;
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-size: 50% 50%;
+            }
+            input {
+              position: absolute;
+              opacity: 0;
+            }
+            input:checked + label::before {
+              border-color: #0b76ef;
+              background-color: #0b76ef;
+              background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+            }
+          }
+          .form__btn {
+            margin-top: 18px;
+            width: 108px;
+            align-self: flex-end;
+            padding: 0px;
+            background-color: inherit;
+            border: none;
+            color: white;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            cursor: pointer;
+            margin-left: auto;
+          }
+          .footer__btn:hover {
+            opacity: 0.5;
+          }
         }
-        label {
-          margin-top: 25px;
-          color: #ffffff;
-          input {
-            margin-right: 10px;
+      }
+      &__onlineCenter {
+        h3 {
+          font-size: 14px;
+          line-height: 16px;
+          text-transform: uppercase;
+          color: white;
+          margin: 0;
+          margin-bottom: 36px;
+        }
+        .center__adress {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          margin-bottom: 20px;
+
+          p {
+            margin: 0;
+            font-size: 14px;
             color: white;
           }
         }
-        .footer__btn {
-          margin-top: 18px;
-          width: 108px;
-          align-self: flex-end;
-          padding: 0px;
-          margin-right: 14px;
-          background-color: inherit;
-          border: none;
-          color: white;
+        .center__conact {
           display: flex;
-          gap: 25px;
-          align-items: center;
-          margin-right: 440px;
-          cursor: pointer;
+          flex-direction: column;
+          gap: 4px;
+          a > p {
+            margin: 0;
+            font-size: 14px;
+            color: white;
+          }
         }
-        .footer__btn:hover {
-          opacity: 0.5;
+        .center__navigation {
+          margin-top: 21px;
+          ul {
+            display: flex;
+            justify-content: space-between;
+            width: 125px;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            li {
+              list-style: none;
+            }
+            a {
+              cursor: pointer;
+            }
+            a:hover {
+              opacity: 0.5;
+            }
+          }
         }
       }
-      @media screen and (max-width: 639px) {
-        padding: 0 10px;
+      &__names {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-top: 0.5px solid #fefefe;
+        padding-top: 28px;
+        p {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          color: white;
+          margin: 0;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        padding: 53px 10px 27px 10px;
         display: grid;
         height: fit-content;
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         grid-auto-rows: auto;
-        grid-template-areas: 
-        "title"
-        "navigation"
-        "contact"
-        "center"
-        "copywrite"
-        "button";
+        grid-template-areas:
+          "title"
+          "navigation"
+          "contact"
+          "center"
+          "button"
+          "copywrite";
 
-        &__title {
+        & .footer__title {
           grid-area: title;
-          margin-top: 50px;
           margin-bottom: 45px;
         }
         &__navigation {
           grid-area: navigation;
+          ul {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          li {
+            margin-bottom: 8px;
+          }
+        }
+        &__btn {
+          grid-area: button;
+          margin-top: 42px;
+        }
+        &__contact-us {
+          grid-area: contact;
+          margin-top: 14px;
+        }
+        &__onlineCenter {
+          grid-area: center;
+          margin-top: 54px;
+        }
+        &__names {
+          grid-area: copywrite;
+          margin-top: 79px;
+          padding-top: 28px;
+        }
+      }
+      @media (min-width: 640px) and (max-width: 1200px) {
+        padding: 100px 20px 46px 20px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "title button"
+          "navigation ."
+          "contact contact"
+          "center ."
+          "copywrite copywrite";
+        &__title {
+          grid-area: title;
+        }
+        &__navigation {
+          grid-area: navigation;
+          margin-top: 20px;
           ul {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
           }
           li {
-            list-style: none;
-            display: flex;
             margin-bottom: 8px;
           }
-          a {
-            text-decoration: none;
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            color: white;
+        }
+        &__btn {
+          grid-area: button;
+          margin: 0;
+          margin-left: auto;
+        }
+        &__contact-us {
+          grid-area: contact;
+          margin-top: 14px;
+          margin-right: 36%;
+          form .form__btn {
+            width: 124px;
+          }
+        }
+        &__onlineCenter {
+          grid-area: center;
+          margin-top: 77px;
+        }
+        &__names {
+          grid-area: copywrite;
+          margin-top: 68px;
+          padding-top: 28px;
+        }
+      }
+      @media (min-width: 1200px) and (max-width: 1920px) {
+        padding: 100px 150px 50px 150px;
+        display: grid;
+        grid-template-columns: 1.05fr 1fr;
+        grid-template-rows: auto 280px auto auto;
+        grid-template-areas:
+          "title navigation"
+          "contact center"
+          "contact button"
+          "copywrite copywrite";
+        &__title {
+          grid-area: title;
+        }
+        &__navigation {
+          grid-area: navigation;
+          margin-top: 20px;
+          padding-right: 60px;
+          ul {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+          }
+          li {
+            margin-bottom: 8px;
           }
         }
         &__btn {
           grid-area: button;
+          margin: 0;
         }
         &__contact-us {
           grid-area: contact;
+          margin-top: 66px;
+          margin-right: 16%;
+          form .form__btn {
+            width: 124px;
+          }
         }
         &__onlineCenter {
+          grid-row-gap: 10px;
           grid-area: center;
+          margin-top: 54px;
         }
         &__names {
           grid-area: copywrite;
+          margin-top: 68px;
+          padding-top: 28px;
         }
       }
-      @media (min-width: 640px)  and (max-width: 1199px) {
+      @media screen and (min-width: 1600px) {
+        padding: 100px 150px 50px 150px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "title button"
-        "navigation ."
-        "contact contact"
-        "center ."
-        "copywrite .";
-
+        grid-template-columns: 1.97fr 0.9fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "title navigation button"
+          "contact center ."
+          "copywrite copywrite copywrite";
         &__title {
           grid-area: title;
         }
         &__navigation {
           grid-area: navigation;
+          margin-top: 20px;
+          ul {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+          }
+          li {
+            margin-bottom: 8px;
+          }
         }
         &__btn {
           grid-area: button;
+          margin: 0;
+          margin-left: auto;
         }
         &__contact-us {
           grid-area: contact;
-          width: 70%;
+          margin-top: 55px;
+          margin-right: 53%;
+          form .form__btn {
+            width: 124px;
+          }
         }
         &__onlineCenter {
+          grid-row-gap: 10px;
           grid-area: center;
+          margin-top: 54px;
         }
         &__names {
           grid-area: copywrite;
-        }
-      }
-      @media (min-width: 1200px)  and (max-width: 1919px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "title navigation"
-        "contact center"
-        "contact button"
-        "copywrite copywrite";
-
-        &__title {
-          grid-area: title;
-        }
-        &__navigation {
-          grid-area: navigation;
-        }
-        &__btn {
-          grid-area: button;
-        }
-        &__contact-us {
-          grid-area: contact;
-          width: 70%;
-        }
-        &__onlineCenter {
-          grid-area: center;
-        }
-        &__names {
-          grid-area: copywrite;
+          margin-top: 63px;
+          padding-top: 28px;
         }
       }
     }
