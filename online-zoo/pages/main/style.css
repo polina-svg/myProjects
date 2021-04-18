@@ -1533,7 +1533,7 @@ body .wrapper .map .map__wrapper {
   flex-direction: column;
   background-image: url(../../assets/images/Group.png);
   max-width: 1200px;
-  max-height: 500px;
+  max-height: 600px;
   height: 35.3vw;
   width: 100%;
   margin-bottom: 36px;
@@ -1663,9 +1663,9 @@ body .wrapper .map .map__btn span {
     right: 16.8%;
   }
   body .wrapper .map .map__wrapper .animals__box.panda > img {
-    position: relative;
-    left: 52%;
-    bottom: 21px;
+    left: 18%;
+    top: 10%;
+    position: absolute;
   }
   body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample {
     height: 113px;
@@ -1697,13 +1697,13 @@ body .wrapper .map .map__btn span {
     font-size: 12px;
   }
   body .wrapper .map .map__wrapper .animals__box.eagle {
-    left: 0%;
+    left: 8%;
     top: 7%;
   }
   body .wrapper .map .map__wrapper .animals__box.eagle > img {
-    left: 51%;
-    position: relative;
-    bottom: 20px;
+    left: 18%;
+    top: 10%;
+    position: absolute;
   }
   body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample {
     height: 113px;
@@ -1736,12 +1736,12 @@ body .wrapper .map .map__btn span {
   }
   body .wrapper .map .map__wrapper .animals__box.aligator {
     top: 13%;
-    left: 9.5%;
+    left: 17.5%;
   }
   body .wrapper .map .map__wrapper .animals__box.aligator > img {
-    bottom: 21px;
-    position: relative;
-    left: 54%;
+    left: 18%;
+    top: 10%;
+    position: absolute;
   }
   body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample {
     height: 113px;
@@ -1776,9 +1776,9 @@ body .wrapper .map .map__btn span {
     bottom: 32%;
   }
   body .wrapper .map .map__wrapper .animals__box.gorilla > img {
-    bottom: 19px;
-    position: relative;
-    left: 52%;
+    left: 18%;
+    top: 10%;
+    position: absolute;
   }
   body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample {
     height: 113px;
@@ -1808,6 +1808,239 @@ body .wrapper .map .map__btn span {
   }
   body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample .example__info .animal__info p {
     font-size: 12px;
+  }
+  body .wrapper .map .map__btn {
+    width: 245px;
+  }
+  body .wrapper .map .panda__marker {
+    width: 34px;
+    height: 47px;
+  }
+  body .wrapper .map .eagle__marker {
+    width: 34px;
+    height: 47px;
+  }
+  body .wrapper .map .aligator__marker {
+    width: 34px;
+    height: 47px;
+  }
+  body .wrapper .map .gorilla__marker {
+    width: 34px;
+    height: 47px;
+  }
+}
+@media (min-width: 640px) and (max-width: 1200px) {
+  body .wrapper .map {
+    padding: 100px 20px 80px 20px;
+  }
+  body .wrapper .map h2 {
+    font-size: 48px;
+    margin-bottom: 51px;
+  }
+  body .wrapper .map .map__wrapper {
+    margin-bottom: 39px;
+    height: 47.3vw;
+    min-height: 146px;
+    min-width: 300px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda {
+    top: 10%;
+    right: 17.5%;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .panda__marker {
+    height: 94px;
+    width: 67px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda > img {
+    position: absolute;
+    left: 20%;
+    top: 13%;
+    height: 40px;
+    width: 40px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample {
+    height: 147px;
+    width: 436px;
+    right: 4px;
+    top: 66px;
+    z-index: 1;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample .example__image {
+    margin-left: 12px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample .example__image img {
+    height: 65px;
+    width: 65px;
+    margin-left: 15px;
+    margin-right: 55px;
+    margin-bottom: 5px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample .example__info {
+    margin-left: -48px;
+    margin-top: -4px;
+    line-height: 4px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample .example__info h4 {
+    font-size: 18px;
+    margin-top: 34px;
+    margin-left: 2px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample .example__info .animal__info {
+    margin-bottom: 31px;
+    line-height: 7px;
+    margin-right: 41px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample .example__info .animal__info p {
+    font-size: 14px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle {
+    left: 9%;
+    top: 8%;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .eagle__marker {
+    height: 94px;
+    width: 67px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle > img {
+    height: 40px;
+    width: 40px;
+    left: 20%;
+    top: 13%;
+    position: absolute;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample {
+    height: 147px;
+    width: 436px;
+    right: -373px;
+    top: 73px;
+    z-index: 1;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample .example__image {
+    margin-left: 12px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample .example__image img {
+    height: 65px;
+    width: 65px;
+    margin-left: 15px;
+    margin-right: 55px;
+    margin-bottom: 5px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample .example__info {
+    margin-left: -48px;
+    margin-top: -4px;
+    line-height: 4px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample .example__info h4 {
+    font-size: 18px;
+    margin-top: 34px;
+    margin-left: 2px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample .example__info .animal__info {
+    margin-bottom: 31px;
+    line-height: 7px;
+    margin-right: 41px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample .example__info .animal__info p {
+    font-size: 14px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator {
+    top: 11%;
+    left: 17%;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .aligator__marker {
+    height: 94px;
+    width: 67px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator > img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 20%;
+    top: 13%;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample {
+    height: 147px;
+    width: 436px;
+    right: -324px;
+    top: 63px;
+    z-index: 1;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample .example__image {
+    margin-left: 12px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample .example__image img {
+    height: 65px;
+    width: 65px;
+    margin-left: 15px;
+    margin-right: 55px;
+    margin-bottom: 5px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample .example__info {
+    margin-left: -48px;
+    margin-top: -4px;
+    line-height: 4px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample .example__info h4 {
+    font-size: 18px;
+    margin-top: 34px;
+    margin-left: 2px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample .example__info .animal__info {
+    margin-bottom: 31px;
+    line-height: 7px;
+    margin-right: 41px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample .example__info .animal__info p {
+    font-size: 14px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla {
+    bottom: 40%;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .gorilla__marker {
+    height: 94px;
+    width: 67px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla > img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 20%;
+    top: 13%;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample {
+    height: 147px;
+    width: 436px;
+    right: -146px;
+    top: 11px;
+    z-index: 1;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample .example__image {
+    margin-left: 12px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample .example__image img {
+    height: 65px;
+    width: 65px;
+    margin-left: 15px;
+    margin-right: 55px;
+    margin-bottom: 5px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample .example__info {
+    margin-left: -48px;
+    margin-top: -4px;
+    line-height: 4px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample .example__info h4 {
+    font-size: 18px;
+    margin-top: 34px;
+    margin-left: 2px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample .example__info .animal__info {
+    margin-bottom: 31px;
+    line-height: 7px;
+    margin-right: 41px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample .example__info .animal__info p {
+    font-size: 14px;
   }
   body .wrapper .map .map__btn {
     width: 245px;

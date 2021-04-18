@@ -898,7 +898,7 @@ body {
         flex-direction: column;
         background-image: url(../../assets/images/Group.png);
         max-width: 1200px;
-        max-height: 500px;
+        max-height: 600px;
         height: 35.3vw;
         width: 100%;
         margin-bottom: 36px;
@@ -1005,9 +1005,9 @@ body {
             top: 10%;
             right: 16.8%;
             & > img {
-              position: relative;
-              left: 52%;
-              bottom: 21px;
+              left: 18%;
+              top: 10%;
+              position: absolute;
             }
             .map__animalExample {
               height: 113px;
@@ -1042,12 +1042,12 @@ body {
             }
           }
           .animals__box.eagle {
-            left: 0%;
+            left: 8%;
             top: 7%;
             & > img {
-              left: 51%;
-              position: relative;
-              bottom: 20px;
+              left: 18%;
+              top: 10%;
+              position: absolute;
             }
             .map__animalExample {
               height: 113px;
@@ -1083,11 +1083,11 @@ body {
           }
           .animals__box.aligator {
             top: 13%;
-            left: 9.5%;
+            left: 17.5%;
             & > img {
-              bottom: 21px;
-              position: relative;
-              left: 54%;
+              left: 18%;
+              top: 10%;
+              position: absolute;
             }
             .map__animalExample {
               height: 113px;
@@ -1124,9 +1124,9 @@ body {
           .animals__box.gorilla {
             bottom: 32%;
             & > img {
-              bottom: 19px;
-              position: relative;
-              left: 52%;
+              left: 18%;
+              top: 10%;
+              position: absolute;
             }
             .map__animalExample {
               height: 113px;
@@ -1155,6 +1155,237 @@ body {
                   line-height: 12px;
                   p {
                     font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .map__btn {
+          width: 245px;
+        }
+        .panda__marker {
+          width: 34px;
+          height: 47px;
+        }
+        .eagle__marker {
+          width: 34px;
+          height: 47px;
+        }
+        .aligator__marker {
+          width: 34px;
+          height: 47px;
+        }
+        .gorilla__marker {
+          width: 34px;
+          height: 47px;
+        }
+      }
+      @media (min-width: 640px) and (max-width: 1200px){
+        padding: 100px 20px 80px 20px;
+        h2 {
+          font-size: 48px;
+          margin-bottom: 51px;
+        }
+        .map__wrapper {
+          margin-bottom: 39px;
+          height: 47.3vw;
+          min-height: 146px;
+          min-width: 300px;
+          .animals__box.panda {
+            top: 10%;
+            right: 17.5%;
+            .panda__marker{
+              height: 94px;
+              width: 67px;
+            }
+            & > img {
+              position: absolute;
+              left: 20%;
+              top: 13%;
+              height: 40px;
+              width: 40px;
+            }
+            .map__animalExample {
+              height: 147px;
+              width: 436px;
+              right: 4px;
+              top: 66px;
+              z-index: 1;
+              .example__image {
+                margin-left: 12px;
+                img {
+                  height: 65px;
+                  width: 65px;
+                  margin-left: 15px;
+                  margin-right: 55px;
+                  margin-bottom: 5px;
+              }
+              }
+              .example__info {
+                margin-left: -48px;
+                margin-top: -4px;
+                line-height: 4px;
+                h4 {
+                  font-size: 18px;
+                  margin-top: 34px;
+                  margin-left: 2px;
+                }
+                .animal__info {
+                  margin-bottom: 31px;
+                  line-height: 7px;
+                  margin-right: 41px;
+                  p {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+          .animals__box.eagle {
+            left: 9%;
+            top: 8%;
+            .eagle__marker{
+              height: 94px;
+              width: 67px;
+            }
+            & > img {         
+            height: 40px;
+            width: 40px;
+            left: 20%;
+            top: 13%;
+            position: absolute;
+            }
+            .map__animalExample {
+              height: 147px;
+              width: 436px;
+              right: -373px;
+              top: 73px;
+              z-index: 1;
+              .example__image {
+                margin-left: 12px;
+                img {
+                  height: 65px;
+                  width: 65px;
+                  margin-left: 15px;
+                  margin-right: 55px;
+                  margin-bottom: 5px;
+              }
+              }
+              .example__info {
+                margin-left: -48px;
+                margin-top: -4px;
+                line-height: 4px;
+                h4 {
+                  font-size: 18px;
+                  margin-top: 34px;
+                  margin-left: 2px;
+                }
+                .animal__info {
+                  margin-bottom: 31px;
+                  line-height: 7px;
+                  margin-right: 41px;
+                  p {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+          .animals__box.aligator {
+            top: 11%;
+            left: 17%;
+            .aligator__marker{
+              height: 94px;
+              width: 67px;
+            }
+            & > img {
+              height: 40px;
+              width: 40px;
+              position: absolute;
+              left: 20%;
+              top: 13%;
+            }
+            .map__animalExample {
+              height: 147px;
+              width: 436px;
+              right: -324px;
+              top: 63px;
+              z-index: 1;
+              .example__image {
+                margin-left: 12px;
+                img {
+                  height: 65px;
+                  width: 65px;
+                  margin-left: 15px;
+                  margin-right: 55px;
+                  margin-bottom: 5px;
+              }
+              }
+              .example__info {
+                margin-left: -48px;
+                margin-top: -4px;
+                line-height: 4px;
+                h4 {
+                  font-size: 18px;
+                  margin-top: 34px;
+                  margin-left: 2px;
+                }
+                .animal__info {
+                  margin-bottom: 31px;
+                  line-height: 7px;
+                  margin-right: 41px;
+                  p {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+          .animals__box.gorilla {
+            bottom: 40%;
+            .gorilla__marker{
+              height: 94px;
+              width: 67px;
+            }
+            & > img {
+              height: 40px;
+              width: 40px;
+              position: absolute;
+              left: 20%;
+              top: 13%;
+            }
+            .map__animalExample {
+              height: 147px;
+              width: 436px;
+              right: -146px;
+              top: 11px;
+              z-index: 1;
+              .example__image {
+                margin-left: 12px;
+                img {
+                  height: 65px;
+                  width: 65px;
+                  margin-left: 15px;
+                  margin-right: 55px;
+                  margin-bottom: 5px;
+              }
+              }
+              .example__info {
+                margin-left: -48px;
+                margin-top: -4px;
+                line-height: 4px;
+                h4 {
+                  font-size: 18px;
+                  margin-top: 34px;
+                  margin-left: 2px;
+                }
+                .animal__info {
+                  margin-bottom: 31px;
+                  line-height: 7px;
+                  margin-right: 41px;
+                  p {
+                    font-size: 14px;
                   }
                 }
               }
