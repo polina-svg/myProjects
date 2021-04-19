@@ -1382,7 +1382,7 @@ body .wrapper .petsInzoo__btn span {
   text-transform: uppercase;
 }
 body .wrapper .payAndfeed {
-  padding: 100px;
+  padding: 103px 446px;
   background-color: #f2f2f2;
 }
 body .wrapper .payAndfeed h2 {
@@ -1391,7 +1391,7 @@ body .wrapper .payAndfeed h2 {
   font-size: 48px;
   margin: 0 auto;
   line-height: 56px;
-  margin-top: -6px;
+  margin-top: -136px;
   align-items: center;
 }
 body .wrapper .payAndfeed p {
@@ -1400,14 +1400,18 @@ body .wrapper .payAndfeed p {
   margin: 30px auto;
   max-width: 790px;
   width: 100%;
+  margin-top: 33px;
 }
 body .wrapper .payAndfeed__wrapper {
   max-width: 1200px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
+  margin-bottom: 92px;
+  margin-top: 0px;
+  width: 114%;
+  margin-left: -72px;
 }
 body .wrapper .payAndfeed__item {
   display: flex;
@@ -1449,6 +1453,7 @@ body .wrapper .payAndfeed__btn {
   width: 245px;
   height: 55px;
   color: #ffffff;
+  margin-bottom: -84px;
 }
 body .wrapper .payAndfeed__btn:hover {
   opacity: 0.6;
@@ -1479,6 +1484,67 @@ body .wrapper .payAndfeed__btn span {
     margin-left: 82px;
   }
   body .wrapper .payAndfeed .payAndfeed__btn {
+    margin-top: -23px;
+  }
+}
+@media (min-width: 640px) and (max-width: 1199px) {
+  body .wrapper .payAndfeed {
+    padding: 100px 20px;
+  }
+  body .wrapper .payAndfeed h2 {
+    font-size: 48px;
+    margin-top: -72px;
+  }
+  body .wrapper .payAndfeed p {
+    visibility: visible;
+    width: 538px;
+    margin-top: 16px;
+  }
+  body .wrapper .payAndfeed .payAndfeed__item {
+    flex-direction: column;
+    margin-top: 19px;
+  }
+  body .wrapper .payAndfeed .payAndfeed__item .arrow {
+    width: 9%;
+    transform: rotate(90deg);
+    padding-top: 82px;
+    margin-left: 82px;
+  }
+  body .wrapper .payAndfeed .payAndfeed__btn {
+    margin-top: -23px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1919px) {
+  body .wrapper .payAndfeed {
+    padding: 100px 150px;
+  }
+  body .wrapper .payAndfeed .payAndfeed__wrapper {
+    width: 87%;
+  }
+  body .wrapper .payAndfeed .payAndfeed__wrapper h2 {
+    font-size: 48px;
+    margin-top: -51px;
+  }
+  body .wrapper .payAndfeed .payAndfeed__wrapper p {
+    visibility: visible;
+    width: 748px;
+    margin-top: 33px;
+  }
+  body .wrapper .payAndfeed .payAndfeed__wrapper .payAndfeed__item {
+    margin-top: 19px;
+    width: 128%;
+    margin-left: -160px;
+  }
+  body .wrapper .payAndfeed .payAndfeed__wrapper .payAndfeed__item .payAndfeed__item__image:nth-child(1) {
+    padding-left: 101px;
+  }
+  body .wrapper .payAndfeed .payAndfeed__wrapper .payAndfeed__item .arrow {
+    padding-right: 9px;
+    width: 58%;
+    padding-top: 4px;
+    margin-left: 14px;
+  }
+  body .wrapper .payAndfeed .payAndfeed__wrapper .payAndfeed__btn {
     margin-top: -23px;
   }
 }
@@ -1668,7 +1734,7 @@ body .wrapper .testimonials__btn span {
     width: 93%;
   }
 }
-@media (min-width: 640px) and (max-width: 1200px) {
+@media (min-width: 640px) and (max-width: 1198px) {
   body .wrapper .testimonials {
     padding: 100px 20px;
     margin: 0 auto;

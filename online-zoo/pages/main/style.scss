@@ -818,7 +818,7 @@ body {
       }
     }
     .payAndfeed {
-      padding: 100px;
+      padding: 103px 446px;
       background-color: #f2f2f2;
       h2 {
         text-align: center;
@@ -826,7 +826,7 @@ body {
         font-size: 48px;
         margin: 0 auto;
         line-height: 56px;
-        margin-top: -6px;
+        margin-top: -136px;
         align-items: center;
       }
       p {
@@ -835,14 +835,18 @@ body {
         margin: 30px auto;
         max-width: 790px;
         width: 100%;
+        margin-top: 33px;
       }
       &__wrapper {
         max-width: 1200px;
-        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin: 0 auto;
+        margin-bottom: 92px;
+        margin-top:  0px;
+        width: 114%;
+        margin-left: -72px;
       }
       &__item {
         display: flex;
@@ -879,6 +883,7 @@ body {
         width: 245px;
         height: 55px;
         color: #ffffff;
+        margin-bottom: -84px;
       }
       @media screen and (max-width: 640px){
         padding: 50px 40px;
@@ -903,6 +908,64 @@ body {
           margin-top: -23px;
         }
 
+      }
+      @media (min-width: 640px) and (max-width: 1199px){
+        padding: 100px 20px;
+        h2{
+          font-size: 48px;
+          margin-top: -72px;;
+        }
+        p{
+          visibility: visible;
+          width: 538px;
+          margin-top: 16px;
+        }
+        .payAndfeed__item{
+          flex-direction: column;
+          margin-top: 19px;
+          .arrow{
+            width: 9%;
+            transform: rotate(90deg);
+            padding-top: 82px;
+            margin-left: 82px;;
+          }
+        }
+        .payAndfeed__btn{
+          margin-top: -23px;
+        }
+      }
+      @media (min-width: 1200px) and (max-width: 1919px){
+        padding: 100px 150px;
+        .payAndfeed__wrapper{
+          width: 87%;
+          h2{
+            font-size: 48px;
+            margin-top: -51px;
+          }
+          p{
+            visibility: visible;
+            width: 748px;
+            margin-top: 33px;
+          }
+          .payAndfeed__item{
+            margin-top: 19px;
+            width: 128%;
+            margin-left: -160px;
+            .payAndfeed__item__image:nth-child(1){
+              padding-left: 101px;
+            }
+            .arrow{
+              padding-right: 9px;
+              width: 58%;
+              padding-top: 4px;
+              margin-left: 14px;
+            }
+          }
+          .payAndfeed__btn{
+            margin-top: -23px;
+          }
+        }
+        
       }
     }
     .testimonials {
@@ -1025,7 +1088,7 @@ body {
           
         }
       }
-      @media (min-width: 640px) and (max-width: 1200px){
+      @media (min-width: 640px) and (max-width: 1198px){
         padding: 100px 20px;
         margin: 0 auto;
         h2{
