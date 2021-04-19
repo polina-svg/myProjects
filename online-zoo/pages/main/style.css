@@ -1510,6 +1510,47 @@ body .wrapper .testimonials__btn span {
   font-size: 18px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 640px) {
+  body .wrapper .testimonials {
+    padding: 50px 10px;
+    margin: 0 auto;
+  }
+  body .wrapper .testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 11px;
+    margin-top: 106px;
+    padding: 0;
+  }
+  body .wrapper .testimonials .testimonials__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -20px;
+  }
+  body .wrapper .testimonials .testimonials__wrapper .arrow {
+    visibility: hidden;
+    height: 0px;
+  }
+  body .wrapper .testimonials .testimonials__wrapper .testimonials__user {
+    visibility: hidden;
+    height: 0px;
+  }
+  body .wrapper .testimonials .testimonials__wrapper .testimonials__user.adaptive {
+    height: 363px;
+    visibility: visible;
+  }
+  body .wrapper .testimonials .testimonials__wrapper .testimonials__user.adaptive img {
+    margin-top: -34px;
+    width: 68px;
+    height: 68px;
+  }
+  body .wrapper .testimonials .testimonials__wrapper .testimonials__user.adaptive h3 {
+    font-size: 16px;
+    margin-top: 49px;
+  }
+  body .wrapper .testimonials .testimonials__wrapper .testimonials__user.adaptive p {
+    width: 93%;
+  }
+}
 body .wrapper .map {
   display: flex;
   flex-direction: column;
@@ -2294,6 +2335,221 @@ body .wrapper .map .map__btn span {
   body .wrapper .map .gorilla__marker {
     width: 34px;
     height: 47px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  body .wrapper .map {
+    padding: 100px 360px;
+  }
+  body .wrapper .map h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    margin-top: 13px;
+  }
+  body .wrapper .map .map__wrapper {
+    margin-bottom: -12px;
+    height: 46.3vw;
+    min-height: 146px;
+    min-width: 300px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda {
+    top: 24%;
+    right: 20%;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .panda__marker {
+    height: 94px;
+    width: 67px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda > img {
+    position: absolute;
+    left: 16%;
+    top: 10%;
+    height: 46px;
+    width: 46px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample {
+    height: 147px;
+    width: 436px;
+    right: 13px;
+    top: 73px;
+    z-index: 1;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample .example__image {
+    margin-left: 12px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample .example__image img {
+    height: 65px;
+    width: 65px;
+    margin-left: 15px;
+    margin-right: 55px;
+    margin-bottom: 5px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample .example__info {
+    margin-left: -48px;
+    margin-top: -4px;
+    line-height: 4px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample .example__info h4 {
+    font-size: 18px;
+    margin-top: 34px;
+    margin-left: 2px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample .example__info .animal__info {
+    margin-bottom: 31px;
+    line-height: 7px;
+    margin-right: 41px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.panda .map__animalExample .example__info .animal__info p {
+    font-size: 14px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle {
+    left: 10%;
+    top: 21%;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .eagle__marker {
+    height: 94px;
+    width: 67px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle > img {
+    height: 46px;
+    width: 46px;
+    left: 16%;
+    top: 13%;
+    position: absolute;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample {
+    height: 147px;
+    width: 436px;
+    right: 33px;
+    top: 78px;
+    z-index: 1;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample .example__image {
+    margin-left: 12px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample .example__image img {
+    height: 65px;
+    width: 65px;
+    margin-left: 15px;
+    margin-right: 55px;
+    margin-bottom: 5px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample .example__info {
+    margin-left: -48px;
+    margin-top: -4px;
+    line-height: 4px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample .example__info h4 {
+    font-size: 18px;
+    margin-top: 34px;
+    margin-left: 2px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample .example__info .animal__info {
+    margin-bottom: 31px;
+    line-height: 7px;
+    margin-right: 41px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.eagle .map__animalExample .example__info .animal__info p {
+    font-size: 14px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator {
+    top: 26%;
+    left: 20%;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .aligator__marker {
+    height: 94px;
+    width: 67px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator > img {
+    height: 46px;
+    width: 46px;
+    position: absolute;
+    left: 18%;
+    top: 11%;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample {
+    height: 147px;
+    width: 436px;
+    right: 23px;
+    top: 63px;
+    z-index: 1;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample .example__image {
+    margin-left: 12px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample .example__image img {
+    height: 65px;
+    width: 65px;
+    margin-left: 15px;
+    margin-right: 55px;
+    margin-bottom: 5px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample .example__info {
+    margin-left: -48px;
+    margin-top: -4px;
+    line-height: 4px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample .example__info h4 {
+    font-size: 18px;
+    margin-top: 34px;
+    margin-left: 2px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample .example__info .animal__info {
+    margin-bottom: 31px;
+    line-height: 7px;
+    margin-right: 41px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.aligator .map__animalExample .example__info .animal__info p {
+    font-size: 14px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla {
+    bottom: 43%;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .gorilla__marker {
+    height: 94px;
+    width: 67px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla > img {
+    height: 46px;
+    width: 46px;
+    position: absolute;
+    left: 17%;
+    top: 13%;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample {
+    height: 147px;
+    width: 436px;
+    right: 15px;
+    top: 11px;
+    z-index: 1;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample .example__image {
+    margin-left: 12px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample .example__image img {
+    height: 65px;
+    width: 65px;
+    margin-left: 15px;
+    margin-right: 55px;
+    margin-bottom: 5px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample .example__info {
+    margin-left: -48px;
+    margin-top: -4px;
+    line-height: 4px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample .example__info h4 {
+    font-size: 18px;
+    margin-top: 34px;
+    margin-left: 2px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample .example__info .animal__info {
+    margin-bottom: 31px;
+    line-height: 7px;
+    margin-right: 41px;
+  }
+  body .wrapper .map .map__wrapper .animals__box.gorilla .map__animalExample .example__info .animal__info p {
+    font-size: 14px;
   }
 }
 body .wrapper .footer-wrapper {

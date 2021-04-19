@@ -875,6 +875,46 @@ body {
         width: 245px;
         height: 55px;
       }
+      @media screen and (max-width: 640px){
+        padding: 50px 10px;
+        margin: 0 auto;
+        h2{
+          font-size: 36px;
+          margin-bottom: 11px;
+          margin-top: 106px;
+          padding: 0;
+        }
+        .testimonials__wrapper{
+          display: flex;
+          flex-direction: column;
+          margin-bottom: -20px;
+          .arrow{
+            visibility: hidden;
+            height: 0px;
+          }
+          .testimonials__user{
+            visibility: hidden;
+            height: 0px;
+          }
+          .testimonials__user.adaptive{
+            height: 363px;
+            visibility: visible;
+            img{
+              margin-top: -34px;
+              width: 68px;
+              height: 68px;
+            }
+            h3{
+              font-size: 16px;
+              margin-top: 49px;
+            }
+            p{
+              width: 93%;
+            }
+          }
+          
+        }
+      }
     }
     .map {
       display: flex;
