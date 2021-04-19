@@ -251,8 +251,26 @@ body {
         letter-spacing: 0px;
       }
 
-      nav {
+      .header__navigation {
         width: 813px;
+        position: relative;
+        #checkMenu{
+          display: none;
+        }
+        label{
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          z-index: 2;
+        }
+        .burger-line{
+          position: absolute;
+          width: 40px;
+          height: 4px;
+          background-color: black;
+        }
         ul {
           display: flex;
           justify-content: space-between;
@@ -264,7 +282,6 @@ body {
           padding-top: 5px;
           padding-right: -16px;
           padding-left: 43px;
-        }
         li {
           list-style: none;
           display: flex;
@@ -289,6 +306,7 @@ body {
             font-weight: 900;
           }
         }
+      }
       }
 
       .toggle-bg {
@@ -339,14 +357,64 @@ body {
       .toggle-bg input:checked {
         z-index: 0;
       }
-      @media screen and (max-width: 1200px) {
-        .header__title {
-          margin-left: 0%;
+      @media screen and (max-width: 640px){
+        .header__title{
+          margin-top: 8px;
+          margin-left: -201%;
         }
         .header__navigation {
-          width: 72%;
-        }
+          width: 813px;
+          position: relative;
+          #checkMenu{
+            display: none;
+            position: absolute;
+            left: 219px;
+          }
+          label{
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            z-index: 2;
+          }
+          .burger-line{
+            position: absolute;
+            width: 40px;
+            height: 4px;
+            background-color: black;
+          } 
+          .first{
+            top: 2px;
+            left: 199px;
+          }
+          .second{
+            top: 10px;
+            left: 198px;
+          }
+          .third{
+            top: 19px;
+            left: 206px;
+            width: 32px;
+          } 
+          ul{
+            transform: translateY(61px);
+          } 
       }
+      .header__switch{
+        .toggle-bg{
+          right: 478px;
+         }      
+      }
+    }
+      // @media screen and (max-width: 1200px) {
+      //   .header__title {
+      //     margin-left: 0%;
+      //   }
+      //   .header__navigation {
+      //     width: 72%;
+      //   }
+      // }
     }
     .watchAnimals {
       background-image: url(../../assets/images/main-bg.png);
@@ -638,6 +706,15 @@ body {
         @include slider(black, 0, 60px);
         margin: 30px auto;
       }
+      @media screen and (max-width: 640px){
+        padding: 50px 10px;
+        h2{
+          font-size: 36px;
+        }
+        p{
+          margin: 6px auto;
+        }
+      }
     }
     .infoAbout {
       padding: 100px 12%;
@@ -792,7 +869,40 @@ body {
           }
         }
       }
-      @media screen and (max-width: 1200px) {
+      &__btn{
+        @include btn(
+          $withIcon: false,
+          $icon: "../../assets/icons/rectangle.svg",
+          $bg: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%)
+        );
+        margin: 0 auto;
+        width: 245px;
+        height: 55px;
+        color: #ffffff;
+      }
+      @media screen and (max-width: 640px){
+        padding: 50px 40px;
+        h2{
+          font-size: 36px;
+          margin-top: 119px;
+        }
+        p{
+          visibility: hidden;
+        }
+        .payAndfeed__item{
+          flex-direction: column;
+          margin-top: -92px;
+          .arrow{
+            width: 23%;
+            transform: rotate(90deg);
+            padding-top: 84px;
+            margin-left: 82px;
+          }
+        }
+        .payAndfeed__btn{
+          margin-top: -23px;
+        }
+
       }
     }
     .testimonials {
@@ -880,8 +990,8 @@ body {
         margin: 0 auto;
         h2{
           font-size: 36px;
-          margin-bottom: 11px;
-          margin-top: 106px;
+          margin-bottom: 3px;
+          margin-top: 12px;;
           padding: 0;
         }
         .testimonials__wrapper{
