@@ -254,10 +254,10 @@ body {
       .header__navigation {
         width: 813px;
         position: relative;
-        #checkMenu{
+        #checkMenu {
           display: none;
         }
-        label{
+        label {
           display: block;
           position: absolute;
           width: 100%;
@@ -265,7 +265,7 @@ body {
           cursor: pointer;
           z-index: 2;
         }
-        .burger-line{
+        .burger-line {
           position: absolute;
           width: 40px;
           height: 4px;
@@ -282,31 +282,31 @@ body {
           padding-top: 5px;
           padding-right: -16px;
           padding-left: 43px;
-        li {
-          list-style: none;
-          display: flex;
+          li {
+            list-style: none;
+            display: flex;
 
-          .list__item {
-            text-decoration: none;
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            color: black;
-            cursor: pointer;
-            transition: all 0.5s ease-in;
-            &:hover {
-              opacity: 0.5;
-              font-weight: 900;
+            .list__item {
+              text-decoration: none;
+              font-family: Roboto;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              color: black;
+              cursor: pointer;
+              transition: all 0.5s ease-in;
+              &:hover {
+                opacity: 0.5;
+                font-weight: 900;
+                text-decoration: underline;
+              }
+            }
+            .list__item_active {
               text-decoration: underline;
+              font-weight: 900;
             }
           }
-          .list__item_active {
-            text-decoration: underline;
-            font-weight: 900;
-          }
         }
-      }
       }
 
       .toggle-bg {
@@ -357,20 +357,20 @@ body {
       .toggle-bg input:checked {
         z-index: 0;
       }
-      @media screen and (max-width: 640px){
-        .header__title{
+      @media screen and (max-width: 640px) {
+        .header__title {
           margin-top: 8px;
           margin-left: -201%;
         }
         .header__navigation {
           width: 813px;
           position: relative;
-          #checkMenu{
+          #checkMenu {
             display: none;
             position: absolute;
             left: 219px;
           }
-          label{
+          label {
             display: block;
             position: absolute;
             width: 100%;
@@ -378,35 +378,35 @@ body {
             cursor: pointer;
             z-index: 2;
           }
-          .burger-line{
+          .burger-line {
             position: absolute;
             width: 40px;
             height: 4px;
             background-color: black;
-          } 
-          .first{
+          }
+          .first {
             top: 2px;
             left: 199px;
           }
-          .second{
+          .second {
             top: 10px;
             left: 198px;
           }
-          .third{
+          .third {
             top: 19px;
             left: 206px;
             width: 32px;
-          } 
-          ul{
+          }
+          ul {
             transform: translateY(61px);
-          } 
+          }
+        }
+        .header__switch {
+          .toggle-bg {
+            right: 478px;
+          }
+        }
       }
-      .header__switch{
-        .toggle-bg{
-          right: 478px;
-         }      
-      }
-    }
       // @media screen and (max-width: 1200px) {
       //   .header__title {
       //     margin-left: 0%;
@@ -706,12 +706,12 @@ body {
         @include slider(black, 0, 60px);
         margin: 30px auto;
       }
-      @media screen and (max-width: 640px){
+      @media screen and (max-width: 640px) {
         padding: 50px 10px;
-        h2{
+        h2 {
           font-size: 36px;
         }
-        p{
+        p {
           margin: 6px auto;
         }
       }
@@ -752,7 +752,12 @@ body {
         }
       }
     }
+    .petsInzoo-wrapper {
+      background-color: white;
+    }
     .petsInzoo {
+      max-width: 1920px;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
       padding: 100px 0;
@@ -816,9 +821,49 @@ body {
         height: 55px;
         color: #ffffff;
       }
+      @media screen and (max-width: 640px) {
+        
+      }
+      @media (min-width: 640px) and (max-width: 1199px) {
+        
+      }
+      @media (min-width: 1200px) and (max-width: 1919px) {
+        h2 {
+          margin-bottom: 26px;
+          margin-top: 0;
+          line-height: 56px;
+        }
+        &__animals {
+          display: flex;
+          gap: 25px;
+          align-items: center;
+          max-width: 1300px;
+          max-height: 400px;
+          width: 84vw;
+          height: 26vw;
+          margin: 0 auto;
+        }
+        &__progress {
+          width: 245px;
+          height: 49px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          margin: 22px auto;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+
+    .payAndfeed-wrapper {
+      background-color: #f2f2f2;
     }
     .payAndfeed {
-      padding: 103px 446px;
+      max-width: 1920px;
+      margin: 0 auto;
+      padding: 100px 0;
       background-color: #f2f2f2;
       h2 {
         text-align: center;
@@ -826,7 +871,6 @@ body {
         font-size: 48px;
         margin: 0 auto;
         line-height: 56px;
-        margin-top: -136px;
         align-items: center;
       }
       p {
@@ -843,17 +887,14 @@ body {
         flex-direction: column;
         justify-content: space-between;
         margin: 0 auto;
-        margin-bottom: 92px;
-        margin-top:  0px;
-        width: 114%;
-        margin-left: -72px;
+        width: 99%;
       }
       &__item {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 64px;
-        margin-bottom: 63px;
+        margin-top: 65px;
+        margin-bottom: 45px;
         .payAndfeed__item__image.arrow {
           display: flex;
           align-items: center;
@@ -873,7 +914,7 @@ body {
           }
         }
       }
-      &__btn{
+      &__btn {
         @include btn(
           $withIcon: false,
           $icon: "../../assets/icons/rectangle.svg",
@@ -883,95 +924,84 @@ body {
         width: 245px;
         height: 55px;
         color: #ffffff;
-        margin-bottom: -84px;
       }
-      @media screen and (max-width: 640px){
-        padding: 50px 40px;
-        h2{
+      @media screen and (max-width: 639px) {
+        padding: 40px 40px 50px 40px;
+        h2 {
           font-size: 36px;
-          margin-top: 119px;
+          margin-bottom: 23px;
         }
-        p{
-          visibility: hidden;
+        p {
+          display: none;
         }
-        .payAndfeed__item{
+        .payAndfeed__item {
           flex-direction: column;
-          margin-top: -92px;
-          .arrow{
+          margin-bottom: 32px;
+          .arrow {
             width: 23%;
             transform: rotate(90deg);
             padding-top: 84px;
             margin-left: 82px;
           }
         }
-        .payAndfeed__btn{
-          margin-top: -23px;
+        .payAndfeed__btn {
         }
-
       }
-      @media (min-width: 640px) and (max-width: 1199px){
+      @media (min-width: 640px) and (max-width: 1199px) {
         padding: 100px 20px;
-        h2{
+        h2 {
           font-size: 48px;
-          margin-top: -72px;;
         }
-        p{
-          visibility: visible;
+        p {
           width: 538px;
           margin-top: 16px;
         }
-        .payAndfeed__item{
+        .payAndfeed__item {
           flex-direction: column;
           margin-top: 19px;
-          .arrow{
+          .arrow {
             width: 9%;
             transform: rotate(90deg);
             padding-top: 82px;
-            margin-left: 82px;;
+            margin-left: 82px;
           }
-        }
-        .payAndfeed__btn{
-          margin-top: -23px;
         }
       }
-      @media (min-width: 1200px) and (max-width: 1919px){
+      @media (min-width: 1200px) and (max-width: 1919px) {
         padding: 100px 150px;
-        .payAndfeed__wrapper{
-          width: 87%;
-          h2{
+        .payAndfeed__wrapper {
+          h2 {
             font-size: 48px;
-            margin-top: -51px;
           }
-          p{
+          p {
             visibility: visible;
             width: 748px;
             margin-top: 33px;
           }
-          .payAndfeed__item{
+          .payAndfeed__item {
             margin-top: 19px;
-            width: 128%;
-            margin-left: -160px;
-            .payAndfeed__item__image:nth-child(1){
-              padding-left: 101px;
-            }
-            .arrow{
+            .arrow {
               padding-right: 9px;
               width: 58%;
               padding-top: 4px;
               margin-left: 14px;
             }
           }
-          .payAndfeed__btn{
-            margin-top: -23px;
+          .payAndfeed__btn {
           }
         }
-        
       }
     }
+    
+    .testimonials-wrapper {
+      background-color: white;
+    }
     .testimonials {
+      max-width: 1920px;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
-      padding: 100px 110px;
+      padding: 100px;
       align-items: center;
       text-align: center;
       h2 {
@@ -979,9 +1009,9 @@ body {
         font-style: normal;
         font-weight: 900;
         font-size: 48px;
+        line-height: 56px;
         margin: 0;
-        margin-bottom: 69px;
-        margin-top: 17px;
+        margin-bottom: 48px;
         align-items: center;
         text-align: center;
       }
@@ -991,7 +1021,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         margin-top: 10px;
         gap: 20px;
         .arrow {
@@ -1048,153 +1078,106 @@ body {
         width: 245px;
         height: 55px;
       }
-      @media screen and (max-width: 640px){
+      @media screen and (max-width: 640px) {
         padding: 50px 10px;
         margin: 0 auto;
-        h2{
+        h2 {
           font-size: 36px;
-          margin-bottom: 3px;
-          margin-top: 12px;;
+          margin-bottom: 16px;
           padding: 0;
+          line-height: 42px;
         }
-        .testimonials__wrapper{
+        &__wrapper {
           display: flex;
           flex-direction: column;
-          margin-bottom: -20px;
-          .arrow{
-            visibility: hidden;
+          margin-bottom: 49px;
+          .arrow {
+            display: none;
             height: 0px;
           }
-          .testimonials__user{
-            visibility: hidden;
-            height: 0px;
+          .testimonials__user {
+            display: none;
           }
-          .testimonials__user.adaptive{
+          .testimonials__user.adaptive {
             height: 363px;
-            visibility: visible;
-            img{
-              margin-top: -34px;
+            display: flex;
+            img {
               width: 68px;
               height: 68px;
             }
-            h3{
+            h3 {
               font-size: 16px;
               margin-top: 49px;
             }
-            p{
+            p {
               width: 93%;
             }
           }
-          
+        }
+        &__progress {
+          margin: 0;
+          margin-bottom: 27px;
         }
       }
-      @media (min-width: 640px) and (max-width: 1198px){
+      @media (min-width: 640px) and (max-width: 1199px) {
         padding: 100px 20px;
         margin: 0 auto;
-        h2{
+        h2 {
           font-size: 48px;
-          margin-bottom: 41px;
-          margin-top: 27px;
           padding: 0;
+          margin-bottom: 59px;
         }
-        .testimonials__wrapper{
+        &__wrapper {
           display: flex;
           flex-direction: column;
-          margin-bottom: -20px;
-          .arrow{
-            visibility: hidden;
-            height: 0px;
+          margin-bottom: 0;
+          margin-top: 0;
+          .arrow {
+            display: none;
           }
-          .testimonials__user{
-            visibility: hidden;
-            height: 0px;
+          .testimonials__user {
+            display: none;
           }
-          .testimonials__user.adaptive{
+          .testimonials__user.adaptive {
             height: 303px;
-            visibility: visible;
-            img{
+            display: flex;
+            img {
               margin-top: -14px;
               width: 68px;
               height: 68px;
               margin-bottom: 15px;
             }
-            h3{
+            h3 {
               margin-bottom: 0px;
               font-size: 20px;
               margin-top: 0px;
             }
-            p{
+            p {
               width: 69%;
               margin-bottom: 48px;
             }
           }
+        }
+        &__progress {
+          margin: 0;
+          margin-top: 55px;
+          margin-bottom: 30px;
         }
       }
-      @media (min-width: 1200px) and (max-width: 1920px){
-        padding: 100px 300px;
+      @media (min-width: 1200px) and (max-width: 1919px) {
         margin: 0 auto;
-        h2{
-          font-size: 48px;
-          margin-bottom: 55px;
-          margin-top: 0px;
-          padding: 0;
-        }
-        .testimonials__wrapper{
-          max-width: 1300px;
-          width: 166%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-bottom: 20px;
-          margin-top: 10px;
-          gap: 20px;
-          .arrow{
-            visibility: visible;
-            width: 30px;
-            height: 30px;
-          }
-          .testimonials__user{
-            max-width: 585px;
-            height: 310px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            visibility: visible;
-          }
-          .testimonials__user.adaptive{
-            max-width: 585px;
-            height: 310px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            img{
-              margin-top: -14px;
-              width: 68px;
-              height: 68px;
-              margin-bottom: 15px;
-            }
-            h3{
-              margin-bottom: 0px;
-              font-size: 20px;
-              margin-top: 0px;
-            }
-            p{
-              width: 69%;
-              margin-bottom: 48px;
-            }
-          }
-        }
       }
     }
+    
+    .map-wrapper {
+      background-color: #f2f2f2;
+    }
     .map {
+      max-width: 1920px;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: #f2f2f2;
       h2 {
         font-family: "Roboto";
         font-style: normal;
@@ -1321,6 +1304,7 @@ body {
             & > img {
               left: 18%;
               top: 10%;
+              width: 23px;
               position: absolute;
             }
             .map__animalExample {
@@ -1361,6 +1345,7 @@ body {
             & > img {
               left: 18%;
               top: 10%;
+              width: 23px;
               position: absolute;
             }
             .map__animalExample {
@@ -1401,6 +1386,7 @@ body {
             & > img {
               left: 18%;
               top: 10%;
+              width: 23px;
               position: absolute;
             }
             .map__animalExample {
@@ -1440,6 +1426,7 @@ body {
             & > img {
               left: 18%;
               top: 10%;
+              width: 23px;
               position: absolute;
             }
             .map__animalExample {
@@ -1495,21 +1482,21 @@ body {
           height: 47px;
         }
       }
-      @media (min-width: 640px) and (max-width: 1200px){
+      @media (min-width: 640px) and (max-width: 1199px) {
         padding: 100px 20px 80px 20px;
         h2 {
           font-size: 48px;
           margin-bottom: 51px;
         }
         .map__wrapper {
-          margin-bottom: 39px;
+          margin-bottom: 47px;
           height: 47.3vw;
           min-height: 146px;
           min-width: 300px;
           .animals__box.panda {
             top: 10%;
             right: 17.5%;
-            .panda__marker{
+            .panda__marker {
               height: 94px;
               width: 67px;
             }
@@ -1534,7 +1521,7 @@ body {
                   margin-left: 15px;
                   margin-right: 55px;
                   margin-bottom: 5px;
-              }
+                }
               }
               .example__info {
                 margin-left: -48px;
@@ -1559,16 +1546,16 @@ body {
           .animals__box.eagle {
             left: 9%;
             top: 8%;
-            .eagle__marker{
+            .eagle__marker {
               height: 94px;
               width: 67px;
             }
-            & > img {         
-            height: 40px;
-            width: 40px;
-            left: 20%;
-            top: 13%;
-            position: absolute;
+            & > img {
+              height: 40px;
+              width: 40px;
+              left: 20%;
+              top: 13%;
+              position: absolute;
             }
             .map__animalExample {
               height: 147px;
@@ -1584,7 +1571,7 @@ body {
                   margin-left: 15px;
                   margin-right: 55px;
                   margin-bottom: 5px;
-              }
+                }
               }
               .example__info {
                 margin-left: -48px;
@@ -1609,7 +1596,7 @@ body {
           .animals__box.aligator {
             top: 11%;
             left: 17%;
-            .aligator__marker{
+            .aligator__marker {
               height: 94px;
               width: 67px;
             }
@@ -1634,7 +1621,7 @@ body {
                   margin-left: 15px;
                   margin-right: 55px;
                   margin-bottom: 5px;
-              }
+                }
               }
               .example__info {
                 margin-left: -48px;
@@ -1658,7 +1645,7 @@ body {
           }
           .animals__box.gorilla {
             bottom: 40%;
-            .gorilla__marker{
+            .gorilla__marker {
               height: 94px;
               width: 67px;
             }
@@ -1683,7 +1670,7 @@ body {
                   margin-left: 15px;
                   margin-right: 55px;
                   margin-bottom: 5px;
-              }
+                }
               }
               .example__info {
                 margin-left: -48px;
@@ -1726,22 +1713,23 @@ body {
           height: 47px;
         }
       }
-      @media (min-width: 1200px) and (max-width: 1920px){
-        padding: 100px 360px;
+      @media (min-width: 1200px) and (max-width: 1919px) {
+        padding: 100px 150px;
         h2 {
           font-size: 48px;
           margin-bottom: 30px;
-          margin-top: 13px;
+          margin-top: 0px;
+          line-height: 56px;
         }
         .map__wrapper {
-          margin-bottom: -12px;
-          height: 46.3vw;
+          height: 40.3vw;
+          margin-bottom: 16px;
           min-height: 146px;
           min-width: 300px;
           .animals__box.panda {
             top: 24%;
             right: 20%;
-            .panda__marker{
+            .panda__marker {
               height: 94px;
               width: 67px;
             }
@@ -1766,7 +1754,7 @@ body {
                   margin-left: 15px;
                   margin-right: 55px;
                   margin-bottom: 5px;
-              }
+                }
               }
               .example__info {
                 margin-left: -48px;
@@ -1791,16 +1779,16 @@ body {
           .animals__box.eagle {
             left: 10%;
             top: 21%;
-            .eagle__marker{
+            .eagle__marker {
               height: 94px;
               width: 67px;
             }
-            & > img {         
-            height: 46px;
-            width: 46px;
-            left: 16%;
-            top: 13%;
-            position: absolute;
+            & > img {
+              height: 46px;
+              width: 46px;
+              left: 16%;
+              top: 13%;
+              position: absolute;
             }
             .map__animalExample {
               height: 147px;
@@ -1816,7 +1804,7 @@ body {
                   margin-left: 15px;
                   margin-right: 55px;
                   margin-bottom: 5px;
-              }
+                }
               }
               .example__info {
                 margin-left: -48px;
@@ -1841,7 +1829,7 @@ body {
           .animals__box.aligator {
             top: 26%;
             left: 20%;
-            .aligator__marker{
+            .aligator__marker {
               height: 94px;
               width: 67px;
             }
@@ -1866,7 +1854,7 @@ body {
                   margin-left: 15px;
                   margin-right: 55px;
                   margin-bottom: 5px;
-              }
+                }
               }
               .example__info {
                 margin-left: -48px;
@@ -1890,7 +1878,7 @@ body {
           }
           .animals__box.gorilla {
             bottom: 43%;
-            .gorilla__marker{
+            .gorilla__marker {
               height: 94px;
               width: 67px;
             }
@@ -1915,7 +1903,7 @@ body {
                   margin-left: 15px;
                   margin-right: 55px;
                   margin-bottom: 5px;
-              }
+                }
               }
               .example__info {
                 margin-left: -48px;
@@ -1958,7 +1946,7 @@ body {
           height: 47px;
         }
       }
-      @media screen and (min-width: 1600px){
+      @media screen and (min-width: 1920px) {
         padding: 100px 360px;
         h2 {
           font-size: 48px;
@@ -1973,7 +1961,7 @@ body {
           .animals__box.panda {
             top: 24%;
             right: 20%;
-            .panda__marker{
+            .panda__marker {
               height: 94px;
               width: 67px;
             }
@@ -1998,7 +1986,7 @@ body {
                   margin-left: 15px;
                   margin-right: 55px;
                   margin-bottom: 5px;
-              }
+                }
               }
               .example__info {
                 margin-left: -48px;
@@ -2023,16 +2011,16 @@ body {
           .animals__box.eagle {
             left: 10%;
             top: 21%;
-            .eagle__marker{
+            .eagle__marker {
               height: 94px;
               width: 67px;
             }
-            & > img {         
-            height: 46px;
-            width: 46px;
-            left: 16%;
-            top: 13%;
-            position: absolute;
+            & > img {
+              height: 46px;
+              width: 46px;
+              left: 16%;
+              top: 13%;
+              position: absolute;
             }
             .map__animalExample {
               height: 147px;
@@ -2048,7 +2036,7 @@ body {
                   margin-left: 15px;
                   margin-right: 55px;
                   margin-bottom: 5px;
-              }
+                }
               }
               .example__info {
                 margin-left: -48px;
@@ -2073,7 +2061,7 @@ body {
           .animals__box.aligator {
             top: 26%;
             left: 20%;
-            .aligator__marker{
+            .aligator__marker {
               height: 94px;
               width: 67px;
             }
@@ -2098,7 +2086,7 @@ body {
                   margin-left: 15px;
                   margin-right: 55px;
                   margin-bottom: 5px;
-              }
+                }
               }
               .example__info {
                 margin-left: -48px;
@@ -2122,7 +2110,7 @@ body {
           }
           .animals__box.gorilla {
             bottom: 43%;
-            .gorilla__marker{
+            .gorilla__marker {
               height: 94px;
               width: 67px;
             }
@@ -2147,7 +2135,7 @@ body {
                   margin-left: 15px;
                   margin-right: 55px;
                   margin-bottom: 5px;
-              }
+                }
               }
               .example__info {
                 margin-left: -48px;
@@ -2404,7 +2392,7 @@ body {
 
         & .footer__title {
           grid-area: title;
-          margin-bottom: 45px;
+          margin-bottom: 15px;
         }
         &__navigation {
           grid-area: navigation;
