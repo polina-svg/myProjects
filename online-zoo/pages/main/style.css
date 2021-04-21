@@ -244,14 +244,19 @@ body .wrapper .header .toggle-bg input:checked {
     display: none;
   }
 }
-body .wrapper .watchAnimals {
+body .wrapper .watchAnimals-wrapper {
   background-image: url(../../assets/images/main-bg.png);
+  background-size: cover;
+}
+body .wrapper .watchAnimals-wrapper .watchAnimals {
+  max-width: 1920px;
+  margin: 0 auto;
   height: 940px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
 }
-body .wrapper .watchAnimals__title {
+body .wrapper .watchAnimals-wrapper .watchAnimals__title {
   max-width: 800px;
   width: 100%;
   margin: 205px 0 0 360px;
@@ -260,12 +265,12 @@ body .wrapper .watchAnimals__title {
   color: white;
   line-height: 104px;
 }
-body .wrapper .watchAnimals__body {
+body .wrapper .watchAnimals-wrapper .watchAnimals__body {
   display: flex;
   align-items: flex-end;
   height: 527px;
 }
-body .wrapper .watchAnimals__animals.animals {
+body .wrapper .watchAnimals-wrapper .watchAnimals__animals.animals {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -273,17 +278,17 @@ body .wrapper .watchAnimals__animals.animals {
   margin-left: 235px;
   align-self: end;
 }
-body .wrapper .watchAnimals .animals {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals {
   padding-left: 135px;
 }
-body .wrapper .watchAnimals .animals img {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals img {
   position: absolute;
   left: 0;
   width: 100%;
   top: calc(350px / 2);
   z-index: 0;
 }
-body .wrapper .watchAnimals .animals__slide {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide {
   display: flex;
   overflow: hidden;
   width: 100%;
@@ -291,7 +296,7 @@ body .wrapper .watchAnimals .animals__slide {
   gap: 46px;
   z-index: 1;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda {
   width: 245px;
   height: 352px;
   background-image: url(../../assets/images/panda.jpg);
@@ -305,15 +310,15 @@ body .wrapper .watchAnimals .animals__slide .animals__panda {
   cursor: pointer;
   transition: all 0.3s;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda p {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda p {
   color: white;
   width: 194px;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns {
   display: flex;
   justify-content: center;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,10 +330,10 @@ body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first 
   border: none;
   cursor: pointer;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first:hover {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first:hover {
   opacity: 0.6;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first .icon {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first .icon {
   width: 32px;
   height: 29px;
   border: 1px solid white;
@@ -338,11 +343,11 @@ body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first 
   background-repeat: no-repeat;
   background-position: center;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first span {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first span {
   font-size: 18px;
   text-transform: uppercase;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first span {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first span {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -352,13 +357,13 @@ body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first 
   line-height: 14px;
   cursor: pointer;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first .icon {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first .icon {
   width: 24px;
   height: 24px;
   border: 1px solid #4bd8b5;
   cursor: pointer;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -370,10 +375,10 @@ body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .second
   border: none;
   cursor: pointer;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde:hover {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde:hover {
   opacity: 0.6;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde .icon {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde .icon {
   width: 32px;
   height: 29px;
   border: 1px solid white;
@@ -383,26 +388,26 @@ body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .second
   background-repeat: no-repeat;
   background-position: center;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde span {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde span {
   font-size: 18px;
   text-transform: uppercase;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde span {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde span {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   cursor: pointer;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde .icon {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde .icon {
   width: 24px;
   height: 24px;
   cursor: pointer;
 }
-body .wrapper .watchAnimals .animals__slide .animals__panda:hover {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda:hover {
   transform: scale(0.9);
   box-shadow: #26394d 0px 20px 30px -10px;
 }
-body .wrapper .watchAnimals .animals__slide .animals__eagle {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__eagle {
   background-image: url(../../assets/images/eagle.jpg);
   width: 140px;
   height: 203px;
@@ -411,11 +416,11 @@ body .wrapper .watchAnimals .animals__slide .animals__eagle {
   cursor: pointer;
   transition: all 0.3s;
 }
-body .wrapper .watchAnimals .animals__slide .animals__eagle:hover {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__eagle:hover {
   transform: scale(0.9);
   box-shadow: #26394d 0px 20px 30px -10px;
 }
-body .wrapper .watchAnimals .animals__slide .animals__gorilla {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__gorilla {
   background-image: url(../../assets/images/gorilla.jpg);
   width: 140px;
   height: 203px;
@@ -424,11 +429,11 @@ body .wrapper .watchAnimals .animals__slide .animals__gorilla {
   cursor: pointer;
   transition: all 0.3s;
 }
-body .wrapper .watchAnimals .animals__slide .animals__gorilla:hover {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__gorilla:hover {
   transform: scale(0.9);
   box-shadow: #26394d 0px 20px 30px -10px;
 }
-body .wrapper .watchAnimals .animals__slide .animals__crocodile {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__crocodile {
   background-image: url(../../assets/images/aligator.jpg);
   width: 140px;
   height: 203px;
@@ -437,11 +442,11 @@ body .wrapper .watchAnimals .animals__slide .animals__crocodile {
   cursor: pointer;
   transition: all 0.3s;
 }
-body .wrapper .watchAnimals .animals__slide .animals__crocodile:hover {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__crocodile:hover {
   transform: scale(0.9);
   box-shadow: #26394d 0px 20px 30px -10px;
 }
-body .wrapper .watchAnimals .animals__slide .animals__fox {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__fox {
   background-image: url(../../assets/images/fox.jpg);
   width: 96px;
   height: 203px;
@@ -450,11 +455,11 @@ body .wrapper .watchAnimals .animals__slide .animals__fox {
   cursor: pointer;
   transition: all 0.3s;
 }
-body .wrapper .watchAnimals .animals__slide .animals__fox:hover {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__fox:hover {
   transform: scale(0.9);
   box-shadow: #26394d 0px 20px 30px -10px;
 }
-body .wrapper .watchAnimals .animals__progress {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__progress {
   margin-left: 23%;
   margin-top: 14px;
   width: 245px;
@@ -464,43 +469,43 @@ body .wrapper .watchAnimals .animals__progress {
   justify-content: space-between;
   align-items: center;
 }
-body .wrapper .watchAnimals .animals__progress .progress__numbers .progress__num {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__progress .progress__numbers .progress__num {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
 }
-body .wrapper .watchAnimals .animals__progress .progress__numbers .progress__num_first {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__progress .progress__numbers .progress__num_first {
   color: #fefefe;
   font-size: 24px;
   line-height: 28px;
 }
-body .wrapper .watchAnimals .animals__progress .progress__numbers .progress__num_slash {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__progress .progress__numbers .progress__num_slash {
   color: #fefefe;
   font-size: 24px;
   line-height: 28px;
 }
-body .wrapper .watchAnimals .animals__progress .progress__numbers .progress__num_last {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__progress .progress__numbers .progress__num_last {
   color: #828282;
   font-size: 14px;
   line-height: 16px;
 }
-body .wrapper .watchAnimals .animals__progress .progress__slider {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__progress .progress__slider {
   width: 100%;
   position: relative;
   height: 10px;
   display: flex;
   align-items: center;
 }
-body .wrapper .watchAnimals .animals__progress .progress__slider .progress__bar {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__progress .progress__slider .progress__bar {
   background-color: #828282;
   height: 5px;
   width: 100%;
   cursor: pointer;
 }
-body .wrapper .watchAnimals .animals__progress .progress__slider .progress__bar:hover {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__progress .progress__slider .progress__bar:hover {
   opacity: 0.7;
 }
-body .wrapper .watchAnimals .animals__progress .progress__slider .progress__cursor {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__progress .progress__slider .progress__cursor {
   height: 10px;
   background-color: #fefefe;
   width: 30px;
@@ -509,13 +514,13 @@ body .wrapper .watchAnimals .animals__progress .progress__slider .progress__curs
   cursor: pointer;
   transition: all 0.3s;
 }
-body .wrapper .watchAnimals .animals__progress .progress__slider .progress__cursor:hover {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__progress .progress__slider .progress__cursor:hover {
   transform: scale(1.4);
 }
-body .wrapper .watchAnimals__nav {
+body .wrapper .watchAnimals-wrapper .watchAnimals__nav {
   margin: 0 0 111px 152px;
 }
-body .wrapper .watchAnimals__nav ul {
+body .wrapper .watchAnimals-wrapper .watchAnimals__nav ul {
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -524,18 +529,18 @@ body .wrapper .watchAnimals__nav ul {
   height: 107px;
   justify-content: space-between;
 }
-body .wrapper .watchAnimals__nav ul li {
+body .wrapper .watchAnimals-wrapper .watchAnimals__nav ul li {
   list-style: none;
 }
-body .wrapper .watchAnimals__nav ul a {
+body .wrapper .watchAnimals-wrapper .watchAnimals__nav ul a {
   display: inline-block;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
-body .wrapper .watchAnimals__nav ul a:hover {
+body .wrapper .watchAnimals-wrapper .watchAnimals__nav ul a:hover {
   transform: translate(5px, -1px);
 }
-body .wrapper .watchAnimals__btn {
+body .wrapper .watchAnimals-wrapper .watchAnimals__btn {
   margin-left: 188px;
   align-self: end;
   margin-top: 38px;
@@ -554,10 +559,10 @@ body .wrapper .watchAnimals__btn {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-body .wrapper .watchAnimals__btn:hover {
+body .wrapper .watchAnimals-wrapper .watchAnimals__btn:hover {
   opacity: 0.6;
 }
-body .wrapper .watchAnimals__btn .icon {
+body .wrapper .watchAnimals-wrapper .watchAnimals__btn .icon {
   width: 32px;
   height: 29px;
   border: 1px solid white;
@@ -567,19 +572,19 @@ body .wrapper .watchAnimals__btn .icon {
   background-repeat: no-repeat;
   background-position: center;
 }
-body .wrapper .watchAnimals__btn span {
+body .wrapper .watchAnimals-wrapper .watchAnimals__btn span {
   font-size: 18px;
   text-transform: uppercase;
 }
-body .wrapper .watchAnimals__btn:hover {
+body .wrapper .watchAnimals-wrapper .watchAnimals__btn:hover {
   opacity: 0.8;
   outline: none;
 }
 @media screen and (max-width: 639px) {
-  body .wrapper .watchAnimals {
+  body .wrapper .watchAnimals-wrapper .watchAnimals {
     height: 669px;
   }
-  body .wrapper .watchAnimals .watchAnimals__title {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__title {
     margin-top: 28.5%;
     margin-left: 2.5%;
     font-size: 48px;
@@ -587,135 +592,135 @@ body .wrapper .watchAnimals__btn:hover {
     margin-left: 3.5%;
     margin-bottom: -59px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body {
     height: 427px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__btn {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__btn {
     margin: 76px 65px 5px 13px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__nav {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__nav {
     display: none;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals {
     margin-top: 166px;
     margin-left: -433px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__bg-line {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__bg-line {
     left: 121px;
     top: 98px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide {
     gap: 12px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__eagle {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__eagle {
     width: 113px;
     height: 164px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__panda {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__panda {
     width: 140px;
     height: 202px;
     padding-bottom: 8px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__panda p {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__panda p {
     margin-top: 22px;
     font-size: 12px;
     width: 129px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__panda .panda__btns {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__panda .panda__btns {
     display: flex;
     flex-direction: column;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__panda .panda__btns .seconde {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__panda .panda__btns .seconde {
     padding-top: 5px;
     padding-right: 48px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__gorilla {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__gorilla {
     width: 113px;
     height: 164px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__crocodile, body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__fox {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__crocodile, body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__fox {
     display: none;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__progress {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__progress {
     margin-left: 31%;
     margin-top: 4px;
     width: 147px;
   }
 }
 @media (min-width: 640px) and (max-width: 1199px) {
-  body .wrapper .watchAnimals {
+  body .wrapper .watchAnimals-wrapper .watchAnimals {
     height: 939px;
   }
-  body .wrapper .watchAnimals .watchAnimals__title {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__title {
     font-size: 64px;
     line-height: 75px;
     margin: 127px 0 0 23px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body {
     height: 427px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__btn {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__btn {
     margin-top: 29px;
     margin-left: -18px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__nav {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__nav {
     margin-left: 20px;
     margin-bottom: -133px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals {
     margin-left: -264px;
     margin-top: 129px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide {
     gap: 26px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__eagle {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__eagle {
     width: 160px;
     height: 243px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__panda {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__panda {
     width: 245px;
     height: 352px;
     padding-bottom: 75px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__panda p {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__panda p {
     font-size: 14px;
     line-height: 16px;
     width: 183px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__gorilla {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__gorilla {
     width: 160px;
     height: 243px;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__crocodile, body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__fox {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__crocodile, body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__fox {
     display: none;
   }
-  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__progress {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__progress {
     margin-left: 31%;
     margin-top: 17px;
     width: 246px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1919px) {
-  body .wrapper .watchAnimals .watchAnimals__title {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__title {
     margin: 121px 0 0 151px;
   }
-  body .wrapper .watchAnimals .watchAnimals__btn {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__btn {
     margin-left: -2%;
   }
-  body .wrapper .watchAnimals .animals {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .animals {
     margin-left: 7%;
     margin-top: 9%;
   }
-  body .wrapper .watchAnimals .animals__slide .animals__eagle {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__eagle {
     width: 160px;
     height: 243px;
   }
-  body .wrapper .watchAnimals .animals__slide .animals__gorilla {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__gorilla {
     width: 152px;
     height: 225px;
   }
-  body .wrapper .watchAnimals .watchAnimals__nav {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__nav {
     margin-left: 12.2%;
     margin-bottom: 0.5%;
   }
