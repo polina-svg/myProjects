@@ -37,18 +37,13 @@ body .wrapper .header h1 {
 body .wrapper .header p {
   margin: 0;
 }
-body .wrapper .header .header__title {
-  margin-left: 125px;
-}
 body .wrapper .header .header__zoo {
   font-family: "Roboto";
   font-weight: 900;
   font-size: 37px;
-  padding-left: 26px;
   padding-top: 22px;
 }
 body .wrapper .header .header__online {
-  padding-left: 28px;
   font-family: "Roboto";
   font-weight: 900;
   font-size: 20px;
@@ -57,7 +52,6 @@ body .wrapper .header .header__online {
   letter-spacing: 0px;
 }
 body .wrapper .header .header__navigation {
-  width: 813px;
   position: relative;
 }
 body .wrapper .header .header__navigation #checkMenu {
@@ -158,20 +152,22 @@ body .wrapper .header .toggle-bg input ~ :checked ~ .switch {
 body .wrapper .header .toggle-bg input:checked {
   z-index: 0;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
+  body .wrapper .header {
+    padding: 10px 25px;
+  }
   body .wrapper .header .header__title {
-    margin-top: 8px;
-    margin-left: -141px;
+    flex: 1;
   }
   body .wrapper .header .header__navigation {
-    width: 813px;
-    position: relative;
+    display: flex;
+    order: 3;
+    margin-left: 10px;
   }
   body .wrapper .header .header__navigation .burger__wrapper {
     width: 40px;
     height: 21px;
     position: relative;
-    top: 10px;
   }
   body .wrapper .header .header__navigation .burger__wrapper .burger-line {
     position: absolute;
@@ -180,24 +176,72 @@ body .wrapper .header .toggle-bg input:checked {
     background-color: black;
   }
   body .wrapper .header .header__navigation .burger__wrapper .first {
-    top: -7px;
-    left: 200px;
+    bottom: 15px;
   }
   body .wrapper .header .header__navigation .burger__wrapper .second {
-    top: 1px;
-    left: 200px;
+    bottom: 8px;
   }
   body .wrapper .header .header__navigation .burger__wrapper .third {
-    top: 10px;
-    left: 208px;
+    bottom: 1px;
     width: 32px;
   }
   body .wrapper .header .header__navigation ul {
     transform: translateY(61px);
     display: none;
   }
-  body .wrapper .header .header__switch .toggle-bg {
-    left: 60px;
+  body .wrapper .header .header__switch {
+    order: 0;
+  }
+}
+@media (min-width: 639px) and (max-width: 1199px) {
+  body .wrapper .header {
+    padding: 20px 25px;
+  }
+  body .wrapper .header .header__title {
+    flex: 1;
+  }
+  body .wrapper .header .header__navigation {
+    display: flex;
+    order: 3;
+    margin-left: 10px;
+  }
+  body .wrapper .header .header__navigation .burger__wrapper {
+    width: 40px;
+    height: 21px;
+    position: relative;
+  }
+  body .wrapper .header .header__navigation .burger__wrapper .burger-line {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: black;
+  }
+  body .wrapper .header .header__navigation .burger__wrapper .first {
+    bottom: 15px;
+  }
+  body .wrapper .header .header__navigation .burger__wrapper .second {
+    bottom: 8px;
+  }
+  body .wrapper .header .header__navigation .burger__wrapper .third {
+    bottom: 1px;
+    width: 32px;
+  }
+  body .wrapper .header .header__navigation ul {
+    transform: translateY(61px);
+    display: none;
+  }
+  body .wrapper .header .header__switch {
+    order: 0;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1920px) {
+  body .wrapper .header .header__navigation .burger__wrapper {
+    display: none;
+  }
+}
+@media screen and (min-width: 1921px) {
+  body .wrapper .header .header__navigation .burger__wrapper {
+    display: none;
   }
 }
 body .wrapper .watchAnimals {
@@ -598,7 +642,64 @@ body .wrapper .watchAnimals__btn:hover {
     width: 147px;
   }
 }
-@media screen and (max-width: 1200px) {
+@media (min-width: 640px) and (max-width: 1199px) {
+  body .wrapper .watchAnimals {
+    height: 939px;
+  }
+  body .wrapper .watchAnimals .watchAnimals__title {
+    font-size: 64px;
+    line-height: 75px;
+    margin: 127px 0 0 23px;
+  }
+  body .wrapper .watchAnimals .watchAnimals__body {
+    height: 427px;
+  }
+  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__btn {
+    margin-top: 29px;
+    margin-left: -18px;
+  }
+  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__nav {
+    margin-left: 20px;
+    margin-bottom: -133px;
+  }
+  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals {
+    margin-left: -264px;
+    margin-top: 129px;
+  }
+  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide {
+    gap: 26px;
+  }
+  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__eagle {
+    width: 160px;
+    height: 243px;
+  }
+  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__panda {
+    width: 245px;
+    height: 352px;
+    padding-bottom: 75px;
+  }
+  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__panda p {
+    font-size: 14px;
+    line-height: 16px;
+    width: 183px;
+  }
+  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__gorilla {
+    width: 160px;
+    height: 243px;
+  }
+  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__crocodile, body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__fox {
+    display: none;
+  }
+  body .wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__progress {
+    margin-left: 31%;
+    margin-top: 17px;
+    width: 246px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1919px) {
+  body .wrapper .watchAnimals .watchAnimals__title {
+    margin: 121px 0 0 151px;
+  }
   body .wrapper .watchAnimals .watchAnimals__btn {
     margin-left: -2%;
   }
