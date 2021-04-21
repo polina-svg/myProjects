@@ -724,6 +724,18 @@ body .wrapper .infoAbout__item h3 {
   font-weight: 900;
   font-size: 20px;
 }
+@media screen and (max-width: 640px) {
+  body .wrapper .infoAbout {
+    padding: 50px 10px;
+  }
+  body .wrapper .infoAbout .infoAbout__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  body .wrapper .infoAbout .infoAbout__wrapper .infoAbout__item {
+    width: 300px;
+  }
+}
 @media screen and (max-width: 1200px) {
   body .wrapper .infoAbout .infoAbout__item {
     width: 32%;
@@ -1385,6 +1397,40 @@ body .wrapper .petsInzoo__btn:hover {
 body .wrapper .petsInzoo__btn span {
   font-size: 18px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 640px) {
+  body .wrapper .petsInzoo {
+    padding: 50px 10px;
+    margin: 0 auto;
+  }
+  body .wrapper .petsInzoo h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 55px;
+    margin-top: 23px;
+  }
+  body .wrapper .petsInzoo .petsInzoo__animals {
+    margin-bottom: 32px;
+    width: 137vw;
+    height: 75vw;
+  }
+  body .wrapper .petsInzoo .petsInzoo__animals .arrow {
+    display: none;
+  }
+  body .wrapper .petsInzoo .petsInzoo__animals .animals__gorilla {
+    display: none;
+  }
+  body .wrapper .petsInzoo .petsInzoo__animals .animals__crocodile {
+    display: none;
+  }
+  body .wrapper .petsInzoo .petsInzoo__animals .animals__panda {
+    height: 300px;
+    width: 300px;
+  }
+  body .wrapper .petsInzoo .petsInzoo__animals .animals__eagle {
+    width: 300px;
+    height: 300px;
+  }
 }
 @media (min-width: 1200px) and (max-width: 1919px) {
   body .wrapper .petsInzoo h2 {

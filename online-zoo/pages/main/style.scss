@@ -633,6 +633,9 @@ body {
         opacity: 0.8;
         outline: none;
       }
+      @media screen and (max-width: 640px){
+        
+      }
       @media screen and (max-width: 1200px) {
         .watchAnimals__title {
           margin-top: 10.5%;
@@ -746,6 +749,16 @@ body {
           font-size: 20px;
         }
       }
+      @media screen and (max-width: 640px){
+        padding: 50px 10px;
+        .infoAbout__wrapper{
+          display: flex;
+          flex-direction: column;
+          .infoAbout__item{
+            width: 300px;
+          }
+        }
+      }
       @media screen and (max-width: 1200px) {
         .infoAbout__item {
           width: 32%;
@@ -822,7 +835,36 @@ body {
         color: #ffffff;
       }
       @media screen and (max-width: 640px) {
-        
+        padding: 50px 10px;
+        margin: 0 auto;
+        h2{
+          font-size: 36px;
+          line-height: 42px;
+          margin-bottom: 55px;
+          margin-top: 23px;
+        }
+        .petsInzoo__animals{
+          margin-bottom: 32px;
+          width: 137vw;
+          height: 75vw;
+          .arrow{
+            display: none;
+          }
+          .animals__gorilla{
+            display: none;
+          }
+          .animals__crocodile{
+            display: none;
+          }
+          .animals__panda{
+            height: 300px;
+            width: 300px;
+          }
+          .animals__eagle{
+            width: 300px;
+            height: 300px;    
+          }
+        }
       }
       @media (min-width: 640px) and (max-width: 1199px) {
         
@@ -987,8 +1029,7 @@ body {
               margin-left: 14px;
             }
           }
-          .payAndfeed__btn {
-          }
+          
         }
       }
     }
