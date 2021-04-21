@@ -531,7 +531,7 @@ body .wrapper .watchAnimals__btn:hover {
   opacity: 0.8;
   outline: none;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   body .wrapper .watchAnimals {
     height: 669px;
   }
@@ -739,7 +739,7 @@ body .wrapper .how-it-works__progress .progress__slider .progress__cursor {
 body .wrapper .how-it-works__progress .progress__slider .progress__cursor:hover {
   transform: scale(1.4);
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   body .wrapper .how-it-works {
     padding: 50px 10px;
   }
@@ -753,6 +753,11 @@ body .wrapper .how-it-works__progress .progress__slider .progress__cursor:hover 
     height: 325px;
   }
 }
+@media (min-width: 639px) and (max-width: 1199px) {
+  body .wrapper .how-it-works {
+    padding: 100px 20px;
+  }
+}
 body .wrapper .infoAbout {
   padding: 100px 12%;
   background-color: #f2f2f2;
@@ -763,7 +768,7 @@ body .wrapper .infoAbout__wrapper {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  gap: 0px;
+  gap: 30px;
 }
 body .wrapper .infoAbout__item {
   display: flex;
@@ -791,6 +796,8 @@ body .wrapper .infoAbout__item h3 {
   body .wrapper .infoAbout .infoAbout__wrapper {
     display: flex;
     flex-direction: column;
+    gap: 0px;
+    align-items: center;
   }
   body .wrapper .infoAbout .infoAbout__wrapper .infoAbout__item {
     width: 300px;
@@ -1458,7 +1465,7 @@ body .wrapper .petsInzoo__btn span {
   font-size: 18px;
   text-transform: uppercase;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 539px) {
   body .wrapper .petsInzoo {
     padding: 50px 10px;
     margin: 0 auto;
@@ -1490,6 +1497,41 @@ body .wrapper .petsInzoo__btn span {
   body .wrapper .petsInzoo .petsInzoo__animals .animals__eagle {
     width: 300px;
     height: 300px;
+  }
+}
+@media (min-width: 639px) and (max-width: 1199px) {
+  body .wrapper .petsInzoo {
+    padding: 100px 20px;
+    margin: 0 auto;
+  }
+  body .wrapper .petsInzoo h2 {
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 55px;
+    margin-top: 23px;
+  }
+  body .wrapper .petsInzoo .petsInzoo__animals {
+    margin-bottom: 32px;
+    width: 137vw;
+    height: 75vw;
+  }
+  body .wrapper .petsInzoo .petsInzoo__animals .arrow {
+    display: none;
+  }
+  body .wrapper .petsInzoo .petsInzoo__animals .animals__gorilla {
+    height: 301px;
+    width: 210px;
+  }
+  body .wrapper .petsInzoo .petsInzoo__animals .animals__crocodile {
+    display: none;
+  }
+  body .wrapper .petsInzoo .petsInzoo__animals .animals__panda {
+    height: 301px;
+    width: 210px;
+  }
+  body .wrapper .petsInzoo .petsInzoo__animals .animals__eagle {
+    height: 301px;
+    width: 210px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1919px) {

@@ -627,7 +627,7 @@ body {
         opacity: 0.8;
         outline: none;
       }
-      @media screen and (max-width: 640px){
+      @media screen and (max-width: 639px){
         height: 669px;
         .watchAnimals__title{
           margin-top: 28.5%;
@@ -691,6 +691,9 @@ body {
             }
           }
         }
+      }
+      @media(min-width: 639px) and (max-width: 1199px){
+        
       }
       @media screen and (max-width: 1200px) {
         .watchAnimals__title {
@@ -765,7 +768,7 @@ body {
         @include slider(black, 0, 60px);
         margin: 30px auto;
       }
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 639px) {
         padding: 50px 10px;
         h2 {
           font-size: 36px;
@@ -777,6 +780,9 @@ body {
           height: 325px;
         }
       }
+      @media(min-width: 639px) and (max-width: 1199px){
+        padding: 100px 20px;
+      }
     }
     .infoAbout {
       padding: 100px 12%;
@@ -787,7 +793,8 @@ body {
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
-        gap: 0px
+        gap: 30px
+        
       }
       &__item {
         display: flex;
@@ -813,6 +820,8 @@ body {
         .infoAbout__wrapper{
           display: flex;
           flex-direction: column;
+          gap: 0px;
+          align-items: center;
           .infoAbout__item{
             width: 300px;
           }
@@ -893,7 +902,7 @@ body {
         height: 55px;
         color: #ffffff;
       }
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 539px) {
         padding: 50px 10px;
         margin: 0 auto;
         h2{
@@ -925,8 +934,38 @@ body {
           }
         }
       }
-      @media (min-width: 640px) and (max-width: 1199px) {
-        
+      @media (min-width: 639px) and (max-width: 1199px) {
+        padding: 100px 20px;
+        margin: 0 auto;
+        h2{
+          font-size: 48px;
+          line-height: 56px;
+          margin-bottom: 55px;
+          margin-top: 23px;
+        }
+        .petsInzoo__animals{
+          margin-bottom: 32px;
+          width: 137vw;
+          height: 75vw;
+          .arrow{
+            display: none;
+          }
+          .animals__gorilla{
+            height: 301px;
+            width: 210px;
+          }
+          .animals__crocodile{
+            display: none;
+          }
+          .animals__panda{
+            height: 301px;
+            width: 210px;
+          }
+          .animals__eagle{
+            height: 301px;
+            width: 210px;    
+          }
+        }
       }
       @media (min-width: 1200px) and (max-width: 1919px) {
         h2 {
