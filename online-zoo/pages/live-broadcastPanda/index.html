@@ -14,14 +14,24 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <h1 href="../main/index.html">
+        <a href="#header" class="header__title">
           <p class="header__zoo">zoo</p>
           <p class="header__online">online</p>
-        </h1>
+        </a>
         <nav class="header__navigation">
+          <div class="burger__wrapper">
+            <div class="burger-line first"></div>
+            <div class="burger-line second"></div>
+            <div class="burger-line third"></div>
+          </div>
+
           <ul>
-            <li><a class="list__item" href="../main/index.html">About</a></li>
-            <li><a class="list__item active" href="../live-broadcastPanda/index.html">Zoos</a></li>
+            <li><a class="list__item_active" href="#header">About</a></li>
+            <li>
+              <a class="list__item" href="../live-broadcastPanda/index.html"
+                >Zoos</a
+              >
+            </li>
             <li><a class="list__item" href="../map/index.html">Map</a></li>
             <li><a class="list__item" href="#form">Contact Us</a></li>
             <li>
@@ -33,11 +43,13 @@
             </li>
           </ul>
         </nav>
-        <span class="toggle-bg">
-          <input type="radio" name="toggle" value="off" />
-          <input type="radio" name="toggle" value="on" />
-          <span class="switch"></span>
-        </span>
+        <div class="header__switch">
+          <span class="toggle-bg">
+            <input type="radio" name="toggle" value="off" />
+            <input type="radio" name="toggle" value="on" />
+            <span class="switch"></span>
+          </span>
+        </div>
       </header>
       <div class="container">
         <aside class="aside">
@@ -110,87 +122,81 @@
           </div>
         </section>
       </div>
-      <footer class="footer">
-        <div class="footer__navigation__container">
-          <h2>
-            <a href="#header">
-              <p class="footer__zoo">zoo</p>
-              <p class="footer__online">online</p>
-            </a>
-          </h2>
-          <nav class="footer__navigation">
-            <ul>
-              <li><a class="list__item" href="../main/index.html">About</a></li>
-            <li><a class="list__item active" href="../live-broadcastPanda/index.html">Zoos</a></li>
-            <li><a class="list__item" href="../map/index.html">Map</a></li>
-            <li><a class="list__item" href="#form">Contact Us</a></li>
-            <li>
-              <a
-                class="list__item"
-                href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
-                >Design</a
-              >
-            </li>
-            </ul>
-          </nav>
-          <button class="footer__btn">
-            <div class="icon"></div>
-            <span>donate for volunteers</span>
-          </button>
-        </div>
-        <div class="contacts__wrapper">
-          <div class="contact-us" id="form">
-            <h3>Contact us</h3>
-            <form action="#">
-              <input type="text" placeholder="name" />
-              <input type="email" placeholder="email" />
-              <fieldset>
-                <legend>Please enter your message</legend>
-                <textarea maxlength="280"></textarea>
-              </fieldset>
-            </form>
-            <label for="#"
-              ><input type="checkbox" />I agree to the processing of Personal
-              Data</label
-            >
-            <button class="footer__btn">
-              SEND
-              <img src="../../assets/icons/ArrowFooter.png" alt="play" />
-            </button>
-          </div>
-          <div class="footer__onlineCenter">
-            <h3>ZOO Online Centre</h3>
-            <p>132, Address District, Street</p>
-            <p>Open Daily 10:00 am - 5:00 pm</p>
-            <a type="tel" href=""><p>T(702) 163-3433</p></a>
-            <a type="mailto" href=""><p>zoo.online@gmail.com</p></a>
+      <div class="footer-wrapper">
+        <footer class="footer">
+            <h2 class="footer__title">
+                <a href="#header">
+                    <p class="footer__zoo">zoo</p>
+                    <p class="footer__online">online</p>
+                </a>
+            </h2>
             <nav class="footer__navigation">
-              <ul>
-                <li>
-                  <a href="#"
-                    ><img src="../../assets/icons/instagram 1.svg" alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="../../assets/icons/twittersvg.svg" alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="../../assets/icons/youtube.svg" alt="" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="../../assets/icons/vk.svg" alt="" /></a>
-                </li>
-              </ul>
+                <ul>
+                    <li><a class="about" href="#header">About</a></li>
+                    <li><a class="active" href="../live-broadcastPanda/index.html">Zoos</a></li>
+                    <li><a class="active" href="../map/index.html">Map</a></li>
+                    <li><a class="active" href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">Design</a>
+                    </li>
+                </ul>
             </nav>
-          </div>
-        </div>
-        <div class="footer__names">
-          <p>©Noora Sagnayeva</p>
-          <p>©RSSchool and ©Yem Digital - 2021</p>
-        </div>
-      </footer>
+            <button class="footer__btn">
+                <div class="icon"></div>
+                <span>donate for volunteers</span>
+            </button>
+            <div class="footer__contact-us" id="form">
+                <h3>Contact us</h3>
+                <form action="#">
+                    <input required type="text" placeholder="Name"/>
+                    <input required type="email" placeholder="Email"/>
+                    <fieldset>
+                        <legend>Please enter your message</legend>
+                        <textarea required maxlength="280"></textarea>
+                    </fieldset>
+                    <div class="check">
+                        <input name="fotr" required type="checkbox"/>
+                        <label for="fotr">I agree to the processing of Personal Data</label>
+                    </div>
+                    
+                    <button type="submit" class="form__btn">
+                        SEND
+                        <img src="../../assets/icons/ArrowFooter.png" alt="play"/>
+                    </button>
+                </form>
+            </div>
+            <div class="footer__onlineCenter">
+                <h3>ZOO Online Centre</h3>
+                <div class="center__adress">
+                    <p>132, Address District, Street</p>
+                    <p>Open Daily 10:00 am - 5:00 pm</p>
+                </div>
+                <div class="center__conact">
+                    <a type="tel" href=""><p>T(702) 163-3433</p></a>
+                    <a type="mailto" href=""><p>zoo.online@gmail.com</p></a>
+                </div>
+                <nav class="center__navigation">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="../../assets/icons/instagram 1.svg" alt=""/></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../../assets/icons/twittersvg.svg" alt=""/></a>
+                        </li>
+                        
+                        <li>
+                            <a href="#"><img src="../../assets/icons/vk.svg" alt=""/></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../../assets/icons/youtube.svg" alt=""/></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__names">
+                <p>©Noora Sagnayeva</p>
+                <p>©RSSchool and ©Yem Digital - 2021</p>
+            </div>
+        </footer>
+    </div>
     </div>
   </body>
 </html>

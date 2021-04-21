@@ -1,147 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZooApp</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
     />
-</head>
-<body>
-<div class="wrapper">
-    <header class="header">
-        <h1>
-            <p class="header__zoo">zoo</p>
-            <p class="header__online">online</p>
-        </h1>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <a href="#header" class="header__title">
+          <p class="header__zoo">zoo</p>
+          <p class="header__online">online</p>
+        </a>
         <nav class="header__navigation">
-            <ul>
-                <li><a class="list__item active" href="../main/index.html">About</a></li>
-                <li><a class="list__item active" href="../live-broadcastPanda/index.html">Zoos</a></li>
-                <li><a class="list__item map" href="#">Map</a></li>
-                <li><a class="list__item active" href="#form">Contact Us</a></li>
-                <li><a class="list__item active" href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">Design</a></li>
-            </ul>
-        </nav>
-        <span class="toggle-bg">
-          <input type="radio" name="toggle" value="off"/>
-          <input type="radio" name="toggle" value="on"/>
-          <span class="switch"></span>
-        </span>
-    </header>
-    <main>
-        <section class="map-map">
-            <div class="map__container">
-                <h2>Choose your favorite</h2>
-                <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious
-                    species and their habitat, and we are determined to assist in all aspects, including providing
-                    veterinary support and raising much-needed emergency funds. Zoo Online saves wildlife and inspires
-                    everyone to make conservation a priority in their lives. Animals have the right to a pain-free and
-                    happy life. They have equal claim to the resources of this planet, and deserve a life of dignity and
-                    compassion.As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires
-                    on precious species and their habitat.</p>
-                <div class="map__container__images">
-                    <img src="../../assets/icons/left-arrow.svg" alt="">
-                    <img src="../../assets/images/gorillaMap.png" alt="">
-                    <img src="../../assets/images/pandaMap.png" alt="panda">
-                    <img src="../../assets/images/alligatorMap.png" alt="aligator">
-                    <img src="../../assets/images/eagleMap.png" alt="eagle">
-                    <img src="../../assets/images/tigerMap.png" alt="tiger">
-                    <img src="../../assets/images/elephantMap.png" alt="elephant">
-                    <img src="../../assets/images/lionMap.png" alt="lion">
-                    <img src="../../assets/images/zebra.png" alt="zebra">
-                    <img src="../../assets/icons/right-arrow.svg" alt="">
-                </div>
-                <div class="map__progress progress">
-                    <div class="progress__numbers">
-                        <span class="progress__num_first">01</span>
-                        <span class="progress__num_slash">/</span>
-                        <span class="progress__num_last">04</span>
-                    </div>
-                    <div class="progress__slider">
-                        <div class="progress__bar"></div>
-                        <div class="progress__cursor"></div>
-                    </div>
-                </div>
+          <div class="burger__wrapper">
+            <div class="burger-line first"></div>
+            <div class="burger-line second"></div>
+            <div class="burger-line third"></div>
+          </div>
 
+          <ul>
+            <li><a class="list__item_active" href="#header">About</a></li>
+            <li>
+              <a class="list__item" href="../live-broadcastPanda/index.html"
+                >Zoos</a
+              >
+            </li>
+            <li><a class="list__item" href="../map/index.html">Map</a></li>
+            <li><a class="list__item" href="#form">Contact Us</a></li>
+            <li>
+              <a
+                class="list__item"
+                href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
+                >Design</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header__switch">
+          <span class="toggle-bg">
+            <input type="radio" name="toggle" value="off" />
+            <input type="radio" name="toggle" value="on" />
+            <span class="switch"></span>
+          </span>
+        </div>
+      </header>
+      <main>
+        <section class="map-map">
+          <div class="map__container">
+            <h2>Choose your favorite</h2>
+            <p>
+              As a voice for wildlife, we are devastated by the impact of the
+              2020 Australian bushfires on precious species and their habitat,
+              and we are determined to assist in all aspects, including
+              providing veterinary support and raising much-needed emergency
+              funds. Zoo Online saves wildlife and inspires everyone to make
+              conservation a priority in their lives. Animals have the right to
+              a pain-free and happy life. They have equal claim to the resources
+              of this planet, and deserve a life of dignity and compassion.As a
+              voice for wildlife, we are devastated by the impact of the 2020
+              Australian bushfires on precious species and their habitat.
+            </p>
+            <div class="map__container__images">
+              <img
+                class="arrow"
+                src="../../assets/icons/left-arrow.svg"
+                alt=""
+              />
+              <img
+                class="gorilla"
+                src="../../assets/images/gorillaMap.png"
+                alt=""
+              />
+              <img
+                class="panda"
+                src="../../assets/images/pandaMap.png"
+                alt="panda"
+              />
+              <img
+                class="aligator"
+                src="../../assets/images/alligatorMap.png"
+                alt="aligator"
+              />
+              <img
+                class="eagle"
+                src="../../assets/images/eagleMap.png"
+                alt="eagle"
+              />
+              <img
+                class="tiger"
+                src="../../assets/images/tigerMap.png"
+                alt="tiger"
+              />
+              <img
+                class="elephant"
+                src="../../assets/images/elephantMap.png"
+                alt="elephant"
+              />
+              <img
+                class="lion"
+                src="../../assets/images/lionMap.png"
+                alt="lion"
+              />
+              <img
+                class="zebra"
+                src="../../assets/images/zebra.png"
+                alt="zebra"
+              />
+              <img
+                class="arrow"
+                src="../../assets/icons/right-arrow.svg"
+                alt=""
+              />
             </div>
-            <div class="map">
-                <div class="map__wrapper">
-                    <div class="animals__box panda">
-                        <img class="animals__marker" src="../../assets/images/placeholder 1.png" alt="">
-                        <div class="map__animalExample">
-                            <div class="example__image">
-                                <img src="../../assets/icons/eagle_ebalo.png" alt="eagle"/>
-                            </div>
-                            <div class="example__info">
-                                <h4>West End Bald Eagle</h4>
-                                <div class="animal__info">
-                                    <p><b>Region:</b> on an island near Los Angeles</p>
-                                    <p><b>Population:</b> more than 270 pairs in 2013</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="animals__box eagle">
-                        <img class="animals__marker" src="../../assets/images/placeholder 2.png" alt="">
-                        <div class="map__animalExample">
-                            <div class="example__image">
-                                <img src="../../assets/icons/eagle_ebalo.png" alt="eagle"/>
-                            </div>
-                            <div class="example__info">
-                                <h4>West End Bald Eagle</h4>
-                                <div class="animal__info">
-                                    <p><b>Region:</b> on an island near Los Angeles</p>
-                                    <p><b>Population:</b> more than 270 pairs in 2013</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="animals__box aligator">
-                        <img class="animals__marker" src="../../assets/images/placeholder 3.png" alt="">
-                        <div class="map__animalExample">
-                            <div class="example__image">
-                                <img src="../../assets/icons/eagle_ebalo.png" alt="eagle"/>
-                            </div>
-                            <div class="example__info">
-                                <h4>West End Bald Eagle</h4>
-                                <div class="animal__info">
-                                    <p><b>Region:</b> on an island near Los Angeles</p>
-                                    <p><b>Population:</b> more than 270 pairs in 2013</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="animals__box gorilla">
-                        <img class="animals__marker" src="../../assets/images/placeholder 2.png" alt="">
-                        <div class="map__animalExample">
-                            <div class="example__image">
-                                <img src="../../assets/icons/eagle_ebalo.png" alt="eagle"/>
-                            </div>
-                            <div class="example__info">
-                                <h4>West End Bald Eagle</h4>
-                                <div class="animal__info">
-                                    <p><b>Region:</b> on an island near Los Angeles</p>
-                                    <p><b>Population:</b> more than 270 pairs in 2013</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="../../assets/images/Group.png" alt="map"/>
-                    <button class="map__btn">
-                        <div class="icon"></div>
-                        <span>WATCH ONLINE</span>
-                    </button>
-                </div>
+            <div class="map__progress progress">
+              <div class="progress__numbers">
+                <span class="progress__num_first">01</span>
+                <span class="progress__num_slash">/</span>
+                <span class="progress__num_last">04</span>
+              </div>
+              <div class="progress__slider">
+                <div class="progress__bar"></div>
+                <div class="progress__cursor"></div>
+              </div>
             </div>
+          </div>
         </section>
-        <footer class="footer">
-            <div class="footer__navigation__container">
-                <h2>
+        <div class="map-wrapper">
+          <section class="map">
+            <h2>Map</h2>
+            <div class="map__wrapper">
+              <div class="animals__box panda">
+                <img
+                  src="../../assets/icons/picture_activePanda.png"
+                  alt="panda"
+                />
+                <svg
+                  class="panda__marker"
+                  preserveAspectRatio="xMinYMin meet"
+                  viewBox="0 0 68 94"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="animals__marker"
+                    d="M34.0345 0.496094C15.8014 0.496094 0.968262 15.331 0.968262 33.5663C0.968262 51.2064 31.1986 91.3966 32.4864 93.1007C32.8481 93.5871 33.4278 93.871 34.0347 93.871C34.6416 93.871 35.2213 93.5871 35.5831 93.1007C36.8706 91.3966 67.1012 51.2065 67.1012 33.5663C67.1008 15.331 52.2676 0.496094 34.0345 0.496094ZM34.0345 51.0741C24.3831 51.0741 16.5288 43.219 16.5288 33.5663C16.5288 23.9137 24.3831 16.0585 34.0345 16.0585C43.686 16.0585 51.5402 23.9137 51.5402 33.5663C51.5402 43.219 43.686 51.0741 34.0345 51.0741Z"
+                    fill="url(#paint0_linear)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear"
+                      x1="-11.38"
+                      y1="0.496093"
+                      x2="83.3795"
+                      y2="20.869"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#4BD8B5" />
+                      <stop offset="1" stop-color="#49D6DF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="map__animalExample">
+                  <div class="example__image">
+                    <img src="../../assets/icons/eagle_ebalo.png" alt="eagle" />
+                  </div>
+                  <div class="example__info">
+                    <h4>West End Bald Eagle</h4>
+                    <div class="animal__info">
+                      <p><b>Region:</b> on an island near Los Angeles</p>
+                      <p><b>Population:</b> more than 270 pairs in 2013</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="animals__box eagle">
+                <img src="../../assets/icons/EagleActive.png" alt="eagle" />
+                <svg
+                  class="eagle__marker"
+                  preserveAspectRatio="xMinYMin meet"
+                  viewBox="0 0 68 94"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="animals__marker"
+                    d="M34.0345 0.496094C15.8014 0.496094 0.968262 15.331 0.968262 33.5663C0.968262 51.2064 31.1986 91.3966 32.4864 93.1007C32.8481 93.5871 33.4278 93.871 34.0347 93.871C34.6416 93.871 35.2213 93.5871 35.5831 93.1007C36.8706 91.3966 67.1012 51.2065 67.1012 33.5663C67.1008 15.331 52.2676 0.496094 34.0345 0.496094ZM34.0345 51.0741C24.3831 51.0741 16.5288 43.219 16.5288 33.5663C16.5288 23.9137 24.3831 16.0585 34.0345 16.0585C43.686 16.0585 51.5402 23.9137 51.5402 33.5663C51.5402 43.219 43.686 51.0741 34.0345 51.0741Z"
+                    fill="url(#paint0_linear)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear"
+                      x1="-11.38"
+                      y1="0.496093"
+                      x2="83.3795"
+                      y2="20.869"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#4BD8B5" />
+                      <stop offset="1" stop-color="#49D6DF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="map__animalExample">
+                  <div class="example__image">
+                    <img src="../../assets/icons/eagle_ebalo.png" alt="eagle" />
+                  </div>
+                  <div class="example__info">
+                    <h4>West End Bald Eagle</h4>
+                    <div class="animal__info">
+                      <p><b>Region:</b> on an island near Los Angeles</p>
+                      <p><b>Population:</b> more than 270 pairs in 2013</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="animals__box aligator">
+                <img
+                  src="../../assets/icons/AligatorActive.png"
+                  alt="aligator"
+                />
+                <svg
+                  class="aligator__marker"
+                  preserveAspectRatio="xMinYMin meet"
+                  viewBox="0 0 68 94"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="animals__marker"
+                    d="M34.0345 0.496094C15.8014 0.496094 0.968262 15.331 0.968262 33.5663C0.968262 51.2064 31.1986 91.3966 32.4864 93.1007C32.8481 93.5871 33.4278 93.871 34.0347 93.871C34.6416 93.871 35.2213 93.5871 35.5831 93.1007C36.8706 91.3966 67.1012 51.2065 67.1012 33.5663C67.1008 15.331 52.2676 0.496094 34.0345 0.496094ZM34.0345 51.0741C24.3831 51.0741 16.5288 43.219 16.5288 33.5663C16.5288 23.9137 24.3831 16.0585 34.0345 16.0585C43.686 16.0585 51.5402 23.9137 51.5402 33.5663C51.5402 43.219 43.686 51.0741 34.0345 51.0741Z"
+                    fill="url(#paint0_linear)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear"
+                      x1="-11.38"
+                      y1="0.496093"
+                      x2="83.3795"
+                      y2="20.869"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#4BD8B5" />
+                      <stop offset="1" stop-color="#49D6DF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="map__animalExample">
+                  <div class="example__image">
+                    <img src="../../assets/icons/eagle_ebalo.png" alt="eagle" />
+                  </div>
+                  <div class="example__info">
+                    <h4>West End Bald Eagle</h4>
+                    <div class="animal__info">
+                      <p><b>Region:</b> on an island near Los Angeles</p>
+                      <p><b>Population:</b> more than 270 pairs in 2013</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="animals__box gorilla">
+                <img src="../../assets/icons/GorillaActive.png" alt="gorilla" />
+                <svg
+                  class="gorilla__marker"
+                  preserveAspectRatio="xMinYMin meet"
+                  viewBox="0 0 68 94"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="animals__marker"
+                    d="M34.0345 0.496094C15.8014 0.496094 0.968262 15.331 0.968262 33.5663C0.968262 51.2064 31.1986 91.3966 32.4864 93.1007C32.8481 93.5871 33.4278 93.871 34.0347 93.871C34.6416 93.871 35.2213 93.5871 35.5831 93.1007C36.8706 91.3966 67.1012 51.2065 67.1012 33.5663C67.1008 15.331 52.2676 0.496094 34.0345 0.496094ZM34.0345 51.0741C24.3831 51.0741 16.5288 43.219 16.5288 33.5663C16.5288 23.9137 24.3831 16.0585 34.0345 16.0585C43.686 16.0585 51.5402 23.9137 51.5402 33.5663C51.5402 43.219 43.686 51.0741 34.0345 51.0741Z"
+                    fill="url(#paint0_linear)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear"
+                      x1="-11.38"
+                      y1="0.496093"
+                      x2="83.3795"
+                      y2="20.869"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#4BD8B5" />
+                      <stop offset="1" stop-color="#49D6DF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="map__animalExample">
+                  <div class="example__image">
+                    <img src="../../assets/icons/eagle_ebalo.png" alt="eagle" />
+                  </div>
+                  <div class="example__info">
+                    <h4>West End Bald Eagle</h4>
+                    <div class="animal__info">
+                      <p><b>Region:</b> on an island near Los Angeles</p>
+                      <p><b>Population:</b> more than 270 pairs in 2013</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="map__btn" href="../live-broadcastPanda/index.html">
+              <div class="icon"></div>
+              <span>WATCH ONLINE</span>
+            </a>
+          </section>
+        </div>
+        <div class="footer-wrapper">
+            <footer class="footer">
+                <h2 class="footer__title">
                     <a href="#header">
                         <p class="footer__zoo">zoo</p>
                         <p class="footer__online">online</p>
@@ -149,10 +323,10 @@
                 </h2>
                 <nav class="footer__navigation">
                     <ul>
-                        <li><a class="list__item" href="../main/index.html">About</a></li>
-                        <li><a class="list__item" href="../live-broadcastPanda/index.html">Zoos</a></li>
-                        <li><a class="list__item active" href="../map/index.html">Map</a></li>
-                        <li><a class="list__item" href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">Design</a>
+                        <li><a class="about" href="#header">About</a></li>
+                        <li><a class="active" href="../live-broadcastPanda/index.html">Zoos</a></li>
+                        <li><a class="active" href="../map/index.html">Map</a></li>
+                        <li><a class="active" href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">Design</a>
                         </li>
                     </ul>
                 </nav>
@@ -160,34 +334,37 @@
                     <div class="icon"></div>
                     <span>donate for volunteers</span>
                 </button>
-            </div>
-            <div class="contacts__wrapper">
-                <div class="contact-us" id="form">
+                <div class="footer__contact-us" id="form">
                     <h3>Contact us</h3>
                     <form action="#">
-                        <input required type="text" placeholder="name"/>
-                        <input required type="email" placeholder="email"/>
+                        <input required type="text" placeholder="Name"/>
+                        <input required type="email" placeholder="Email"/>
                         <fieldset>
                             <legend>Please enter your message</legend>
                             <textarea required maxlength="280"></textarea>
                         </fieldset>
+                        <div class="check">
+                            <input name="fotr" required type="checkbox"/>
+                            <label for="fotr">I agree to the processing of Personal Data</label>
+                        </div>
+                        
+                        <button type="submit" class="form__btn">
+                            SEND
+                            <img src="../../assets/icons/ArrowFooter.png" alt="play"/>
+                        </button>
                     </form>
-                    <label
-                    ><input required type="checkbox"/>I agree to the processing of Personal
-                        Data</label
-                    >
-                    <button type="submit" class="footer__btn">
-                        SEND
-                        <img src="../../assets/icons/ArrowFooter.png" alt="play"/>
-                    </button>
                 </div>
                 <div class="footer__onlineCenter">
                     <h3>ZOO Online Centre</h3>
-                    <p>132, Address District, Street</p>
-                    <p>Open Daily 10:00 am - 5:00 pm</p>
-                    <a type="tel" href=""><p>T(702) 163-3433</p></a> 
-                    <a type="mailto" href=""><p>zoo.online@gmail.com</p></a>
-                    <nav class="footer__navigation">
+                    <div class="center__adress">
+                        <p>132, Address District, Street</p>
+                        <p>Open Daily 10:00 am - 5:00 pm</p>
+                    </div>
+                    <div class="center__conact">
+                        <a type="tel" href=""><p>T(702) 163-3433</p></a>
+                        <a type="mailto" href=""><p>zoo.online@gmail.com</p></a>
+                    </div>
+                    <nav class="center__navigation">
                         <ul>
                             <li>
                                 <a href="#"><img src="../../assets/icons/instagram 1.svg" alt=""/></a>
@@ -195,19 +372,23 @@
                             <li>
                                 <a href="#"><img src="../../assets/icons/twittersvg.svg" alt=""/></a>
                             </li>
-                            <li>
-                                <a href="#"><img src="../../assets/icons/youtube.svg" alt=""/></a>
-                            </li>
+                            
                             <li>
                                 <a href="#"><img src="../../assets/icons/vk.svg" alt=""/></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../../assets/icons/youtube.svg" alt=""/></a>
                             </li>
                         </ul>
                     </nav>
                 </div>
-            </div>
-            <div class="footer__names">
-                <p>©Noora Sagnayeva</p>
-                <p>©RSSchool and ©Yem Digital - 2021</p>
-            </div>
-        </footer>
-    </main>
+                <div class="footer__names">
+                    <p>©Noora Sagnayeva</p>
+                    <p>©RSSchool and ©Yem Digital - 2021</p>
+                </div>
+            </footer>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
