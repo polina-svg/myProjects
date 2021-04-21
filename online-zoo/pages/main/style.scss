@@ -634,12 +634,73 @@ body {
         outline: none;
       }
       @media screen and (max-width: 640px){
-        
+        height: 669px;
+        .watchAnimals__title{
+          margin-top: 28.5%;
+          margin-left: 2.5%;
+          font-size: 48px;
+          line-height: 56px;
+          margin-left: 3.5%;
+          margin-bottom: -59px;
+        }
+        .watchAnimals__body{
+          height: 427px;
+          .watchAnimals__btn{
+            margin: 76px 65px 5px 13px;;
+          }
+          .watchAnimals__nav{
+            display: none;
+          }
+          .watchAnimals__animals{
+            margin-left: -137%;
+            margin-top: 53%;
+            .animals__bg-line{
+              left: 121px;
+              top: 98px;
+            }
+            .animals__slide{
+              gap: 12px;
+              .animals__eagle{
+                width: 113px;
+                height: 164px;
+              }
+              .animals__panda{
+                width: 140px;
+                height: 202px;
+                p{
+                  margin-top: 22px;
+                  font-size: 12px;
+                  width: 129px;
+                }
+                .panda__btns{
+                  display: flex;
+                  flex-direction: column;
+                  .seconde{
+                    padding-top: 5px;
+                    padding-right: 48px;
+                  }
+                }
+              }
+              .animals__gorilla{
+                width: 113px;
+                height: 164px;
+              }
+              .animals__crocodile, .animals__fox{
+                display: none;
+              }
+            }
+            .animals__progress{
+              margin-left: 31%;
+              margin-top: 4px;
+              width: 147px;
+            }
+          }
+        }
       }
       @media screen and (max-width: 1200px) {
         .watchAnimals__title {
-          margin-top: 10.5%;
-          margin-left: 12.5%;
+          // margin-top: 10.5%;
+          // margin-left: 12.5%;
         }
         .watchAnimals__btn {
           margin-left: -2%;
