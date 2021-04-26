@@ -14,14 +14,27 @@ class PhotoFilter {
     const filterInputs = document.querySelectorAll(".filters label > input");
     const filterOutputs = document.querySelectorAll(".filters label > output");
     filterInputs.forEach((item) => {
-      item.value = 0;
+      if (item.matches('#saturate')) {
+        item.value = 100;
+      } else {
+        item.value = 0;
+      }
     });
     filterOutputs.forEach((item) => {
-      item.innerHTML = 0;
+      if (item.matches('#saturateResult')) {
+        item.innerHTML = 100;
+      } else {
+        item.innerHTML = 0;
+      }
+     
     });
     this.createPictureUrl();
   }
   nextPicture() {
+    this.state = {
+      ...this.state,
+      loadedUrl: ''
+    }
     if (this.state.currentPicture > 19) {
       this.state = {
         ...this.state,
@@ -36,7 +49,11 @@ class PhotoFilter {
     this.createPictureUrl();
   }
   loadPicture(loadedPicture) {
-    this.createPictureUrl(loadedPicture);
+    this.state = {
+      ...this.state,
+      loadedUrl: URL.createObjectURL(loadedPicture)
+    }
+    this.createPictureUrl();
   }
   savePicture() {
     const link = document.createElement('a');
@@ -66,28 +83,28 @@ class PhotoFilter {
     document.exitFullscreen();
   }
   pictureInit() {
-    const date = `${new Date().getHours()}:${new Date().getMinutes()}`;
-    console.log(date);
+    const date = new Date();
+    const hours = date.getHours();
     switch (true) {
-      case date > "6:0" && date < "11:59":
+      case hours >= 6 && hours < 12:
         this.state = {
           ...this.state,
           currentUrl: "./assets/images/morning/",
         };
         break;
-      case date > "12:0" && date < "17:59":
+      case hours >= 12 && hours < 18:
         this.state = {
           ...this.state,
           currentUrl: "./assets/images/day/",
         };
         break;
-      case date > "18:0" && date < "23:59":
+      case hours >= 18 && hours < 24:
         this.state = {
           ...this.state,
           currentUrl: "./assets/images/evening/",
         };
         break;
-      case date > "00:00" && date < "5:59":
+      case hours >= 0 && hours < 6:
         this.state = {
           ...this.state,
           currentUrl: "./assets/images/night/",
@@ -96,12 +113,11 @@ class PhotoFilter {
     }
     this.createPictureUrl();
   }
-
-  createPictureUrl(loadImage) {
+  createPictureUrl() {
     const image = new Image(500, 500);
     let source;
-    if (loadImage) {
-      source = URL.createObjectURL(loadImage);
+    if (this.state.loadedUrl) {
+      source = this.state.loadedUrl
     } else {
       source = `${this.state.currentUrl}${
         this.state.currentPicture < 10
@@ -127,7 +143,6 @@ class PhotoFilter {
       };
     });
   }
-
   init() {
     this.pictureInit();
 
@@ -136,7 +151,6 @@ class PhotoFilter {
       document.querySelector("#blurResult").innerHTML = blur.value;
       this.changeFilter("blur", blur.value);
     };
-
     const invert = document.querySelector("#invert");
     invert.oninput = () => {
       document.querySelector("#invertResult").innerHTML = invert.value;
@@ -160,7 +174,7 @@ class PhotoFilter {
       document.querySelector("#hueResult").innerHTML = hue.value;
       this.changeFilter("hue", hue.value);
     };
-
+    
     const fullSreenIcon = document.querySelector(".fullscreen");
     fullSreenIcon.addEventListener("click", () => {
       if (this.state.fullScreen) {
@@ -169,6 +183,7 @@ class PhotoFilter {
         this.openFullScreen();
       }
     });
+
     const buttonContainer = document.querySelector(".btn-container");
     const buttons = document.querySelectorAll(".btn");
     buttonContainer.addEventListener("click", (event) => {
@@ -177,18 +192,22 @@ class PhotoFilter {
         event.target.classList.add("btn-active");
       }
     })
+
     const resetBtn = document.querySelector(".btn-reset");
     resetBtn.addEventListener("click", () => {
       this.reset();
     });
+
     const nextBtn = document.querySelector(".btn-next");
     nextBtn.addEventListener("click", () => {
       this.nextPicture();
     });
+
     const saveBtn = document.querySelector(".btn-save");
     saveBtn.addEventListener('click',() => {
       this.savePicture()
     })
+
     const loadBtn = document.querySelector("#btnInput");
     loadBtn.oninput = (event) => {
       this.loadPicture(event.target.files[0])
@@ -205,7 +224,8 @@ const App = new PhotoFilter({
   fullScreen: false,
   currentPicture: 1,
   currentUrl: "",
-  downLoadImage: ''
+  downLoadImage: '',
+  loadedUrl: '',
 });
 
 App.init();
