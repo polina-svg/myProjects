@@ -169,7 +169,14 @@ class PhotoFilter {
         this.openFullScreen();
       }
     });
-
+    const buttonContainer = document.querySelector(".btn-container");
+    const buttons = document.querySelectorAll(".btn");
+    buttonContainer.addEventListener("click", (event) => {
+      if (event.target.tagName === "BUTTON") {
+        buttons.forEach((item) => item.classList.remove("btn-active"));
+        event.target.classList.add("btn-active");
+      }
+    })
     const resetBtn = document.querySelector(".btn-reset");
     resetBtn.addEventListener("click", () => {
       this.reset();
