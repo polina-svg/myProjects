@@ -6,6 +6,7 @@ body {
   font-size: 14px;
   line-height: 16px;
   color: #4f4f4f;
+  transition: 1s;
 }
 body a {
   text-decoration: none;
@@ -3470,4 +3471,179 @@ body .wrapper .footer__names p {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+body[data-theme=true] .header {
+  background-color: #333333;
+}
+body[data-theme=true] .header p {
+  color: white;
+}
+body[data-theme=true] .header .toggle-bg {
+  background: Gray;
+}
+body[data-theme=true] .header .switch {
+  background: #1B1B1B;
+}
+body[data-theme=true] .header .header__navigation .burger__wrapper .burger-line {
+  background-color: white;
+}
+body[data-theme=true] .header .header__navigation ul li .list__item {
+  color: white;
+}
+body[data-theme=true] .header .header__navigation ul li .list__item_active {
+  color: white;
+}
+body[data-theme=true] .how-it-works {
+  background-color: #333333;
+}
+body[data-theme=true] .how-it-works h2 {
+  color: #FEFEFE;
+}
+body[data-theme=true] .how-it-works p {
+  color: #FEFEFE;
+}
+body[data-theme=true] .how-it-works__progress {
+  width: 245px;
+  height: 49px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+}
+body[data-theme=true] .how-it-works__progress .progress__numbers .progress__num {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+}
+body[data-theme=true] .how-it-works__progress .progress__numbers .progress__num_first {
+  color: white;
+  font-size: 24px;
+  line-height: 28px;
+}
+body[data-theme=true] .how-it-works__progress .progress__numbers .progress__num_slash {
+  color: white;
+  font-size: 24px;
+  line-height: 28px;
+}
+body[data-theme=true] .how-it-works__progress .progress__numbers .progress__num_last {
+  color: #828282;
+  font-size: 14px;
+  line-height: 16px;
+}
+body[data-theme=true] .how-it-works__progress .progress__slider {
+  width: 100%;
+  position: relative;
+  height: 10px;
+  display: flex;
+  align-items: center;
+}
+body[data-theme=true] .how-it-works__progress .progress__slider .progress__bar {
+  background-color: #828282;
+  height: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+body[data-theme=true] .how-it-works__progress .progress__slider .progress__bar:hover {
+  opacity: 0.7;
+}
+body[data-theme=true] .how-it-works__progress .progress__slider .progress__cursor {
+  height: 10px;
+  background-color: white;
+  width: 60px;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+body[data-theme=true] .how-it-works__progress .progress__slider .progress__cursor:hover {
+  transform: scale(1.4);
+}
+body[data-theme=true] .infoAbout {
+  background-color: #4F4F4F;
+}
+body[data-theme=true] .infoAbout p {
+  color: #FEFEFE;
+}
+body[data-theme=true] .petsInzoo {
+  background-color: #333333;
+}
+body[data-theme=true] .petsInzoo h2 {
+  color: #FEFEFE;
+}
+body[data-theme=true] .petsInzoo .petsInzoo__animals .arrow {
+  fill: #FEFEFE;
+}
+body[data-theme=true] .petsInzoo__progress {
+  width: 245px;
+  height: 49px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+}
+body[data-theme=true] .petsInzoo__progress .progress__numbers .progress__num {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+}
+body[data-theme=true] .petsInzoo__progress .progress__numbers .progress__num_first {
+  color: #FEFEFE;
+  font-size: 24px;
+  line-height: 28px;
+}
+body[data-theme=true] .petsInzoo__progress .progress__numbers .progress__num_slash {
+  color: #FEFEFE;
+  font-size: 24px;
+  line-height: 28px;
+}
+body[data-theme=true] .petsInzoo__progress .progress__numbers .progress__num_last {
+  color: #828282;
+  font-size: 14px;
+  line-height: 16px;
+}
+body[data-theme=true] .petsInzoo__progress .progress__slider {
+  width: 100%;
+  position: relative;
+  height: 10px;
+  display: flex;
+  align-items: center;
+}
+body[data-theme=true] .petsInzoo__progress .progress__slider .progress__bar {
+  background-color: #828282;
+  height: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+body[data-theme=true] .petsInzoo__progress .progress__slider .progress__bar:hover {
+  opacity: 0.7;
+}
+body[data-theme=true] .petsInzoo__progress .progress__slider .progress__cursor {
+  height: 10px;
+  background-color: #FEFEFE;
+  width: 60px;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+body[data-theme=true] .petsInzoo__progress .progress__slider .progress__cursor:hover {
+  transform: scale(1.4);
+}
+body[data-theme=true] .payAndfeed {
+  background-color: #4F4F4F;
+}
+body[data-theme=true] .payAndfeed h2 {
+  color: #FEFEFE;
+}
+body[data-theme=true] .payAndfeed p {
+  color: #FEFEFE;
+}
+body[data-theme=true] .testimonials {
+  background-color: #333333;
+}
+body[data-theme=true] .testimonials h2 {
+  color: #FEFEFE;
+}
+
+/*# sourceMappingURL=light-mode.css.map */

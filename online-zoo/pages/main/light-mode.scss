@@ -195,6 +195,8 @@
 @mixin mapAnimalSticker($icon) {
 }
 
+
+
 body {
   font-family: "Roboto";
   font-style: normal;
@@ -202,6 +204,7 @@ body {
   font-size: 14px;
   line-height: 16px;
   color: #4f4f4f;
+  transition: 1s;
   a {
     text-decoration: none;
     font-family: Roboto;
@@ -2806,6 +2809,100 @@ body {
           padding-top: 28px;
         }
       }
+    }
+  }
+}
+$main-text: #FEFEFE;
+$main-bg: #333333;
+$main-bg-light: #4F4F4F;
+
+
+
+body[data-theme="true"] {
+  .header {
+    background-color: #333333;
+    p {
+      color: white;
+    }
+    .toggle-bg {
+      background: Gray;
+    }
+    .switch {
+      background: #1B1B1B;
+    }
+    .header__navigation{
+      .burger__wrapper{
+        .burger-line{
+          background-color: white;
+        }
+      }
+      ul{
+        li{
+          .list__item{
+            color: white;
+          }
+          .list__item_active{
+            color: white;
+          }
+        }
+        
+      }
+    }
+  }
+  .how-it-works{
+    background-color: $main-bg;
+    h2{
+      color:$main-text
+    }
+    p{
+      color:$main-text;
+    }
+    &__progress {
+      @include slider(white, 0, 60px);
+      margin: 30px auto;
+    }
+  }
+  .infoAbout{
+    background-color:$main-bg-light;
+    p{
+      color: $main-text;
+    }
+  }
+  .petsInzoo{
+    background-color:$main-bg;
+    h2{
+      color:$main-text
+    }
+      .petsInzoo__animals{
+        .arrow{
+          fill:$main-text;
+        }
+    }
+    &__progress {
+      @include slider($main-text, 0, 60px);
+      margin: 30px auto;
+    }
+    
+  }
+  .payAndfeed{
+    background-color: $main-bg-light;
+    h2{
+      color: $main-text;
+    }
+    p{
+      color: $main-text;
+    }
+    .payAndfeed__item{
+      
+    }
+  }
+  .testimonials{
+    background-color: $main-bg;
+    h2{
+      color: $main-text
+    }
+    .testimonials__wrapper{
+      
     }
   }
 }

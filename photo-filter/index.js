@@ -119,7 +119,7 @@ class PhotoFilter {
     if (this.state.loadedUrl) {
       source = this.state.loadedUrl
     } else {
-      source = `${this.state.currentUrl}${
+      source = `${this.state.currentUrl}${ 
         this.state.currentPicture < 10
           ? "0" + this.state.currentPicture
           : this.state.currentPicture
@@ -144,9 +144,9 @@ class PhotoFilter {
     });
   }
   init() {
-    this.pictureInit();
+    this.pictureInit(); // выбрали картинку и ее отобразили
 
-    const blur = document.querySelector("#blur");
+    const blur = document.querySelector("#blur") 
     blur.oninput = () => {
       document.querySelector("#blurResult").innerHTML = blur.value;
       this.changeFilter("blur", blur.value);
@@ -227,5 +227,7 @@ const App = new PhotoFilter({
   downLoadImage: '',
   loadedUrl: '',
 });
+
+
 
 App.init();
