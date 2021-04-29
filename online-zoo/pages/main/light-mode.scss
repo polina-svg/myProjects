@@ -309,6 +309,54 @@ body {
           }
         }
       }
+      .header__switch{
+        cursor: pointer;
+        .toggle-bg {
+          background: #f2f2f2;
+          display: block;
+          float: left;
+          height: 30px;
+          position: relative;
+          width: 54px;
+          border-radius: 20px;
+          top: 4px;
+          cursor: pointer;
+        }
+        .toggle-bg input {
+          height: 30px;
+          left: 0;
+          margin: 0;
+          opacity: 0;
+          padding: 0;
+          position: absolute;
+          width: 55px;
+          z-index: 2;
+          cursor: pointer;
+        }
+        .toggle-bg:hover {
+          background-color: black;
+        }
+        .switch {
+          background: #ffffff;
+          display: block;
+          float: left;
+          height: 20px;
+          left: 6px;
+          position: relative;
+          top: 3.5px;
+          width: 20px;
+          z-index: 1;
+          border-radius: 10px;
+          transition: all 0.5s ease-in-out;
+        }
+        .toggle-bg input:checked ~ .switch {
+          left: 5px;
+        }
+  
+        .toggle-bg input ~ :checked ~ .switch {
+          left: 30px;
+        }
+      }
 
       .toggle-bg {
         background: #f2f2f2;
@@ -2824,12 +2872,16 @@ body[data-theme="true"] {
     p {
       color: white;
     }
-    .toggle-bg {
-      background: Gray;
+    .header__switch{
+      .toggle-bg {
+        background-color: #4F4F4F;
+        .switch {
+          background-color:#1B1B1B;
+        }
+      }
     }
-    .switch {
-      background: #1B1B1B;
-    }
+    
+    
     .header__navigation{
       .burger__wrapper{
         .burger-line{
@@ -2893,7 +2945,14 @@ body[data-theme="true"] {
       color: $main-text;
     }
     .payAndfeed__item{
-      
+      .payAndfeed__item__image{
+        svg{
+          .text{
+            fill:$main-text;
+          }
+        }
+        
+      }
     }
   }
   .testimonials{
@@ -2902,7 +2961,31 @@ body[data-theme="true"] {
       color: $main-text
     }
     .testimonials__wrapper{
-      
+      .arrow{
+        fill:$main-text;
+      }
+      .testimonials__user{
+        background-color: #3C3C3C;
+        h3{
+          color:$main-text;
+        }
+        p{
+          color:$main-text;
+        }
+      }
+    }
+     &__progress {
+      @include slider($main-text, 0, 60px);
+      margin: 30px auto;
+    }
+  }
+  .map{
+    background-color: $main-bg-light;
+    h2{
+      color:$main-text;
+    }
+    .map__wrapper{
+      background-image: url(../../assets/images/MapDark.png);
     }
   }
 }

@@ -107,6 +107,53 @@ body .wrapper .header .header__navigation ul li .list__item_active {
   text-decoration: underline;
   font-weight: 900;
 }
+body .wrapper .header .header__switch {
+  cursor: pointer;
+}
+body .wrapper .header .header__switch .toggle-bg {
+  background: #f2f2f2;
+  display: block;
+  float: left;
+  height: 30px;
+  position: relative;
+  width: 54px;
+  border-radius: 20px;
+  top: 4px;
+  cursor: pointer;
+}
+body .wrapper .header .header__switch .toggle-bg input {
+  height: 30px;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  width: 55px;
+  z-index: 2;
+  cursor: pointer;
+}
+body .wrapper .header .header__switch .toggle-bg:hover {
+  background-color: black;
+}
+body .wrapper .header .header__switch .switch {
+  background: #ffffff;
+  display: block;
+  float: left;
+  height: 20px;
+  left: 6px;
+  position: relative;
+  top: 3.5px;
+  width: 20px;
+  z-index: 1;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+body .wrapper .header .header__switch .toggle-bg input:checked ~ .switch {
+  left: 5px;
+}
+body .wrapper .header .header__switch .toggle-bg input ~ :checked ~ .switch {
+  left: 30px;
+}
 body .wrapper .header .toggle-bg {
   background: #f2f2f2;
   display: block;
@@ -3477,11 +3524,11 @@ body[data-theme=true] .header {
 body[data-theme=true] .header p {
   color: white;
 }
-body[data-theme=true] .header .toggle-bg {
-  background: Gray;
+body[data-theme=true] .header .header__switch .toggle-bg {
+  background-color: #4F4F4F;
 }
-body[data-theme=true] .header .switch {
-  background: #1B1B1B;
+body[data-theme=true] .header .header__switch .toggle-bg .switch {
+  background-color: #1B1B1B;
 }
 body[data-theme=true] .header .header__navigation .burger__wrapper .burger-line {
   background-color: white;
@@ -3639,11 +3686,92 @@ body[data-theme=true] .payAndfeed h2 {
 body[data-theme=true] .payAndfeed p {
   color: #FEFEFE;
 }
+body[data-theme=true] .payAndfeed .payAndfeed__item .payAndfeed__item__image svg .text {
+  fill: #FEFEFE;
+}
 body[data-theme=true] .testimonials {
   background-color: #333333;
 }
 body[data-theme=true] .testimonials h2 {
   color: #FEFEFE;
+}
+body[data-theme=true] .testimonials .testimonials__wrapper .arrow {
+  fill: #FEFEFE;
+}
+body[data-theme=true] .testimonials .testimonials__wrapper .testimonials__user {
+  background-color: #3C3C3C;
+}
+body[data-theme=true] .testimonials .testimonials__wrapper .testimonials__user h3 {
+  color: #FEFEFE;
+}
+body[data-theme=true] .testimonials .testimonials__wrapper .testimonials__user p {
+  color: #FEFEFE;
+}
+body[data-theme=true] .testimonials__progress {
+  width: 245px;
+  height: 49px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+}
+body[data-theme=true] .testimonials__progress .progress__numbers .progress__num {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+}
+body[data-theme=true] .testimonials__progress .progress__numbers .progress__num_first {
+  color: #FEFEFE;
+  font-size: 24px;
+  line-height: 28px;
+}
+body[data-theme=true] .testimonials__progress .progress__numbers .progress__num_slash {
+  color: #FEFEFE;
+  font-size: 24px;
+  line-height: 28px;
+}
+body[data-theme=true] .testimonials__progress .progress__numbers .progress__num_last {
+  color: #828282;
+  font-size: 14px;
+  line-height: 16px;
+}
+body[data-theme=true] .testimonials__progress .progress__slider {
+  width: 100%;
+  position: relative;
+  height: 10px;
+  display: flex;
+  align-items: center;
+}
+body[data-theme=true] .testimonials__progress .progress__slider .progress__bar {
+  background-color: #828282;
+  height: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+body[data-theme=true] .testimonials__progress .progress__slider .progress__bar:hover {
+  opacity: 0.7;
+}
+body[data-theme=true] .testimonials__progress .progress__slider .progress__cursor {
+  height: 10px;
+  background-color: #FEFEFE;
+  width: 60px;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+body[data-theme=true] .testimonials__progress .progress__slider .progress__cursor:hover {
+  transform: scale(1.4);
+}
+body[data-theme=true] .map {
+  background-color: #4F4F4F;
+}
+body[data-theme=true] .map h2 {
+  color: #FEFEFE;
+}
+body[data-theme=true] .map .map__wrapper {
+  background-image: url(../../assets/images/MapDark.png);
 }
 
 /*# sourceMappingURL=light-mode.css.map */
