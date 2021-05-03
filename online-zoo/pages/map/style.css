@@ -290,7 +290,6 @@ body .wrapper .map-map .map__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 91%;
   gap: 12px;
 }
 body .wrapper .map-map .map__container h2 {
@@ -313,7 +312,6 @@ body .wrapper .map-map .map__container p {
   font-weight: normal;
   font-size: 14px;
   color: #4f4f4f;
-  padding-bottom: 24px;
   margin-left: 137px;
   text-align: center;
 }
@@ -325,7 +323,6 @@ body .wrapper .map-map .map__container .map__container__images {
   gap: 17px;
   padding-bottom: -6px;
   align-items: center;
-  width: 94%;
   padding-top: -22px;
   margin-top: 38px;
 }
@@ -337,7 +334,6 @@ body .wrapper .map-map .map__container .map__progress {
   justify-content: space-between;
   align-items: center;
   margin: 30px auto;
-  padding-left: 96px;
   padding-top: 23px;
 }
 body .wrapper .map-map .map__container .map__progress .progress__numbers .progress__num {
@@ -399,9 +395,10 @@ body .wrapper .map-map .map-wrapper {
     font-size: 24px;
     line-height: 28px;
     margin-top: 0;
-    margin-left: 0;
     margin-bottom: 0;
     padding: 0;
+    margin-right: 121px;
+    width: 100%;
   }
   body .wrapper .map-map .map__container p {
     line-height: 14px;
@@ -409,7 +406,7 @@ body .wrapper .map-map .map-wrapper {
     height: 162px;
     font-size: 12px;
     text-align: justify;
-    padding-right: 105px;
+    margin-right: 140px;
   }
   body .wrapper .map-map .map__container .map__container__images .eagle, body .wrapper .map-map .map__container .map__container__images .tiger, body .wrapper .map-map .map__container .map__container__images .elephant, body .wrapper .map-map .map__container .map__container__images .lion, body .wrapper .map-map .map__container .map__container__images .zebra {
     display: none;
@@ -422,8 +419,44 @@ body .wrapper .map-map .map-wrapper {
     width: 75px;
     height: 75px;
   }
-  body .wrapper .map-map .map__container .map__progress progress {
-    padding-left: 0;
+  body .wrapper .map-map .map__container .map__progress {
+    padding: 30px 10px;
+  }
+}
+@media (min-width: 640px) and (max-width: 1199px) {
+  body .wrapper .map-map {
+    padding: 30px 40px;
+  }
+  body .wrapper .map-map .map__container h2 {
+    font-size: 36px;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    margin-right: 121px;
+    width: 100%;
+  }
+  body .wrapper .map-map .map__container p {
+    width: 579px;
+    height: 162px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: justify;
+    margin-right: 140px;
+  }
+  body .wrapper .map-map .map__container .map__container__images .tiger, body .wrapper .map-map .map__container .map__container__images .elephant, body .wrapper .map-map .map__container .map__container__images .lion, body .wrapper .map-map .map__container .map__container__images .zebra {
+    display: none;
+  }
+  body .wrapper .map-map .map__container .map__container__images .aligator, body .wrapper .map-map .map__container .map__container__images .gorilla, body .wrapper .map-map .map__container .map__container__images .eagle {
+    height: 75px;
+    width: 75px;
+  }
+  body .wrapper .map-map .map__container .map__container__images .panda {
+    width: 120px;
+    height: 120px;
+  }
+  body .wrapper .map-map .map__container .map__progress {
+    padding: 30px 10px;
   }
 }
 body .wrapper .map {

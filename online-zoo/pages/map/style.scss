@@ -386,7 +386,6 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 91%;
         gap: 12px;
         h2 {
           font-family: Roboto;
@@ -408,7 +407,6 @@ body {
           font-weight: normal;
           font-size: 14px;
           color: #4f4f4f;
-          padding-bottom: 24px;
           margin-left: 137px;
           text-align: center;
         }
@@ -420,14 +418,12 @@ body {
           gap: 17px;
           padding-bottom: -6px;
           align-items: center;
-          width: 94%;
           padding-top: -22px;
           margin-top: 38px;
         }
         .map__progress {
           @include slider(black, 0, 60px);
           margin: 30px auto;
-          padding-left: 96px;
           padding-top: 23px;
         }
       }
@@ -441,9 +437,10 @@ body {
             font-size: 24px;
             line-height: 28px;
             margin-top: 0;
-            margin-left: 0;
             margin-bottom: 0;
             padding: 0;
+            margin-right: 121px;
+            width: 100%;
           }
           p{
             line-height: 14px;
@@ -451,7 +448,8 @@ body {
             height: 162px;
             font-size: 12px;
             text-align: justify;
-            padding-right: 105px;
+            margin-right: 140px;
+  
           }
           .map__container__images{
             .eagle, .tiger, .elephant, .lion, .zebra{
@@ -466,8 +464,47 @@ body {
               height: 75px;
             }
           }
-          .map__progress progress{
-            padding-left: 0;
+          .map__progress{
+            padding: 30px 10px;
+          }
+        }
+      }
+      @media (min-width: 640px) and (max-width: 1199px){
+        padding: 30px 40px;
+        .map__container {
+          h2 {
+            font-size: 36px;
+            line-height: 28px;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
+            margin-right: 121px;
+            width: 100%;
+          }
+          p{
+            width: 579px;
+            height: 162px;
+            font-size: 20px;
+            line-height: 20px;
+            text-align: justify;
+            margin-right: 140px;
+  
+          }
+          .map__container__images{
+             .tiger, .elephant, .lion, .zebra{
+              display: none;
+            }
+            .aligator, .gorilla, .eagle{
+              height: 75px;
+              width: 75px;
+            }
+            .panda{
+              width: 120px;
+              height: 120px;
+            }
+          }
+          .map__progress{
+            padding: 30px 10px;
           }
         }
       }
