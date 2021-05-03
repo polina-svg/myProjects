@@ -420,6 +420,9 @@ body {
           align-items: center;
           padding-top: -22px;
           margin-top: 38px;
+          .arrow{
+            cursor: pointer;
+          }
         }
         .map__progress {
           @include slider(black, 0, 60px);
@@ -505,6 +508,17 @@ body {
           }
           .map__progress{
             padding: 30px 10px;
+          }
+        }
+      }
+      @media (min-width: 1200px) and (max-width: 1920px){
+        .map__container{
+          h2{
+            margin-left: 0;
+          }
+          p{
+            margin-left: 0;
+        
           }
         }
       }

@@ -326,6 +326,9 @@ body .wrapper .map-map .map__container .map__container__images {
   padding-top: -22px;
   margin-top: 38px;
 }
+body .wrapper .map-map .map__container .map__container__images .arrow {
+  cursor: pointer;
+}
 body .wrapper .map-map .map__container .map__progress {
   width: 245px;
   height: 49px;
@@ -457,6 +460,14 @@ body .wrapper .map-map .map-wrapper {
   }
   body .wrapper .map-map .map__container .map__progress {
     padding: 30px 10px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1920px) {
+  body .wrapper .map-map .map__container h2 {
+    margin-left: 0;
+  }
+  body .wrapper .map-map .map__container p {
+    margin-left: 0;
   }
 }
 body .wrapper .map {
