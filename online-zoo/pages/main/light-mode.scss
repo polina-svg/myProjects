@@ -195,8 +195,6 @@
 @mixin mapAnimalSticker($icon) {
 }
 
-
-
 body {
   font-family: "Roboto";
   font-style: normal;
@@ -235,7 +233,6 @@ body {
         margin: 0;
       }
       .header__title {
-       
       }
       .header__zoo {
         font-family: "Roboto";
@@ -253,7 +250,6 @@ body {
       }
 
       .header__navigation {
-
         position: relative;
         #checkMenu {
           display: none;
@@ -309,7 +305,7 @@ body {
           }
         }
       }
-      .header__switch{
+      .header__switch {
         cursor: pointer;
         .toggle-bg {
           background: #f2f2f2;
@@ -352,7 +348,7 @@ body {
         .toggle-bg input:checked ~ .switch {
           left: 5px;
         }
-  
+
         .toggle-bg input ~ :checked ~ .switch {
           left: 30px;
         }
@@ -408,14 +404,14 @@ body {
       }
       @media screen and (max-width: 639px) {
         padding: 10px 25px;
-        .header__title{
+        .header__title {
           flex: 1;
         }
         .header__navigation {
           display: flex;
           order: 3;
           margin-left: 10px;
-          .burger__wrapper{
+          .burger__wrapper {
             width: 40px;
             height: 21px;
             position: relative;
@@ -435,7 +431,7 @@ body {
               bottom: 1px;
               width: 32px;
             }
-          }             
+          }
           ul {
             transform: translateY(61px);
             display: none;
@@ -445,16 +441,16 @@ body {
           order: 0;
         }
       }
-      @media(min-width: 639px) and (max-width: 1199px){
+      @media (min-width: 639px) and (max-width: 1199px) {
         padding: 20px 25px;
-        .header__title{
+        .header__title {
           flex: 1;
         }
         .header__navigation {
           display: flex;
           order: 3;
           margin-left: 10px;
-          .burger__wrapper{
+          .burger__wrapper {
             width: 40px;
             height: 21px;
             position: relative;
@@ -474,7 +470,7 @@ body {
               bottom: 1px;
               width: 32px;
             }
-          }             
+          }
           ul {
             transform: translateY(61px);
             display: none;
@@ -484,23 +480,22 @@ body {
           order: 0;
         }
       }
-      @media (min-width: 1200px) and (max-width: 1920px){
-        .header__navigation{
-          .burger__wrapper{
+      @media (min-width: 1200px) and (max-width: 1920px) {
+        .header__navigation {
+          .burger__wrapper {
             display: none;
           }
         }
       }
-      @media screen and (min-width: 1921px){
-        .header__navigation{
-          .burger__wrapper{
+      @media screen and (min-width: 1921px) {
+        .header__navigation {
+          .burger__wrapper {
             display: none;
           }
         }
       }
-     
     }
-    .watchAnimals-wrapper{
+    .watchAnimals-wrapper {
       background-image: url(../../assets/images/main-bg.png);
       background-size: cover;
       .watchAnimals {
@@ -533,7 +528,6 @@ body {
           align-self: end;
         }
         .animals {
-          padding-left: 135px;
           img {
             position: absolute;
             left: 0;
@@ -546,29 +540,40 @@ body {
             overflow: hidden;
             width: 100%;
             align-items: center;
-            gap: 46px;
             z-index: 1;
-            .animals__panda {
-              width: 245px;
-              height: 352px;
-              background-image: url(../../assets/images/panda.jpg);
+            height: 350px;
+            position: relative;
+            .slider__wrapper {
+              position: relative;
+              display: flex;
+              width: 100%;
+              gap: 46px;
+              z-index: 1;
+              left: 245px;
+              transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+            .item {
+              width: 140px;
+              height: 203px;
               background-size: cover;
               border-radius: 5px;
+              cursor: pointer;
+              transition: all 0.3s;
               display: flex;
               flex-direction: column;
               justify-content: flex-end;
               align-items: center;
               padding-bottom: 38px;
-              cursor: pointer;
-              transition: all 0.3s;
               p {
+                visibility: hidden;
                 color: white;
-                width: 194px;
+                width: 95%;
+                font-size: 0.5em;
               }
-              .panda__btns {
+              .btn-watch {
                 display: flex;
                 justify-content: center;
-  
+                visibility: hidden;
                 .first {
                   @include btn(
                     $withIcon: true,
@@ -585,13 +590,13 @@ body {
                       #49d6df 100.68%
                     );
                     font-weight: 500;
-                    font-size: 12px;
+                    font-size: 7px;
                     line-height: 14px;
                     cursor: pointer;
                   }
                   .icon {
-                    width: 24px;
-                    height: 24px;
+                    width: 12px;
+                    height: 12px;
                     border: 1px solid rgba(75, 216, 181, 1);
                     cursor: pointer;
                   }
@@ -604,73 +609,53 @@ body {
                   );
                   span {
                     font-weight: 500;
-                    font-size: 12px;
+                    font-size: 10px;
                     line-height: 14px;
                     cursor: pointer;
                   }
                   .icon {
-                    width: 24px;
-                    height: 24px;
+                    width: 12px;
+                    height: 12px;
                     cursor: pointer;
+                    background-size: contain;
                   }
                 }
               }
             }
-            .animals__panda:hover {
-              transform: scale(0.9);
+            .item.active {
+              transform: scale(1.4);
+              p {
+                visibility: visible;
+              }
+              .btn-watch {
+                visibility: visible;
+              }
+            }
+
+            .item:hover {
+              transform: scale(1.4);
               box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+              p {
+                visibility: visible;
+              }
+              .btn-watch {
+                visibility: visible;
+              }
+            }
+            .animals__panda {
+              background-image: url(../../assets/images/panda.jpg);
             }
             .animals__eagle {
               background-image: url(../../assets/images/eagle.jpg);
-              width: 140px;
-              height: 203px;
-              background-size: cover;
-              border-radius: 5px;
-              cursor: pointer;
-              transition: all 0.3s;
-            }
-            .animals__eagle:hover {
-              transform: scale(0.9);
-              box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             }
             .animals__gorilla {
               background-image: url(../../assets/images/gorilla.jpg);
-              width: 140px;
-              height: 203px;
-              background-size: cover;
-              border-radius: 5px;
-              cursor: pointer;
-              transition: all 0.3s;
-            }
-            .animals__gorilla:hover {
-              transform: scale(0.9);
-              box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             }
             .animals__crocodile {
               background-image: url(../../assets/images/aligator.jpg);
-              width: 140px;
-              height: 203px;
-              background-size: cover;
-              border-radius: 5px;
-              cursor: pointer;
-              transition: all 0.3s;
-            }
-            .animals__crocodile:hover {
-              transform: scale(0.9);
-              box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             }
             .animals__fox {
               background-image: url(../../assets/images/fox.jpg);
-              width: 96px;
-              height: 203px;
-              background-size: cover;
-              border-radius: 5px;
-              cursor: pointer;
-              transition: all 0.3s;
-            }
-            .animals__fox:hover {
-              transform: scale(0.9);
-              box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             }
           }
           &__progress {
@@ -689,7 +674,7 @@ body {
             width: 20px;
             height: 107px;
             justify-content: space-between;
-  
+
             li {
               list-style: none;
             }
@@ -721,9 +706,9 @@ body {
           opacity: 0.8;
           outline: none;
         }
-        @media screen and (max-width: 639px){
+        @media screen and (max-width: 639px) {
           height: 669px;
-          .watchAnimals__title{
+          .watchAnimals__title {
             margin-top: 28.5%;
             margin-left: 2.5%;
             font-size: 48px;
@@ -731,54 +716,55 @@ body {
             margin-left: 3.5%;
             margin-bottom: -59px;
           }
-          .watchAnimals__body{
+          .watchAnimals__body {
             height: 427px;
-            .watchAnimals__btn{
-              margin: 76px 65px 5px 13px;;
+            .watchAnimals__btn {
+              margin: 76px 65px 5px 13px;
             }
-            .watchAnimals__nav{
+            .watchAnimals__nav {
               display: none;
             }
-            .watchAnimals__animals{
+            .watchAnimals__animals {
               margin-top: 166px;
               margin-left: -433px;
-              .animals__bg-line{
+              .animals__bg-line {
                 left: 121px;
                 top: 98px;
               }
-              .animals__slide{
+              .animals__slide {
                 gap: 12px;
-                .animals__eagle{
+                .animals__eagle {
                   width: 113px;
                   height: 164px;
                 }
-                .animals__panda{
+                .animals__panda {
                   width: 140px;
                   height: 202px;
                   padding-bottom: 8px;
-                  p{
+                  p {
                     margin-top: 22px;
                     font-size: 12px;
                     width: 129px;
                   }
-                  .panda__btns{
+                  .panda__btns {
                     display: flex;
                     flex-direction: column;
-                    .seconde{
+                    .seconde {
                       padding-top: 5px;
                       padding-right: 48px;
                     }
                   }
                 }
-                .animals__gorilla{
+                .animals__gorilla {
                   width: 113px;
                   height: 164px;
                 }
-                .animals__crocodile, .animals__fox{
+                .animals__crocodile,
+                .animals__fox {
                   display: none;
                 }
               }
-              .animals__progress{
+              .animals__progress {
                 margin-left: 31%;
                 margin-top: 4px;
                 width: 147px;
@@ -786,56 +772,56 @@ body {
             }
           }
         }
-        @media(min-width: 640px) and (max-width: 1199px){
+        @media (min-width: 640px) and (max-width: 1199px) {
           height: 939px;
-          .watchAnimals__title{
+          .watchAnimals__title {
             font-size: 64px;
             line-height: 75px;
             margin: 127px 0 0 23px;
           }
-          .watchAnimals__body{
+          .watchAnimals__body {
             height: 427px;
-            .watchAnimals__btn{
+            .watchAnimals__btn {
               margin-top: 29px;
               margin-left: -18px;
             }
-            .watchAnimals__nav{
+            .watchAnimals__nav {
               margin-left: 20px;
               margin-bottom: -133px;
             }
-            .watchAnimals__animals{
+            .watchAnimals__animals {
               margin-left: -264px;
               margin-top: 129px;
               // .animals__bg-line{
               //   left: 121px;
               //   top: 98px;
               // }
-              .animals__slide{
+              .animals__slide {
                 gap: 26px;
-                .animals__eagle{
+                .animals__eagle {
                   width: 160px;
                   height: 243px;
                 }
-                .animals__panda{
+                .animals__panda {
                   width: 245px;
                   height: 352px;
                   padding-bottom: 75px;
-                  p{
+                  p {
                     font-size: 14px;
                     line-height: 16px;
                     width: 183px;
-                    
                   }
                 }
-                .animals__gorilla{
+                .animals__gorilla {
                   width: 160px;
                   height: 243px;
                 }
-                .animals__crocodile, .animals__fox{
+                .animals__crocodile,
+                .animals__fox {
                   display: none;
                 }
               }
-              .animals__progress{
+              .animals__progress {
                 margin-left: 31%;
                 margin-top: 17px;
                 width: 246px;
@@ -854,25 +840,23 @@ body {
             margin-left: 7%;
             margin-top: 9%;
           }
-          .animals__slide {
-            .animals__eagle {
-              width: 160px;
-              height: 243px;
-            }
-            .animals__gorilla {
-              width: 152px;
-              height: 225px;
-            }
-          }
+          // .animals__slide {
+          //   .animals__eagle {
+          //     width: 160px;
+          //     height: 243px;
+          //   }
+          //   .animals__gorilla {
+          //     width: 152px;
+          //     height: 225px;
+          //   }
+          // }
           .watchAnimals__nav {
             margin-left: 12.2%;
             margin-bottom: 0.5%;
           }
         }
-       
       }
     }
-    
 
     .how-it-works {
       align-items: center;
@@ -926,11 +910,11 @@ body {
         p {
           margin: 6px auto;
         }
-        img{
+        img {
           height: 325px;
         }
       }
-      @media(min-width: 639px) and (max-width: 1199px){
+      @media (min-width: 639px) and (max-width: 1199px) {
         padding: 100px 20px;
       }
     }
@@ -943,8 +927,7 @@ body {
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
-        gap: 30px
-        
+        gap: 30px;
       }
       &__item {
         display: flex;
@@ -965,14 +948,14 @@ body {
           font-size: 20px;
         }
       }
-      @media screen and (max-width: 640px){
+      @media screen and (max-width: 640px) {
         padding: 50px 10px;
-        .infoAbout__wrapper{
+        .infoAbout__wrapper {
           display: flex;
           flex-direction: column;
           gap: 0px;
           align-items: center;
-          .infoAbout__item{
+          .infoAbout__item {
             width: 300px;
           }
         }
@@ -1055,65 +1038,65 @@ body {
       @media screen and (max-width: 539px) {
         padding: 50px 10px;
         margin: 0 auto;
-        h2{
+        h2 {
           font-size: 36px;
           line-height: 42px;
           margin-bottom: 55px;
           margin-top: 23px;
         }
-        .petsInzoo__animals{
+        .petsInzoo__animals {
           margin-bottom: 32px;
           width: 137vw;
           height: 75vw;
-          .arrow{
+          .arrow {
             display: none;
           }
-          .animals__gorilla{
+          .animals__gorilla {
             display: none;
           }
-          .animals__crocodile{
+          .animals__crocodile {
             display: none;
           }
-          .animals__panda{
+          .animals__panda {
             height: 300px;
             width: 300px;
           }
-          .animals__eagle{
+          .animals__eagle {
             width: 300px;
-            height: 300px;    
+            height: 300px;
           }
         }
       }
       @media (min-width: 639px) and (max-width: 1199px) {
         padding: 100px 20px;
         margin: 0 auto;
-        h2{
+        h2 {
           font-size: 48px;
           line-height: 56px;
           margin-bottom: 55px;
           margin-top: 23px;
         }
-        .petsInzoo__animals{
+        .petsInzoo__animals {
           margin-bottom: 32px;
           width: 137vw;
           height: 75vw;
-          .arrow{
+          .arrow {
             display: none;
           }
-          .animals__gorilla{
+          .animals__gorilla {
             height: 301px;
             width: 210px;
           }
-          .animals__crocodile{
+          .animals__crocodile {
             display: none;
           }
-          .animals__panda{
+          .animals__panda {
             height: 301px;
             width: 210px;
           }
-          .animals__eagle{
+          .animals__eagle {
             height: 301px;
-            width: 210px;    
+            width: 210px;
           }
         }
       }
@@ -1145,7 +1128,6 @@ body {
         }
       }
     }
-
 
     .payAndfeed-wrapper {
       background-color: #f2f2f2;
@@ -1277,11 +1259,10 @@ body {
               margin-left: 14px;
             }
           }
-          
         }
       }
     }
-    
+
     .testimonials-wrapper {
       background-color: white;
     }
@@ -1457,7 +1438,7 @@ body {
         margin: 0 auto;
       }
     }
-    
+
     .map-wrapper {
       background-color: #f2f2f2;
     }
@@ -2860,11 +2841,9 @@ body {
     }
   }
 }
-$main-text: #FEFEFE;
+$main-text: #fefefe;
 $main-bg: #333333;
-$main-bg-light: #4F4F4F;
-
-
+$main-bg-light: #4f4f4f;
 
 body[data-theme="true"] {
   .header {
@@ -2872,119 +2851,115 @@ body[data-theme="true"] {
     p {
       color: white;
     }
-    .header__switch{
+    .header__switch {
       .toggle-bg {
-        background-color: #4F4F4F;
+        background-color: #4f4f4f;
         .switch {
-          background-color:#1B1B1B;
+          background-color: #1b1b1b;
         }
       }
     }
-    
-    
-    .header__navigation{
-      .burger__wrapper{
-        .burger-line{
+
+    .header__navigation {
+      .burger__wrapper {
+        .burger-line {
           background-color: white;
         }
       }
-      ul{
-        li{
-          .list__item{
+      ul {
+        li {
+          .list__item {
             color: white;
           }
-          .list__item_active{
+          .list__item_active {
             color: white;
           }
         }
-        
       }
     }
   }
-  .how-it-works{
+  .how-it-works {
     background-color: $main-bg;
-    h2{
-      color:$main-text
+    h2 {
+      color: $main-text;
     }
-    p{
-      color:$main-text;
+    p {
+      color: $main-text;
     }
     &__progress {
       @include slider(white, 0, 60px);
       margin: 30px auto;
     }
   }
-  .infoAbout{
-    background-color:$main-bg-light;
-    p{
+  .infoAbout {
+    background-color: $main-bg-light;
+    p {
       color: $main-text;
     }
   }
-  .petsInzoo{
-    background-color:$main-bg;
-    h2{
-      color:$main-text
+  .petsInzoo {
+    background-color: $main-bg;
+    h2 {
+      color: $main-text;
     }
-      .petsInzoo__animals{
-        .arrow{
-          fill:$main-text;
-        }
+    .petsInzoo__animals {
+      .arrow {
+        fill: $main-text;
+      }
     }
     &__progress {
       @include slider($main-text, 0, 60px);
       margin: 30px auto;
     }
-    
   }
-  .payAndfeed{
+  .payAndfeed {
     background-color: $main-bg-light;
-    h2{
+    h2 {
       color: $main-text;
     }
-    p{
+    p {
       color: $main-text;
     }
-    .payAndfeed__item{
-      .payAndfeed__item__image{
-        svg{
-          .text{
-            fill:$main-text;
+    .payAndfeed__item {
+      .payAndfeed__item__image {
+        svg {
+          .text {
+            fill: $main-text;
           }
         }
-        
       }
     }
   }
-  .testimonials{
+  .testimonials {
     background-color: $main-bg;
-    h2{
-      color: $main-text
+    h2 {
+      color: $main-text;
     }
-    .testimonials__wrapper{
-      .arrow{
-        fill:$main-text;
+    .testimonials__wrapper {
+      .arrow {
+        fill: $main-text;
       }
-      .testimonials__user{
-        background-color: #3C3C3C;
-        h3{
-          color:$main-text;
+      .testimonials__user {
+        background-color: #3c3c3c;
+        h3 {
+          color: $main-text;
         }
-        p{
-          color:$main-text;
+        p {
+          color: $main-text;
         }
       }
     }
-     &__progress {
+    &__progress {
       @include slider($main-text, 0, 60px);
       margin: 30px auto;
     }
   }
-  .map{
+  .map {
     background-color: $main-bg-light;
-    h2{
-      color:$main-text;
+    h2 {
+      color: $main-text;
     }
-    .map__wrapper{
+    .map__wrapper {
       background-image: url(../../assets/images/MapDark.png);
     }
   }

@@ -326,9 +326,6 @@ body .wrapper .watchAnimals-wrapper .watchAnimals__animals.animals {
   margin-left: 235px;
   align-self: end;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals {
-  padding-left: 135px;
-}
 body .wrapper .watchAnimals-wrapper .watchAnimals .animals img {
   position: absolute;
   left: 0;
@@ -341,32 +338,44 @@ body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide {
   overflow: hidden;
   width: 100%;
   align-items: center;
+  z-index: 1;
+  height: 350px;
+  position: relative;
+}
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .slider__wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
   gap: 46px;
   z-index: 1;
+  left: 245px;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda {
-  width: 245px;
-  height: 352px;
-  background-image: url(../../assets/images/panda.jpg);
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item {
+  width: 140px;
+  height: 203px;
   background-size: cover;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   padding-bottom: 38px;
-  cursor: pointer;
-  transition: all 0.3s;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda p {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item p {
+  visibility: hidden;
   color: white;
-  width: 194px;
+  width: 95%;
+  font-size: 0.5em;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item .btn-watch {
   display: flex;
   justify-content: center;
+  visibility: hidden;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item .btn-watch .first {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -378,10 +387,10 @@ body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__pand
   border: none;
   cursor: pointer;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first:hover {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item .btn-watch .first:hover {
   opacity: 0.6;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first .icon {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item .btn-watch .first .icon {
   width: 32px;
   height: 29px;
   border: 1px solid white;
@@ -391,27 +400,27 @@ body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__pand
   background-repeat: no-repeat;
   background-position: center;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first span {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item .btn-watch .first span {
   font-size: 18px;
   text-transform: uppercase;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first span {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item .btn-watch .first span {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   background-image: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
   font-weight: 500;
-  font-size: 12px;
+  font-size: 7px;
   line-height: 14px;
   cursor: pointer;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .first .icon {
-  width: 24px;
-  height: 24px;
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item .btn-watch .first .icon {
+  width: 12px;
+  height: 12px;
   border: 1px solid #4bd8b5;
   cursor: pointer;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item .btn-watch .seconde {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -423,10 +432,10 @@ body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__pand
   border: none;
   cursor: pointer;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde:hover {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item .btn-watch .seconde:hover {
   opacity: 0.6;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde .icon {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item .btn-watch .seconde .icon {
   width: 32px;
   height: 29px;
   border: 1px solid white;
@@ -436,76 +445,55 @@ body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__pand
   background-repeat: no-repeat;
   background-position: center;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde span {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item .btn-watch .seconde span {
   font-size: 18px;
   text-transform: uppercase;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde span {
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item .btn-watch .seconde span {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 14px;
   cursor: pointer;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda .panda__btns .seconde .icon {
-  width: 24px;
-  height: 24px;
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item .btn-watch .seconde .icon {
+  width: 12px;
+  height: 12px;
   cursor: pointer;
+  background-size: contain;
 }
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda:hover {
-  transform: scale(0.9);
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item.active {
+  transform: scale(1.4);
+}
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item.active p {
+  visibility: visible;
+}
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item.active .btn-watch {
+  visibility: visible;
+}
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item:hover {
+  transform: scale(1.4);
   box-shadow: #26394d 0px 20px 30px -10px;
+}
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item:hover p {
+  visibility: visible;
+}
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .item:hover .btn-watch {
+  visibility: visible;
+}
+body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__panda {
+  background-image: url(../../assets/images/panda.jpg);
 }
 body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__eagle {
   background-image: url(../../assets/images/eagle.jpg);
-  width: 140px;
-  height: 203px;
-  background-size: cover;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__eagle:hover {
-  transform: scale(0.9);
-  box-shadow: #26394d 0px 20px 30px -10px;
 }
 body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__gorilla {
   background-image: url(../../assets/images/gorilla.jpg);
-  width: 140px;
-  height: 203px;
-  background-size: cover;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__gorilla:hover {
-  transform: scale(0.9);
-  box-shadow: #26394d 0px 20px 30px -10px;
 }
 body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__crocodile {
   background-image: url(../../assets/images/aligator.jpg);
-  width: 140px;
-  height: 203px;
-  background-size: cover;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__crocodile:hover {
-  transform: scale(0.9);
-  box-shadow: #26394d 0px 20px 30px -10px;
 }
 body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__fox {
   background-image: url(../../assets/images/fox.jpg);
-  width: 96px;
-  height: 203px;
-  background-size: cover;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__fox:hover {
-  transform: scale(0.9);
-  box-shadow: #26394d 0px 20px 30px -10px;
 }
 body .wrapper .watchAnimals-wrapper .watchAnimals .animals__progress {
   margin-left: 23%;
@@ -686,7 +674,8 @@ body .wrapper .watchAnimals-wrapper .watchAnimals__btn:hover {
     width: 113px;
     height: 164px;
   }
-  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__crocodile, body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__fox {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__crocodile,
+body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__fox {
     display: none;
   }
   body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__progress {
@@ -740,7 +729,8 @@ body .wrapper .watchAnimals-wrapper .watchAnimals__btn:hover {
     width: 160px;
     height: 243px;
   }
-  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__crocodile, body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__fox {
+  body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__crocodile,
+body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__slide .animals__fox {
     display: none;
   }
   body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__body .watchAnimals__animals .animals__progress {
@@ -759,14 +749,6 @@ body .wrapper .watchAnimals-wrapper .watchAnimals__btn:hover {
   body .wrapper .watchAnimals-wrapper .watchAnimals .animals {
     margin-left: 7%;
     margin-top: 9%;
-  }
-  body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__eagle {
-    width: 160px;
-    height: 243px;
-  }
-  body .wrapper .watchAnimals-wrapper .watchAnimals .animals__slide .animals__gorilla {
-    width: 152px;
-    height: 225px;
   }
   body .wrapper .watchAnimals-wrapper .watchAnimals .watchAnimals__nav {
     margin-left: 12.2%;
@@ -3525,10 +3507,10 @@ body[data-theme=true] .header p {
   color: white;
 }
 body[data-theme=true] .header .header__switch .toggle-bg {
-  background-color: #4F4F4F;
+  background-color: #4f4f4f;
 }
 body[data-theme=true] .header .header__switch .toggle-bg .switch {
-  background-color: #1B1B1B;
+  background-color: #1b1b1b;
 }
 body[data-theme=true] .header .header__navigation .burger__wrapper .burger-line {
   background-color: white;
@@ -3543,10 +3525,10 @@ body[data-theme=true] .how-it-works {
   background-color: #333333;
 }
 body[data-theme=true] .how-it-works h2 {
-  color: #FEFEFE;
+  color: #fefefe;
 }
 body[data-theme=true] .how-it-works p {
-  color: #FEFEFE;
+  color: #fefefe;
 }
 body[data-theme=true] .how-it-works__progress {
   width: 245px;
@@ -3606,19 +3588,19 @@ body[data-theme=true] .how-it-works__progress .progress__slider .progress__curso
   transform: scale(1.4);
 }
 body[data-theme=true] .infoAbout {
-  background-color: #4F4F4F;
+  background-color: #4f4f4f;
 }
 body[data-theme=true] .infoAbout p {
-  color: #FEFEFE;
+  color: #fefefe;
 }
 body[data-theme=true] .petsInzoo {
   background-color: #333333;
 }
 body[data-theme=true] .petsInzoo h2 {
-  color: #FEFEFE;
+  color: #fefefe;
 }
 body[data-theme=true] .petsInzoo .petsInzoo__animals .arrow {
-  fill: #FEFEFE;
+  fill: #fefefe;
 }
 body[data-theme=true] .petsInzoo__progress {
   width: 245px;
@@ -3635,12 +3617,12 @@ body[data-theme=true] .petsInzoo__progress .progress__numbers .progress__num {
   font-weight: 900;
 }
 body[data-theme=true] .petsInzoo__progress .progress__numbers .progress__num_first {
-  color: #FEFEFE;
+  color: #fefefe;
   font-size: 24px;
   line-height: 28px;
 }
 body[data-theme=true] .petsInzoo__progress .progress__numbers .progress__num_slash {
-  color: #FEFEFE;
+  color: #fefefe;
   font-size: 24px;
   line-height: 28px;
 }
@@ -3667,7 +3649,7 @@ body[data-theme=true] .petsInzoo__progress .progress__slider .progress__bar:hove
 }
 body[data-theme=true] .petsInzoo__progress .progress__slider .progress__cursor {
   height: 10px;
-  background-color: #FEFEFE;
+  background-color: #fefefe;
   width: 60px;
   position: absolute;
   left: 0;
@@ -3678,34 +3660,34 @@ body[data-theme=true] .petsInzoo__progress .progress__slider .progress__cursor:h
   transform: scale(1.4);
 }
 body[data-theme=true] .payAndfeed {
-  background-color: #4F4F4F;
+  background-color: #4f4f4f;
 }
 body[data-theme=true] .payAndfeed h2 {
-  color: #FEFEFE;
+  color: #fefefe;
 }
 body[data-theme=true] .payAndfeed p {
-  color: #FEFEFE;
+  color: #fefefe;
 }
 body[data-theme=true] .payAndfeed .payAndfeed__item .payAndfeed__item__image svg .text {
-  fill: #FEFEFE;
+  fill: #fefefe;
 }
 body[data-theme=true] .testimonials {
   background-color: #333333;
 }
 body[data-theme=true] .testimonials h2 {
-  color: #FEFEFE;
+  color: #fefefe;
 }
 body[data-theme=true] .testimonials .testimonials__wrapper .arrow {
-  fill: #FEFEFE;
+  fill: #fefefe;
 }
 body[data-theme=true] .testimonials .testimonials__wrapper .testimonials__user {
-  background-color: #3C3C3C;
+  background-color: #3c3c3c;
 }
 body[data-theme=true] .testimonials .testimonials__wrapper .testimonials__user h3 {
-  color: #FEFEFE;
+  color: #fefefe;
 }
 body[data-theme=true] .testimonials .testimonials__wrapper .testimonials__user p {
-  color: #FEFEFE;
+  color: #fefefe;
 }
 body[data-theme=true] .testimonials__progress {
   width: 245px;
@@ -3722,12 +3704,12 @@ body[data-theme=true] .testimonials__progress .progress__numbers .progress__num 
   font-weight: 900;
 }
 body[data-theme=true] .testimonials__progress .progress__numbers .progress__num_first {
-  color: #FEFEFE;
+  color: #fefefe;
   font-size: 24px;
   line-height: 28px;
 }
 body[data-theme=true] .testimonials__progress .progress__numbers .progress__num_slash {
-  color: #FEFEFE;
+  color: #fefefe;
   font-size: 24px;
   line-height: 28px;
 }
@@ -3754,7 +3736,7 @@ body[data-theme=true] .testimonials__progress .progress__slider .progress__bar:h
 }
 body[data-theme=true] .testimonials__progress .progress__slider .progress__cursor {
   height: 10px;
-  background-color: #FEFEFE;
+  background-color: #fefefe;
   width: 60px;
   position: absolute;
   left: 0;
@@ -3765,10 +3747,10 @@ body[data-theme=true] .testimonials__progress .progress__slider .progress__curso
   transform: scale(1.4);
 }
 body[data-theme=true] .map {
-  background-color: #4F4F4F;
+  background-color: #4f4f4f;
 }
 body[data-theme=true] .map h2 {
-  color: #FEFEFE;
+  color: #fefefe;
 }
 body[data-theme=true] .map .map__wrapper {
   background-image: url(../../assets/images/MapDark.png);
